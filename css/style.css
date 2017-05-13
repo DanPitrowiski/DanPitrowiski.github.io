@@ -372,10 +372,10 @@ FOR SMALLER SCEENS
 ----------------------
 */
 
-@media (max-width: 960px) {
+@media all and (min-width: 0px) and (max-width: 960px) {
 
     .logo {
-      padding: 10px;
+      padding: 10px 10px 0 0;
       margin-bottom: -5px;
     }
 
@@ -395,7 +395,7 @@ FOR SMALLER SCEENS
     .title-above-image {
       display: inherit;
       text-align: center;
-      padding-right: 100px;
+      clear: both;
     }
 
     header ul {
@@ -464,4 +464,5 @@ FOR SMALLER SCEENS
 
 
 }
+
 
