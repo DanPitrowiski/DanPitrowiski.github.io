@@ -59,7 +59,7 @@ HEADER NAV
 header {
   /* background: url("../images/hero_background.jpg"); */
   /* background-size: cover; */
-  font-size: 1em;
+  font-size: 1.15em;
 }
 
 header img {
@@ -70,7 +70,7 @@ header img {
 .logo {
   float: left;
   position: relative;
-  padding: 1.5em;
+  padding: .5em;
   margin: 0 auto; 
   display: inline-block;
 }
@@ -85,9 +85,9 @@ header nav {
 
 header ul   {
   display: inline-block;
-  padding: 3em 2.8em 2.8em 0;
+  padding: 2em 2em 2em 0;
   margin: 0 auto;
-  height: 1.4em;
+  height: 1em;
   text-align: center;
   color: #323232;
   text-decoration: none;
@@ -130,7 +130,7 @@ img.hero{
   background: url("../images/hero_background.png");
   background-position-x: center;
   background-position-y: top;
-  height: 18em;
+  height: 10em;
   margin-bottom: 5em;
 }
 
@@ -140,10 +140,23 @@ img.hero{
   color: #323232;
   margin: 0 auto;
   position: absolute;
-  top: 7em;
+  top: 4.4em;
   left: 2.8em;
   background: white;
   padding: 20px 20px 20px 20px;
+}
+
+.hero-div img {
+  font-size: 30px;
+  text-align: center;
+  color: #323232;
+  margin: 0 auto;
+  position: absolute;
+  top: 4.4em;
+  left: 2.8em;
+  background: white;
+  padding: 20px 20px 20px 20px;
+  height: 100px;
 }
 
 .title-above-image {
@@ -193,7 +206,7 @@ div.job {
   padding: 10px 30px 10px 30px;
 }
 
-li {
+header li, footer li, .about li {
   display: inline;
   padding: 0px 20px 0px 0px;
 }
@@ -205,14 +218,57 @@ hr {
   margin: 50px 0 50px 0;
   display: block;
   width: 100%;
-  align: center;
+  /*align: center;*/
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: ##449BF7;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+  width: 160px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 /*
 CSS effects
 */
 
-.portfolio-ss:hover { transform: scale(1.05); }
+.portfolio-ss:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
 
 
 /* -------- */
@@ -334,6 +390,61 @@ svg.airplane  {
 
 /*
 --------------
+    ARTICLE
+--------------
+*/
+
+.resume   {
+  /*display: block;*/
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 30px 10px 30px;
+  height: auto;
+  color: rgba(41, 41, 41, 1);
+}
+
+.row:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.column {
+  float: left;
+  width: 31%;
+  margin: 1%;
+}
+
+.article  {
+  font-size: 21px;
+  /*font-family: Georgia, Cambria, "Times New Roman", Times, serif;*/
+  /*font-weight: 400;*/
+  line-height: 32px;
+}
+
+.sidebar {
+  float: left;
+  background-color: #f1f1f1;
+  border: 1px solid #bec7cc;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.sidebar ul {
+  font-size: 16px;
+  line-height: 21px;
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.sidebar h3 {
+  font-size: 21px;
+  padding: 8px;
+  margin: auto;
+}
+
+/*
+--------------
     FOOTER
 --------------
 */
@@ -376,8 +487,8 @@ FOR SMALLER SCEENS
 @media all and (min-width: 0px) and (max-width: 960px) {
 
     .logo {
-      padding: 10px 10px 0 0;
-      margin-bottom: -5px;
+      /*padding: 10px 10px 0 0;*/
+      /*margin-bottom: -5px;*/
     }
 
     .hero-div {
@@ -400,7 +511,7 @@ FOR SMALLER SCEENS
     }
 
     header ul {
-      padding: 2em 1em 0em 0em;
+      /*padding: 2em 1em 0em 0em;*/
     }
 
     div.job {
