@@ -318,7 +318,8 @@ max-width: 1200px;
 }
 
 input {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 30px;
   margin: 0 auto;
   float: center;
@@ -332,7 +333,8 @@ input {
   font-color: red;
   text-align: top;
   padding: 10px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 100px;
   border: 1px solid #d9d9d9;
   font-size: 16px;
@@ -344,7 +346,8 @@ input {
 input.submit  {
   vertical-align: center;
   margin-left: 10px;
-  width: 410px;
+  width: 100%;
+  max-width: 400px;
 }
 
 button  {
@@ -359,7 +362,8 @@ button  {
 }
 
 input.send {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 40px;
   margin: 0 auto;
   margin: 10px 10px 10px 20px;
@@ -487,21 +491,30 @@ FOR SMALLER SCEENS
 @media all and (min-width: 0px) and (max-width: 960px) {
 
     .logo {
-      /*padding: 10px 10px 0 0;*/
-      /*margin-bottom: -5px;*/
+      float: left;
+      position: relative;
+      padding: .5em;
+      margin-bottom: 8px;
+      display: inline-block;
+      height: 50px;
+      position: relative;
     }
 
     .hero-div {
       margin-top: 0em;
+      background: url(../images/hero_background.png);
+      background-position-x: center;
+      background-position-y: top;
+      height: 6em;
+      margin-bottom: 2em;
+      background-size: cover;
     }
 
     .hero-div h1 {
-      display: none;
- /*   top: auto;
-    left: auto;
-    padding: 0 0 10px 0;
-    text-align: center;
-    position: static;*/
+      font-size: 16px;
+      /*position: sticky;*/
+      top: 5.1em;
+      padding: 10px 10px 10px 10px;
     }
 
     .title-above-image {
@@ -511,7 +524,14 @@ FOR SMALLER SCEENS
     }
 
     header ul {
-      /*padding: 2em 1em 0em 0em;*/
+      padding: 1.3em 0em 0em 0em;
+      height: 1em;
+      font-size: 14px;
+    }
+
+    header img {
+      width: 3em;
+      padding-left: 0;
     }
 
     div.job {
