@@ -147,12 +147,11 @@ img.hero{
 }
 
 .hero-div img {
-  font-size: 30px;
   text-align: center;
   color: #323232;
   margin: 0 auto;
   position: absolute;
-  top: 4.4em;
+  top: 8.3em;
   left: 2.8em;
   background: white;
   padding: 20px 20px 20px 20px;
@@ -530,8 +529,8 @@ FOR SMALLER SCEENS
     }
 
     header img {
-      width: 3em;
-      padding-left: 0;
+      width: 5em;
+      padding-left: 1.5em;
     }
 
     div.job {
@@ -593,7 +592,33 @@ FOR SMALLER SCEENS
       padding: 5px;
     }
 
+    .column {
+      width: 100%;
+      margin-bottom: .5em;
+    }
 
+    .sidebar {
+      padding: 8px 8px 8px 16px;
+    }
+
+    .sidebar ul {
+      margin: .5em 0 .5em 0;
+    }
+
+    .sidebar h3 {
+      font-size: 18px;
+      padding: 0 0 0 8px;
+      margin: auto;
+    }
+
+    .hero-div img {
+      position: absolute;
+      top: 5em;
+      left: 2em;
+      background: white;
+      padding: 8px 8px 8px 8px;
+      height: 50px;
+    }
 
 }
 
