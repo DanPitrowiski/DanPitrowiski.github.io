@@ -207,7 +207,7 @@ div.job {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 30px 10px 30px;
-}
+} 
 
 .portfolio-example {
   width: 100%;
@@ -280,8 +280,8 @@ CSS effects
 }
 
 .border-1 {
-  border: 1px solid #5DCBEF !important;
-  background-color: #5DCBEF !important;
+  border: 1px solid #378ACA !important;
+  background-color: #378ACA !important;
   color: #fff !important;
 }
 
@@ -462,7 +462,7 @@ svg.airplane  {
 }
 
 .sidebar ul {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 21px;
   list-style-type: circle;
   padding-left: 20px;
@@ -472,6 +472,11 @@ svg.airplane  {
   font-size: 21px;
   padding: 8px;
   margin: auto;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /*
@@ -538,7 +543,7 @@ FOR SMALLER SCEENS
     }
 
     .hero-div h1 {
-      font-size: 16px;
+      font-size: 15px;
       /*position: sticky;*/
       top: 5.1em;
       padding: 10px 10px 10px 10px;
@@ -586,7 +591,7 @@ FOR SMALLER SCEENS
 
     .portfolio-item  {
       display: block;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
       overflow: auto;
