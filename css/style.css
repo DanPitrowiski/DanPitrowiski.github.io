@@ -40,7 +40,7 @@
 /*******************************************/
 
 body  {
-  font-family: 'Varela Round', sans-serif;
+  font-family: Lato, 'Varela Round', sans-serif;
   line-height: 1.7;
   display: inline;
   margin: 0px;
@@ -205,6 +205,12 @@ div.job {
   padding: 10px 30px 10px 30px;
 }
 
+.portfolio-example {
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 header li, footer li, .about li {
   display: inline;
   padding: 0px 20px 0px 0px;
@@ -267,6 +273,24 @@ CSS effects
 .portfolio-ss:hover {
   transform: scale(1.05);
   transition: 0.3s;
+}
+
+.border-1 {
+  border: 1px solid #5DCBEF !important;
+  background-color: #5DCBEF !important;
+  color: #fff !important;
+}
+
+.border-2 {
+  border: 1px solid #46C0AA !important;
+  background-color: #46C0AA !important;
+  color: #fff !important;
+}
+
+.border-3 {
+  border: 1px solid #5DCBEF !important;
+  background-color: #5DCBEF !important;
+  color: #fff !important;
 }
 
 
@@ -399,7 +423,7 @@ svg.airplane  {
 
 .resume   {
   /*display: block;*/
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 10px 30px 10px 30px;
   height: auto;
@@ -427,8 +451,8 @@ svg.airplane  {
 
 .sidebar {
   float: left;
-  background-color: #f1f1f1;
-  border: 1px solid #bec7cc;
+  background-color: #fff;
+  border: 1px solid #D3D3D3;
   padding: 20px;
   border-radius: 4px;
 }
