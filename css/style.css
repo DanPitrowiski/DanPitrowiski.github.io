@@ -41,9 +41,15 @@
 
 body  {
   font-family: Lato, 'Varela Round', sans-serif;
-  line-height: 1.7;
+  line-height: 2;
   display: inline;
   margin: 0px;
+  font-size: 16px;
+}
+
+.content p {
+  font-size: 18px;
+  font-family: charter, Georgia, Cambria;
 }
 
 .page-container {
@@ -52,6 +58,18 @@ body  {
 
 .wootric-powered-by {
   color: #fff;
+}
+
+.headline  {
+  font-weight: 900;
+  line-height: 1.5;
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.subheadline {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 /* 
@@ -131,11 +149,23 @@ img.hero{
 
 .hero-div {
   background-size: cover;
-  background: url("../images/hero_background.png");
   background-position-x: center;
   background-position-y: top;
   height: 10em;
   margin-bottom: 5em;
+}
+
+.default-bg {
+  background: url("../images/hero_background.png");
+}
+
+.wootric-bg {
+  background: url(../images/wootric-team.png);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  height: 20em;
+  margin-bottom: 2em;
 }
 
 .hero-div h1 {
@@ -238,7 +268,7 @@ hr {
   color: #FFFFFF;
   text-align: center;
   font-size: 16px;
-  padding: 6px;
+  /*padding: 6px;*/
   width: 160px;
   transition: all 0.5s;
   cursor: pointer;
@@ -440,6 +470,10 @@ svg.airplane  {
   content: "";
 }
 
+.row {
+  margin-top: 10px;
+}
+
 .column {
   float: left;
   width: 31%;
@@ -452,7 +486,7 @@ svg.airplane  {
   /*font-weight: 400;*/
   line-height: 32px;
   margin: auto;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .sidebar {
@@ -479,6 +513,10 @@ svg.airplane  {
 .content {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.resume .screenshot {
+  width: 100%;
 }
 
 /*
@@ -544,6 +582,16 @@ FOR SMALLER SCEENS
       background-size: cover;
     }
 
+    .hero-wootric-div {
+      margin-top: 0em;
+      background: url(../images/wootric-team.png);
+      background-position-x: center;
+      background-position-y: top;
+      height: 6em;
+      margin-bottom: 2em;
+      background-size: cover;
+    }
+
     .hero-div h1 {
       font-size: 15px;
       /*position: sticky;*/
@@ -573,11 +621,6 @@ FOR SMALLER SCEENS
       display: block;
       text-align: center;
       float: none;
-    }
-
-    h1  {
-      font-size: 22px;
-      text-align: center;
     }
 
     .portfolio-ss, .portfolio-mobile {
