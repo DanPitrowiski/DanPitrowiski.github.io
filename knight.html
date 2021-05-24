@@ -56,7 +56,21 @@
       <img src="images/knight-screenshot.png" class="portfolio-example grow" alt="Knight of the Living Dead Sketch file and Sublime code">
     </div>
       <div class="content">
-        <h3 class="subheadline"><strong>Designing, Coding, Creating a Web-app Game</strong></h3>
+        <h3 class="subheadline"><strong>Designing, Coding, Creating a Game</strong></h3>
+        <p>This game was designed in Sketch and made into an entirely web based game.</p>
+        <p>Knight of the Living Dead is a roquelike RPG inspired by games like Final Fantasy and Darkest Dungeon. In the game you are the Undead Knight on your way to defeat the king and take back your kingdom.
+        </p>
+        <p>There were a few features that make a roquelike RPG.
+          <ol>
+            <li>Gaining skills, items, and power</li>
+            <li>Turn based gameplay</li>
+            <li>New unique monsters to fight</li>
+            <li>Sense of randomness, so each game feels unique</li>
+            <li>Increased difficulty as you progress</li>
+          </ol>
+        </p>
+        <p>From the feedback I gathered the most important feature people wanted was cool skills to use. So that's where the below JavaScript Object was created.
+        </p>
         <pre><code>
   <span class="selector">var</span> <span class="property">keeneye</span> = {
     <span class="selector">name:</span> "Keen eye",
@@ -73,12 +87,25 @@
       <span class="property">hero.accuracy -= keeneye.statAdj;</span> },
   };
         </code></pre>
-        <p>Wootric has been a multi-channel micro-survey platform which integrated into most other platforms to give customers relavant customer feedback when they needed it.
-        </p>
-        <p>Since then Wootric has transitioned into being an Enterprise Feedback Management platform where insights and sentiment are delivered with the help of machine learning. When once we had thousands of user feedback to analyze, we now had the problem of sometimes millions of feedback to understand. With thousands coming in daily. There needed to be a way for users to utilize this data, ask questions, and be able to find their answers.
-        </p>
-        <p>To help the customer, we developed ways to slice and dice their data and to organize their data more thoughtfully.
-        </p>
+      <div class="content">
+        <h3 class="subheadline"><strong>The Goal</strong></h3>
+        <p>Create a system where your character gains new skills, uses them in battle, and are easy to understand. The user would randomly get to decide to add them.</p>
+      </div>
+      <div class="screenshot">
+        <img src="images/perks-and-skills.png" class="portfolio-example grow" alt="Example of the perks and skills you can have">
+      </div>
+      <div class="content">
+        <h3 class="subheadline"><strong>The Solution</strong></h3>
+        <p>Create Javascript Objects where all the properties, methods, and values exist for each skill. Defined within the object was everything I needed to create many different types of skills and also it allowed me to balance and change them quickly.</p>
+        <p>The biggest challenge was how to track the skills and reset the character when the skills ran out. Thats where the <span class="selector">adjHero</span> functions came into play.</p>
+      </div>
+      <div class="content">
+        <h3 class="subheadline"><strong>The Outcome</strong></h3>
+        <p>There are 11 different skills the hero can use. The code to manage skills is only 35 lines long thanks to the JavaScript Objects. Below is the code that runs every turn to check when your skill bonus has ended, and turns your stats back to default.</p>
+      </div>
+      <div class="screenshot">
+        <img src="images/skill-check.png" class="portfolio-example grow" alt="The code to check and run through the skills.">
+      </div>
       </div>
     </div>
   </div>
