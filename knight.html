@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/path/to/styles/default.css"/>
 
   </head>
 
@@ -46,40 +47,32 @@
     </nav>
   </header>
 
-  <div class="hero-wootric-div wootric-bg">
-    <!-- <img src="images/wootric-logo.png"> -->
-  </div>
+<!--   <div class="hero-div wootric-bg">
+  </div> -->
   <div class="resume portfolio-item">
-    <h2 class="content headline">Wootric from Startup to Acquisition</h2>
-    <p class="content small">Lead Product Designer · Nov 2015-Present</p>
-      <div class="row">
-        <div class="column sidebar border-1">
-          <h3>Experience</h3>
-            <ul>
-              <li>Lead Product Designer</li>
-              <li>Nov 2015 – Present · 5 yrs 3 mos</li>
-              <li>Supporting 9 engineers and marketing</li>
-            </ul>
-        </div>
-        <div class="column sidebar border-2">
-          <h3>Growth</h3>
-          <ul>
-            <li>30x Revenue Growth</li>
-            <li>Went from targeting Startups to Enterprise</li>
-            <li>Customers in more than 75 countries</li>
-          </ul>
-        </div>
-        <div class="column sidebar border-3">
-          <h3>KPIs</h3>
-          <ul>
-            <li>Account Churn near 1%</li>
-            <li>Net Promoter Score 56</li>
-            <li>Surveys Sent - 3 billion</li>
-          </ul>
-        </div>
-      </div>
+    <h2 class="content headline">Knight of the Living Dead</h2>
+    <p class="content small">Creator · 2016</p>
+    <div class="screenshot">
+      <img src="images/knight-screenshot.png" class="portfolio-example grow" alt="Knight of the Living Dead Sketch file and Sublime code">
+    </div>
       <div class="content">
-        <h3 class="subheadline"><strong>Collecting analytics over the years</strong></h3>
+        <h3 class="subheadline"><strong>Designing, Coding, Creating a Web-app Game</strong></h3>
+        <pre><code>
+  <span class="selector">var</span> <span class="property">keeneye</span> = {
+    <span class="selector">name:</span> "Keen eye",
+    <span class="selector">statAdj:</span> <span class="number">15</span>,
+    <span class="selector">skillpointCost:</span> <span class="number">3</span>,
+    <span class="selector">turns:</span> <span class="number">10</span>,
+    <span class="selector">turnsCount:</span> <span class="number">0</span>,
+    <span class="selector">uid:</span> "keeneye",
+    <span class="selector">heroOwns:</span> <span class="property">false</span>,
+    <span class="selector">effectDescription:</span> "+15% accuracy for 10 turns",
+    <span class="selector">adjHero: function ()</span>{
+      <span class="property">hero.accuracy += keeneye.statAdj;</span> },
+    <span class="selector">negHero: function ()</span>{
+      <span class="property">hero.accuracy -= keeneye.statAdj;</span> },
+  };
+        </code></pre>
         <p>Wootric has been a multi-channel micro-survey platform which integrated into most other platforms to give customers relavant customer feedback when they needed it.
         </p>
         <p>Since then Wootric has transitioned into being an Enterprise Feedback Management platform where insights and sentiment are delivered with the help of machine learning. When once we had thousands of user feedback to analyze, we now had the problem of sometimes millions of feedback to understand. With thousands coming in daily. There needed to be a way for users to utilize this data, ask questions, and be able to find their answers.
@@ -87,11 +80,11 @@
         <p>To help the customer, we developed ways to slice and dice their data and to organize their data more thoughtfully.
         </p>
       </div>
-      <div class="screenshot">
-        <img src="images/wootric/NPS_Feedback.png" class="portfolio-example grow" alt="Wootric NPS survey on Keyton Row website">
-      </div>
     </div>
   </div>
+  <script src="/path/to/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
   <footer id="bottomBar">
       <p class="footer-text">© Daniel Pitrowiski 2021 | Lead Product Designer | <a target="_blank" href="mailto:danpitrowiski@gmail.com?subject=Hello Daniel! &#128075;">danpitrowiski@gmail.com</a></p>
       <ul class="soc">
