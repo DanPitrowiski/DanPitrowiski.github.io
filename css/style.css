@@ -45,6 +45,7 @@ body  {
   display: inline;
   margin: 0px;
   font-size: 16px;
+  color: #272a2b;
 }
 
 .content p {
@@ -220,6 +221,40 @@ PORTFOLIO
   font-weight: normal;
 }
 
+.update {
+  border-bottom: 1px solid #e0e0e0;
+  margin: auto;
+}
+
+.update a {
+  color: #000;
+}
+
+.update a:hover {
+text-decoration: underline;
+color: #46C0AA;
+}
+
+.update-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  margin: auto;
+  padding: 1rem 0 1rem 0;
+}
+
+.update h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.update img {
+  width: 64px;
+  height: 64px;
+  margin: auto 1rem auto auto;
+}
+
 div.job {
   /* padding: 0 30px 0 30px; */
   float: right;
@@ -268,13 +303,13 @@ hr {
   border-style: dashed;
   margin: 40px auto 40px auto;
   display: block;
-  width: 90%;
+  width: 70%;
 }
 
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: ##449BF7;
+  background-color: #449BF7;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -284,6 +319,17 @@ hr {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+}
+
+.boring-button {
+  background-color: #FFF !important;
+  border: 1px solid #323232 !important;
+  color: #323232 !important;
+}
+
+.boring-button span {
+  color: #323232;
+  font-size: 16px;
 }
 
 .button span {
