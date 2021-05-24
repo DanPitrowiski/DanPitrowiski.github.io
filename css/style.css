@@ -263,7 +263,7 @@ div.job {
 }
 
 .portfolio-list {
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 9rem 0;
   padding: 0;
 }
 
@@ -789,8 +789,8 @@ FOR SMALLER SCEENS
       background: url(../images/wootric-team.png);
       background-position-x: center;
       background-position-y: center;
-      height: 12rem;
-      margin-bottom: 2rem;
+      height: 8rem;
+      margin-bottom: 0;
       background-size: cover;
     }
 
