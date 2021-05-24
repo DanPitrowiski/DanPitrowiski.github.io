@@ -48,7 +48,7 @@ body  {
   color: #272a2b;
 }
 
-.content p, ul li {
+.content p, .article-list {
   font-size: 17px;
   font-family: charter, Georgia, Cambria;
   line-height: 1.8rem;
