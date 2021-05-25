@@ -449,7 +449,8 @@ max-width: 1200px;
 .emailme  {
   max-width: 600px;
   width: 90%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
   padding: 40px;
   float: center;
@@ -457,6 +458,7 @@ max-width: 1200px;
   border: 1px solid #C2C2C2;
   z-index: 1;
   margin-top: 2rem;
+  margin-bottom: 8rem;
 }
 
 .emailme h2 {
@@ -474,7 +476,7 @@ input {
   display: block;
   text-align: center;
   font-size: 16px;
-
+  border: 1px solid #CDCDD9;
 }
 
 .message[placeholder] {
