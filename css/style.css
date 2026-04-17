@@ -133,6 +133,7 @@ header a {
 
 header li.non-active-link  {
   color: #C2C2C2;
+  text-decoration: underline;
 }
 
 nav a:hover {
@@ -218,7 +219,7 @@ PORTFOLIO
 
 .small  {
   font-size: 15px;
-  color: #C2C2C2;
+  color: #5A5A5A;
   font-weight: normal;
 }
 
@@ -409,6 +410,12 @@ CSS effects
   width: 100%;
   /*height: 100%;*/
   z-index: 9999;
+}
+
+.pgf-image-m {
+  width: 50%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .aboutme-body {
@@ -614,7 +621,7 @@ pre code .number {
   height: auto;
   color: rgba(41, 41, 41, 1);
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 10rem;
 }
 
 .image-caption  {
