@@ -35,6 +35,95 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
+    <style>
+  :root {
+    color-scheme: light;
+    --page:            #f9f9f7;
+    --surface-1:       #fcfcfb;
+    --text-primary:    #0b0b0b;
+    --text-secondary:  #52514e;
+    --text-muted:      #898781;
+    --border:          rgba(11,11,11,0.10);
+    --hub-border:      #184f95;
+    --hub-fill:        #eaf1fc;
+    /* categorical slots 1-6, fixed order */
+    --s1: #2a78d6; /* Salesforce - blue */
+    --s2: #eb6834; /* Intercom - orange */
+    --s3: #1baf7a; /* Wootric Database - aqua */
+    --s4: #eda100; /* Google Sheets - yellow */
+    --s5: #e87ba4; /* Recurly - magenta */
+    --s6: #008300; /* JIRA - green */
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:            #0d0d0d;
+      --surface-1:       #1a1a19;
+      --text-primary:    #ffffff;
+      --text-secondary:  #c3c2b7;
+      --text-muted:      #898781;
+      --border:          rgba(255,255,255,0.10);
+      --hub-border:      #3987e5;
+      --hub-fill:        #17263a;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+    }
+  }
+  /** { box-sizing: border-box; }*/
+/*  body {
+    margin: 0;
+    background: var(--page);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+  }*/
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px 20px;
+    max-width: 1240px;
+    width: 100%;
+  }
+  p.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 0 !important;
+  }
+  /*svg { width: 100%; height: auto; display: block; }*/
+  .node-label {
+    font-size: 15px;
+    font-weight: 600;
+    fill: var(--text-primary);
+  }
+  .node-sub {
+    font-size: 11.5px;
+    fill: var(--text-secondary);
+  }
+  .hub-label {
+    font-size: 18px;
+    font-weight: 700;
+    fill: var(--text-primary);
+  }
+  .hub-sub {
+    font-size: 12.5px;
+    fill: var(--text-secondary);
+  }
+  .col-heading {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    fill: var(--text-muted);
+    text-transform: uppercase;
+  }
+</style>
+
   </head>
 
 <body>
@@ -53,62 +142,157 @@
   <!-- <div class="hero-wootric-div wootric-bg"> -->
   </div>
   <div class="resume portfolio-item">
-    <h2 class="content headline">Operationalizing AI for Customer Experience Management</h2>
-    <p class="content small">Senior Product Manager & Lead Designer · 2025-Present</p>
+    <img src="images/PGForsta_Logo.png" class="portfolio-ss grow portfolio-logo" alt="PG Forsta">
+<!--     <h2 class="content headline">Operationalizing AI for Customer Experience Management</h2>
+    <p class="content small">Senior Product Manager & Lead Designer · 2025-Present</p> -->
       <div class="row">
         <div class="column sidebar border-1">
           <h3>Responsibilities</h3>
             <ul>
-              <li>Coordinating with stakeholders to drive sales</li>
-              <li>Supporting Technical Support, Engineers, QA while running product and design</li>
-              <li>Working directly with Enterprise clients to improve their CX programs</li>
+              <li>Point person for Enterprise customers and internal stakeholders to build the product</li>
+              <li>Supporting Sales, Engineers, CS, Data Analytics, and QA</li>
+              <li>Leading designing</li>
             </ul>
         </div>
         <div class="column sidebar border-2">
           <h3>Growth</h3>
           <ul>
-            <li>Profitable product within the product line with +$5 million in sales</li>
+            <li>With a team of 5 managed +$5 million in ARR</li>
             <li>Customers in more than 80 countries including Footlocker, Jack in the Box, Docusign, Zoom, and Glassdoor</li>
           </ul>
         </div>
         <div class="column sidebar border-3">
           <h3>KPIs</h3>
           <ul>
-            <li>Purchased by PG Forsta in May 2025</li>
-            <li>Surveys Sent - 5+ billion</li>
+            <li>5+ billion customer surveys processed</li>
+            <li>90% of CS issues resolved within the first week</li>
+            <li>Lowest churn rate within company</li>
+            <li>Fastest onboarding in CRM industry (90d from signup to finished).
           </ul>
         </div>
       </div>
       <div class="content">
-        <h3 class="subheadline"><strong>1. Framing the Problem: From Reactive CX to Predictive Intelligence</strong></h3>
-        <p>Traditional CX tools like NPS and CSAT act as lagging indicators, telling teams what already happened rather than what will happen next. Organizations struggle to extract value from unstructured feedback such as reviews, support tickets, and survey comments, which make up the majority of customer data.</p>
-        <p>This results in teams spending significant time manually analyzing feedback instead of taking action. The opportunity was to transform overwhelming qualitative feedback into predictive real-time decision-making tool.</p>
-        <img src="images/pgf-listen-2.png" class="portfolio-ss grow" alt="PG Forsta">
-        <p class="image-caption">How to turn customer feedback into actionable results.<p>
+        <h3 class="subheadline"><strong>Project 1: Using AI to Close-the-loop</strong></h3>
+        <p>Led the redesign of how AI-driven insights were surfaced and actioned. The project focused on two goals: helping teams close the loop with customers more efficiently, and unifying visibility into that activity across integrated platforms. I architected the data flow so that responses synced from third-party integrations into the database and through to the CXI platform, giving customers clear confirmation when their feedback had been addressed. The AI insights within CXI helped customers surface the highest-impact survey responses out of a pool of millions, so teams could prioritize where reaching out to customer would matter most.</p>
+        <img src="images/Notes.gif" class="portfolio-ss grow full-width" alt="PG Forsta">
+        <!-- <img src="images/pgf-listen-2.png" class="portfolio-ss grow" alt="PG Forsta"> -->
+        <p class="image-caption">An example of how the process of turning customer feedback into actionable results starts.<p>
       </div>
       <div class="content">
-        <h3 class="subheadline"><strong>2. Product Challenge: AI-Powered Predictive CX (welcome Wootric CXI)</strong></h3>
-        <p>The goal was to evolve customer experience from measurement to prediction and action. Wootric CXI leverages AI, natural language processing, and large language models to unify structured and unstructured data, interpret feedback at scale, and forecast customer outcomes such as churn, loyalty, and conversion.</p>
-        <p>Rather than simply surfacing insights, the platform identifies key drivers of customer behavior and recommends actions. This enables teams to move beyond analysis and into proactive experience management.</p>
+        <h3 class="subheadline"><strong>Project 2: Unified Customer Data Across Platforms</strong></h3>
+        <p>After Press Ganey purchased us, I identified and led an effort to consolidate customer data that was previously siloed across platforms like Salesforce, Intercom, our own database, Recurly, and scattered spreadsheets — accessible only to individual account managers rather than the company at large. I pitched the initiative to leadership, then designed the schema and architecture for a unified customer database, including linking individual accounts to their parent organizations for the first time. We used <a href="https://www.holistics.io/">Holisitics</a> a self-service BI platform. This gave Press Ganey a company-wide view of the Wootric platform for the first time and became a foundational data asset for cross-functional teams. The visibility it created directly led to new upsell opportunities with customers likely to pay more, and recovered sales from demoed accounts that had previously fallen through the cracks.</p>
       </div>
+
+      <div class="card">
+        <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+
+          <!-- column headings -->
+          <text x="40" y="70" class="col-heading">Source systems</text>
+          <text x="520" y="70" class="col-heading">Unified layer</text>
+          <text x="960" y="70" class="col-heading">Company-wide access</text>
+
+          <!-- connecting lines: sources -> hub -->
+          <g fill="none" stroke-linecap="round">
+            <path d="M320,165 C420,165 420,330 520,365" stroke="var(--s1)" stroke-width="2.5" opacity="0.55"/>
+            <path d="M320,249 C420,249 420,345 520,370" stroke="var(--s2)" stroke-width="2.5" opacity="0.55"/>
+            <path d="M320,333 C420,333 460,355 520,375" stroke="var(--s3)" stroke-width="2.5" opacity="0.55"/>
+            <path d="M320,417 C420,417 460,395 520,375" stroke="var(--s4)" stroke-width="2.5" opacity="0.55"/>
+            <path d="M320,501 C420,501 420,405 520,380" stroke="var(--s5)" stroke-width="2.5" opacity="0.55"/>
+            <path d="M320,585 C420,585 420,420 520,385" stroke="var(--s6)" stroke-width="2.5" opacity="0.55"/>
+          </g>
+
+          <!-- connecting lines: hub -> teams -->
+          <g fill="none" stroke-linecap="round">
+            <path d="M800,345 C880,345 880,281 960,281" stroke="var(--hub-border)" stroke-width="2.5" opacity="0.55"/>
+            <path d="M800,375 C880,375 880,375 960,375" stroke="var(--hub-border)" stroke-width="2.5" opacity="0.55"/>
+            <path d="M800,405 C880,405 880,469 960,469" stroke="var(--hub-border)" stroke-width="2.5" opacity="0.55"/>
+          </g>
+
+          <!-- source nodes -->
+          <g>
+            <!-- Salesforce -->
+            <rect x="40" y="133" width="280" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <rect x="40" y="133" width="6" height="64" rx="3" fill="var(--s1)"/>
+            <text x="64" y="160" class="node-label">Salesforce</text>
+            <text x="64" y="180" class="node-sub">Sales &amp; account data</text>
+
+            <!-- Intercom -->
+            <rect x="40" y="217" width="280" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <rect x="40" y="217" width="6" height="64" rx="3" fill="var(--s2)"/>
+            <text x="64" y="244" class="node-label">Intercom</text>
+            <text x="64" y="264" class="node-sub">Support conversations</text>
+
+            <!-- Wootric database -->
+            <rect x="40" y="301" width="280" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <rect x="40" y="301" width="6" height="64" rx="3" fill="var(--s3)"/>
+            <text x="64" y="328" class="node-label">Wootric Database</text>
+            <text x="64" y="348" class="node-sub">Product &amp; survey data</text>
+
+            <!-- Google Sheets -->
+            <rect x="40" y="385" width="280" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <rect x="40" y="385" width="6" height="64" rx="3" fill="var(--s4)"/>
+            <text x="64" y="412" class="node-label">Google Sheets</text>
+            <text x="64" y="432" class="node-sub">Manual account tracking</text>
+
+            <!-- Recurly -->
+            <rect x="40" y="469" width="280" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <rect x="40" y="469" width="6" height="64" rx="3" fill="var(--s5)"/>
+            <text x="64" y="496" class="node-label">Recurly</text>
+            <text x="64" y="516" class="node-sub">Billing &amp; payments</text>
+
+            <!-- JIRA -->
+            <rect x="40" y="553" width="280" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <rect x="40" y="553" width="6" height="64" rx="3" fill="var(--s6)"/>
+            <text x="64" y="580" class="node-label">JIRA</text>
+            <text x="64" y="600" class="node-sub">Product &amp; support issues</text>
+          </g>
+
+          <!-- hub -->
+          <g>
+            <rect x="520" y="305" width="280" height="140" rx="14" fill="var(--hub-fill)" stroke="var(--hub-border)" stroke-width="2"/>
+            <text x="660" y="360" text-anchor="middle" class="hub-label">Unified Customer</text>
+            <text x="660" y="382" text-anchor="middle" class="hub-label">Database</text>
+            <text x="660" y="406" text-anchor="middle" class="hub-sub">Accounts linked to parent orgs</text>
+            <text x="660" y="424" text-anchor="middle" class="hub-sub">Queryable via SQL + dashboards</text>
+          </g>
+
+          <!-- team nodes -->
+          <g>
+            <rect x="960" y="249" width="200" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <text x="1060" y="277" text-anchor="middle" class="node-label">Sales</text>
+            <text x="1060" y="297" text-anchor="middle" class="node-sub">Upsell targeting</text>
+
+            <rect x="960" y="343" width="200" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <text x="1060" y="371" text-anchor="middle" class="node-label">Product</text>
+            <text x="1060" y="391" text-anchor="middle" class="node-sub">Platform-wide view</text>
+
+            <rect x="960" y="437" width="200" height="64" rx="10" fill="var(--surface-1)" stroke="var(--border)"/>
+            <text x="1060" y="465" text-anchor="middle" class="node-label">Customer Support</text>
+            <text x="1060" y="485" text-anchor="middle" class="node-sub">Full account context</text>
+          </g>
+
+        </svg>
+        <p class="subtitle image-caption">Six disconnected systems consolidated into one shared customer database — queryable via SQL and visible company-wide.</p>
+      </div>
+
         <div class="content">
-        <h3 class="subheadline"><strong>3. Turning Data into Insight</h3></strong></h3>
-        <p>A key challenge was making unstructured data usable. AI-powered summarization transforms large volumes of qualitative feedback into clear, digestible themes, while machine learning dynamically evolves topic detection over time.</p>
-        <p>The design prioritizes surfacing what matters most by highlighting key drivers impacting business metrics and ranking insights based on predicted impact rather than volume. This required careful design of human-AI collaboration, ensuring outputs are transparent, explainable, and actionable.</p>
-        <img src="images/pgf-ai-analysis.png" class="portfolio-ss grow" alt="PG Forsta">
-        <p class="image-caption">An example of how AI analyses feedback to categorize and measure to find key insights.<p>
-      </div>
-      <div class="content">
-        <h3 class="subheadline"><strong>4. From Insight to Action: Closing the Loop Automatically</h3></strong></h3>
-        <p>The true value of AI comes from driving action. The platform integrates predictive insights directly into workflows, enabling automated responses, customer recovery actions, and intelligent segmentation based on predicted behavior.</p>
-        <p>This allows organizations to anticipate churn, prioritize high-impact improvements, and personalize customer engagement at scale. By using the full suite of tools, the gap between insight and action is significantly reduced.</p>
-        <img src="images/pgf-ai-response.png" class="portfolio-ss grow" alt="PG Forsta">
-        <p class="image-caption">Auto generating responses to close the loop.<p>
-      </div>
-      <div class="content">
+          <h3 class="subheadline"><strong>Project 3 - Custom Designs Across Web, Email, iOS and Android</h3></strong></h3>
+          <p>A design that took awhile was implementing custom survey designs that would work across all channels. For a survey to work on any email platform and still look and feel the same on an iOS and Android app is a harder feat than one might assume. Especially as we wanted to make sure no matter what the customer chose, the survey would still meet accesibilty standards.</p>
+          <img src="images/Color.gif" class="portfolio-ss grow" alt="PG Forsta">
+          <p class="image-caption">The admin showing examples of how the same design would appear across channels.<p>
+        </div>
+        <div class="content">
+          <h3 class="subheadline"><strong>Project 4 - Web Survey Accessibility</h3></strong></h3>
+          <p>An effort across the entire platform from surveys, to admin, to dashboards was to meet WCAG AAA accessiblility standards.</p>
+          <p>For example, depending on the color you've set for a background the font will automatically be black or white to maximize its readability and accessibility. And an error will appear letting you know if the contrast doesn't meet AA or AAA readibility in the outlier cases.</p>
+          <img src="images/Light.png" class="portfolio-ss grow" alt="PG Forsta">
+          <img src="images/Dark.png" class="portfolio-ss grow" alt="PG Forsta">
+          <p class="image-caption">Auto adjusting font on every device.<p>
+        </div>
+<!--       <div class="content">
         <h3 class="subheadline"><strong>5. Outcomes & Impact</h3></strong></h3>
         <p>Clients are integrating these processes as we speak into their everyday workflow. Each organization is different but the biggest takeaway has been a dramatic decrease in the manual work that normally came with closing the loop and finding the insights. With this addition, customers have now also had the desire to be even more involved with their CX program. Wanting the refine the processes even further and measure the results.</p>
-        <p>Utilizing AI to help customer support, sales, and product spend more time working on the important KPIs and less time on the busy work, I think has been a great example of how to use AI effectively.</p>
+        <p>Utilizing AI to help customer support, sales, and product spend more time working on the important KPIs and less time on the busy work, I think has been a great example of how to use AI effectively.</p> -->
 <!--         <img src="images/pgf-listen-2.png" class="portfolio-ss grow" alt="PG Forsta">
         <p class="image-caption">How to turn customer feedback into actionable results.<p> -->
       </div>
