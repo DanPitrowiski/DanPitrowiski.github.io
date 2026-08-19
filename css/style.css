@@ -416,9 +416,12 @@ CSS effects
   /*position: absolute;*/
   top: 0;
   left: 0;
-  width: 100%;
+  width: 70%;
   /*height: 100%;*/
   z-index: 9999;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pgf-image-m {
@@ -428,17 +431,17 @@ CSS effects
 }
 
 .aboutme-body {
-  width: 700px;
+  width: 750px;
   margin: 0 auto;
   margin-top: 2rem;
 }
 
 .aboutme-text {
   padding: 0 30px 30px 30px ;
-  width: 600px;
+  width: 750px;
   margin: 0 auto;
   margin-bottom: 60px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .aboutme p {
@@ -446,7 +449,10 @@ CSS effects
 }
 
 .aboutme-bg {
-  width: 100%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   /*margin-bottom: 2em;*/
 /*  position: absolute;
   top: 0;
@@ -637,7 +643,11 @@ pre code .number {
   font-size: 12px;
   color: #827e7e;
   font-style: italic;
-  margin-top: -.4rem;
+  margin-top: 0rem;
+}
+
+.aboutme-body .image-caption {
+  text-align: center;
 }
 
 .row:after {
