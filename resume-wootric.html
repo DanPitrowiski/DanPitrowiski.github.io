@@ -51,12 +51,12 @@
   </header>
 
   <div class="hero-wootric-div wootric-bg">
-    <!-- <img src="images/wootric-logo.png"> -->
   </div>
   <div class="resume portfolio-item">
-    <h2 class="content headline">After a BILLION surveys, what do you do with all that data?</h2>
+    <!-- <img src="images/im+wootric.png" class="grow im-wootric-logo" alt="Wootric and InMoment"> -->
+    <h3 class="content headline">Wootric Projects Before Acquisition</h2>
     <p class="content small">Lead Product Designer · Nov 2015&#8594;2025</p>
-      <div class="row">
+      <!-- <div class="row">
         <div class="column sidebar border-1">
           <h3>Experience</h3>
             <ul>
@@ -70,7 +70,7 @@
           <h3>Growth</h3>
           <ul>
             <li>Millions in sales</li>
-<!--             <li>Went from targeting Startups to Enterprise</li> -->
+            <li>Went from targeting Startups to Enterprise</li>
             <li>Customers in more than 75 countries including Zoom, Docusign, and HSBC</li>
           </ul>
         </div>
@@ -81,30 +81,56 @@
             <li>Purchased by InMoment Dec 2020</li>
             <li>Surveys Sent - 3+ billion</li>
           </ul>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
       <div class="content">
-        <h3 class="subheadline"><strong>Where it all began... collecting feedback</strong></h3>
-        <p>Wootric began as a multi-channel micro-survey platform that integrated into most other platforms (Salesforce, Intercom, Slack, Zendesk, etc.) to give customers relevant customer feedback when they need it.
+      </br>
+        <h2 class="subheadline"><strong>(1) The Standard Dashboard for Everyone</strong></h2>
+        <p>Wootric started off as a survey company providing easy code-based NPS/CSAT/CES surveys any company could use. Plug the code into any channel and it would work.
         </p>
-        <p>Since then, Wootric has transitioned into being an Enterprise Feedback Management platform where insights and sentiment are delivered with the help of machine learning. When once we had thousands of user feedback to analyze, we now had the problem of sometimes millions of feedback to understand with thousands coming in daily. There needed to be a way for users to utilize this data, ask questions, and be able to find their answers.
+        <p>With that we needed the Standard Dashboard a free customer could land on before any upgrades. Even though over the years, I wanted to upgrade it the analytics said customers liked it.
         </p>
-        <p>To help the customer, we developed ways to slice and dice their data and to organize their data more thoughtfully.
+        <p>Weekly Actives kept rising, few customers reported confusion, and reporting was just enough to satisify CX managers who would use screenshots in their Executive Reports.
         </p>
       </div>
       <div class="screenshot">
         <img src="images/wootric/NPS_Feedback.png" class="portfolio-example grow" alt="Wootric NPS survey on Keyton Row website">
-        <p class="image-caption">Wootric's Survey Dashboard where intial customer feedback is gathered.<p>
+        <p class="image-caption">The Standard Survey Dashboard<p>
       </div>
       <div class="content">
-        <h3 class="subheadline"><strong>The User Problem</strong></h3>
-        <p>As a user, we have too much customer feedback to understand. Without a data scientist, we have no way of analyzing it. How can Wootric help us categorize, analyze, and gather insights within their platform?</p>
+        <h2 class="subheadline"><strong>(2) The Enterprise Executive Dashboard</strong></h2>
+        <p><b>Problem:</b> Enterprise Customer receive millions of responses that are near impossible to analyze. How do you give them tools to analze feedback in the millions?
+        </p>
+        <p>Customers like DocuSign, Zoom, Glassdoor, etc. were used to exporting spreadsheets of responses and creating their own dashboards. But this was always a manual process for those involved. Some of the more advanced customers used BI tools like Tableau. But it wasn't a user friendly experience to do what they wanted.
+        </p>
+        <p>After many customer interviews here was the list of features we came up with:</p>
+        <p><b>Primary Feature List:</b> Custom Dashboards, all feedback from all sources centralized in one place, actionable insights, and automatic categorization of feedback.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img src="images/wootric/CXI-Customer-Support-Reporting.png" class="portfolio-example grow" alt="Wootric Executive Dashboard for Customer Support">
+        <p class="image-caption">Wootric CXI Executive Dashboard example for a Customer Support team.<p>
       </div>
       <div class="content">
-        <h3 class="subheadline"><strong>The Solution: CXInsights and Executive Dashboards</strong></h3>
-        <p>CXI or Customer Experience Insights was a company initiative to create a new platform that was devoted to taking feedback from any source, in any amount, and giving you a dashboard to analyze it.</p>
-        <h3 class="subheadline"><strong>(1) Auto-Categorizing w/ Tags and Sentiment</strong></h3>
-        <p>To start the process, we needed to categorize the feedback into meaningful groups. From their, the data could tell more of a story. For that, we used Tags, which utilized three different types.
+        <h2 class="subheadline"><strong>(2a) Feedback Breakdown - the disconnect between your data and the UI</strong></h2>
+        <p>After user testing, one major user issue remained that was only possible to catch from watching sessions. Users didn't know what their data looked like as they filtered and explored their surveys. Too they'd click to filter their data, and their would be 0 results. This wasn't because of us. Looking deeper into it, it was because too often customers passed user segments with no values. They'd have a property called "company_name" that was empty. And another property called "company" with all the data.
+        </p>
+        <p>While we had all of their survey feedback, we had no control over what data they passed us. In most cases, the stakeholders using our product had little control within their company either. Data cleanup is an corporate wide issue that effects all industries.
+        </p>
+        <p> The <b>Feedback Breakdown</b> allowed customers to see the breakdown of data before doing anything. They could see what segments already existed, how much data was in any given segment, and be able to click into it to dive deeper.
+        </p>
+        <p>The result was the Feedback page was by far the most used page by Enterprise customers. Spending over 80% of their time on this single page.
+        </p>
+        <p><b>NOTE:</b> The problem we solved is still a major issue I see industry wide across CX dashboards. Segmenting your data and viewing the results usually exist on different pages. And unless you pass the cleanest of data, their is no way to know what will work beforehand. It's a major reason why I think no one likes dashboards.
+        </p>
+      </div>
+      <div class="screenshot">
+        <img src="images/wootric/cxi-feedback-template.png" class="portfolio-example grow" alt="Feedback Breakdown">
+        <p class="image-caption">Explore feedback and view the feedback breakdown.<p>
+      </div>
+      <div class="content">
+        <h3 class="subheadline"><strong>(3) AI/ML Auto-Categorizing Feedback</strong></h2>
+        <p>To scale for Enterprise customers we needed to categorize their feedback automatically into meaningful groups. From their, the data could tell more of a story. For that, we used Tags, which utilized three different types.
         </p>
         <ul class="article-list">
           <li><strong>Smart Tags</strong> were designed to match based upon Machine Learning and plenty of training data.</li>
@@ -120,16 +146,7 @@
         <img src="images/wootric/tag-hover-examples.png" class="portfolio-example grow" alt="Examples of Wootric Tag Types">
         <p class="image-caption">Examples of Wootric's Tag Types and the hovers to help users understand them.<p>
       </div>
-      <div class="content">
-        <h3 class="subheadline"><strong>(2) Customizable Executive Dashboards</strong></h3>
-        <p>The feedback we received each had it's own unique story. For that, each deserved to have their own unique dashboard. So we developed Executive Dashboards where each report you create, customize, and place on your dashboard. They can report on NPS/CSAT/CES/Any Score, Tag Sentiment, changes in Tags, Properties, etc.
-        </p>
-      </div>
-      <div class="screenshot">
-        <img src="images/wootric/CXI-Customer-Support-Reporting.png" class="portfolio-example grow" alt="Wootric Executive Dashboard for Customer Support">
-        <p class="image-caption">Wootric CXI Executive Dashboard example for a Customer Support team.<p>
-      </div>
-      <div class="content">
+<!--       <div class="content">
         <h3 class="subheadline"><strong>(3) Watchlist Insights</strong></h3>
         <p>Watchlists were created when users complained that they would just like simple lists of feedback and users who they should look into. Those were users whose scores were changing or whose sentiment on their feedback had changed. If a score is getting lower or sentiment worse, it may be a sign of future churn.
         </p>
@@ -137,14 +154,7 @@
       <div class="screenshot">
         <img src="images/wootric/Watchlists-Combined.png" class="portfolio-example grow" alt="Wootric Watchlists for following score, sentiment, and other trends in your users and feedback.">
         <p class="image-caption">Wootric Watchlists for following score, sentiment, and other trends in your users and feedback.<p>
-      </div>
-      <div class="content">
-        <h3 class="subheadline"><strong>The Outcome</strong></h3>
-        <p>Wootric, since making CXI has landed our largest customers and biggest deals. It changed the direction of Wootric from a survey platform to Enterprise Feedback Management.
-        </p>
-        <p>Seeing that growth and product potential, InMoment acquired Wootric in December of 2020. Together we're hoping to bring Wootric's CXI Dashboard to even more customers and grow CXI's potential.
-        </p>
-      </div>
+      </div> -->
     </div>
   </div>
   <footer id="bottomBar">

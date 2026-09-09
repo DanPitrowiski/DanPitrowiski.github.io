@@ -273,6 +273,13 @@ div.job {
   width: 30% !important;
 }
 
+.im-wootric-logo {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: -webkit-auto;
+  display: block;
+}
+
 .portfolio-ss {
   display: inline;
   width: 50%;
