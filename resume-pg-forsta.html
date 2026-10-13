@@ -1,190 +1,155 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Dan Daniel Pitrowiski design and front-end developer portfolio">
-    <meta name="keywords" content="designer, porfolio, front-end developer">
-    <meta name="author" content="Dan Pitrowiski">
-    <meta property="og:title" content="Daniel Pitrowiski's Portfolio" />
-    <meta property="og:description" content="Come say hello and see what Daniel's been up to." />
-    <meta property="og:image" content="https://danpitrowiski.github.io/images/dan-animoji.jpg" />
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons//pple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <title>Dan Pitrowiski ~ About Me</title>
-
-    <!-- external CSS link -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
-    <style>
-  :root {
-    color-scheme: light;
-    --page:            #f9f9f7;
-    --surface-1:       #fcfcfb;
-    --text-primary:    #0b0b0b;
-    --text-secondary:  #52514e;
-    --text-muted:      #898781;
-    --border:          rgba(11,11,11,0.10);
-    --hub-border:      #184f95;
-    --hub-fill:        #eaf1fc;
-    /* categorical slots 1-6, fixed order */
-    --s1: #2a78d6; /* Salesforce - blue */
-    --s2: #eb6834; /* Intercom - orange */
-    --s3: #1baf7a; /* Wootric Database - aqua */
-    --s4: #eda100; /* Google Sheets - yellow */
-    --s5: #e87ba4; /* Recurly - magenta */
-    --s6: #008300; /* JIRA - green */
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Case study: operationalizing AI for customer experience management at Press Ganey Forsta. By Daniel Pitrowiski.">
+<meta name="author" content="Dan Pitrowiski">
+<meta property="og:title" content="Operationalizing AI for CX · Daniel Pitrowiski">
+<meta property="og:description" content="Four projects that made a decade-old CX platform work at Press Ganey's scale.">
+<meta property="og:image" content="https://danpitrowiski.github.io/images/pgf-ai-analysis.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+<title>Press Ganey Forsta · Daniel Pitrowiski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style-new.css">
+<link rel="stylesheet" href="css/case-study.css">
+<style>
+/* Colors for the unified-data diagram. Neutrals come from style-new.css; one color per source system. */
+:root {
+  --surface-1: var(--paper); --border: var(--rule);
+  --text-primary: var(--ink); --text-secondary: var(--ink-soft); --text-muted: var(--ink-soft);
+  --hub-border: #184f95; --hub-fill: #eaf1fc;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --hub-border: #3987e5; --hub-fill: #17263a;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2e9b2e;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:where(:not([data-theme="light"])) {
-      color-scheme: dark;
-      --page:            #0d0d0d;
-      --surface-1:       #1a1a19;
-      --text-primary:    #ffffff;
-      --text-secondary:  #c3c2b7;
-      --text-muted:      #898781;
-      --border:          rgba(255,255,255,0.10);
-      --hub-border:      #3987e5;
-      --hub-fill:        #17263a;
-      --s1: #3987e5;
-      --s2: #d95926;
-      --s3: #199e70;
-      --s4: #c98500;
-      --s5: #d55181;
-      --s6: #008300;
-    }
-  }
-  /** { box-sizing: border-box; }*/
-/*  body {
-    margin: 0;
-    background: var(--page);
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 32px 16px;
-  }*/
-  .card {
-    background: var(--surface-1);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 28px 32px 20px;
-    max-width: 1240px;
-    width: 100%;
-  }
-  p.subtitle {
-    text-align: center;
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-top: 0 !important;
-  }
-  /*svg { width: 100%; height: auto; display: block; }*/
-  .node-label {
-    font-size: 15px;
-    font-weight: 600;
-    fill: var(--text-primary);
-  }
-  .node-sub {
-    font-size: 11.5px;
-    fill: var(--text-secondary);
-  }
-  .hub-label {
-    font-size: 18px;
-    font-weight: 700;
-    fill: var(--text-primary);
-  }
-  .hub-sub {
-    font-size: 12.5px;
-    fill: var(--text-secondary);
-  }
-  .col-heading {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    fill: var(--text-muted);
-    text-transform: uppercase;
-  }
+}
+:root[data-theme="dark"] {
+  --hub-border: #3987e5; --hub-fill: #17263a;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2e9b2e;
+}
+.diagram text { font-family: var(--f-body); }
+.node-label { font-size: 15px; font-weight: 600; fill: var(--text-primary); }
+.node-sub { font-size: 11.5px; fill: var(--text-secondary); }
+.hub-label { font-size: 18px; font-weight: 700; fill: var(--text-primary); }
+.hub-sub { font-size: 12.5px; fill: var(--text-secondary); }
+.col-heading { font: 500 11px var(--f-mono); letter-spacing: .08em; fill: var(--text-muted); text-transform: uppercase; }
 </style>
-
-  </head>
-
+</head>
 <body>
-  <header>
-    <nav class="clearfix">
-      <div class="logo"><a href="index.html"><img src="images/DJP_logo.png"></a></div>
-      <ul>
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="personal.html">Personal Projects</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="masthead">
+  <a class="wordmark" href="index.html">Pitrowiski<span>Senior Product Designer</span></a>
+  <nav aria-label="Elsewhere">
+    <a href="https://www.linkedin.com/in/danpitrowiski/">LinkedIn</a>
+    <a href="https://medium.com/@danpitrowiski">Medium</a>
+    <a href="https://dribbble.com/DJP">Dribbble</a>
+    <a href="https://github.com/DanPitrowiski">GitHub</a>
+  </nav>
+</header>
 
-  <!-- <div class="hero-wootric-div wootric-bg"> -->
-  </div>
-  <div class="resume portfolio-item">
-    <img src="images/PGForsta_Logo.png" class="portfolio-logo grow" alt="PG Forsta">
-<!--     <h2 class="content headline">Operationalizing AI for Customer Experience Management</h2>
-    <p class="content small">Senior Product Manager & Lead Designer · 2025-Present</p> -->
-      <div class="row">
-        <div class="column sidebar border-1">
-          <h3>Responsibilities</h3>
-            <ul>
-              <li>Point person for Enterprise customers and internal stakeholders to build the product</li>
-              <li>Supporting Sales, Engineers, CS, Data Analytics, and QA</li>
-              <li>Leading designing</li>
-            </ul>
-        </div>
-        <div class="column sidebar border-2">
-          <h3>Growth</h3>
-          <ul>
-            <li>With a team of 5 managed +$5 million in ARR</li>
-            <li>Customers in more than 80 countries including Footlocker, Jack in the Box, Docusign, Zoom, and Glassdoor</li>
-          </ul>
-        </div>
-        <div class="column sidebar border-3">
-          <h3>KPIs</h3>
-          <ul>
-            <li>5+ billion customer surveys processed</li>
-            <li>90% of CS issues resolved within the first week</li>
-            <li>Lowest churn rate within company</li>
-            <li>Fastest onboarding in CRM industry (90d from signup to finished).
-          </ul>
-        </div>
-      </div>
-      <div class="content">
-        <h3 class="subheadline"><strong>Project 1: Using AI to Close-the-loop</strong></h3>
-        <p>Led the redesign of how AI-driven insights were surfaced and actioned. The project focused on two goals: helping teams close the loop with customers more efficiently, and unifying visibility into that activity across integrated platforms. I architected the data flow so that responses synced from third-party integrations into the database and through to the CXI platform, giving customers clear confirmation when their feedback had been addressed. The AI insights within CXI helped customers surface the highest-impact survey responses out of a pool of millions, so teams could prioritize where reaching out to customer would matter most.</p>
-        <img src="images/Notes.gif" class="portfolio-example grow full-width" alt="PG Forsta">
-        <!-- <img src="images/pgf-listen-2.png" class="portfolio-example grow" alt="PG Forsta"> -->
-        <p class="image-caption">An example of how the process of turning customer feedback into actionable results starts.<p>
-      </div>
-      <div class="content">
-        <h3 class="subheadline"><strong>Project 2: Unified Customer Data Across Platforms</strong></h3>
-        <p>After Press Ganey purchased us, I identified and led an effort to consolidate customer data that was previously siloed across platforms like Salesforce, Intercom, our own database, Recurly, and scattered spreadsheets — accessible only to individual account managers rather than the company at large. I pitched the initiative to leadership, then designed the schema and architecture for a unified customer database, including linking individual accounts to their parent organizations for the first time. We used <a href="https://www.holistics.io/">Holisitics</a> a self-service BI platform. This gave Press Ganey a company-wide view of the Wootric platform for the first time and became a foundational data asset for cross-functional teams. The visibility it created directly led to new upsell opportunities with customers likely to pay more, and recovered sales from demoed accounts that had previously fallen through the cracks.</p>
-      </div>
+<div class="shell">
+  <aside class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#ai-loop">AI close-the-loop</a></li>
+      <li><a href="#unified-data">Unified customer data</a></li>
+      <li><a href="#cross-channel">Cross-channel surveys</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+      <li><a href="#outcome">Outcome</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ol>
+  </aside>
 
-      <div class="card">
-        <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <main class="article">
+    <div class="title-row" style="border-bottom: none;">
+      <p class="crumb"><a href="index.html#work">Case studies</a> / Press Ganey</p>
+      <h1>Operationalizing AI for Customer Experience Management</h1>
+      <p class="dek">Four projects that turned a decade-old feedback platform into one that works at Press Ganey's scale.</p>
+    </div>
+    <p class="meta-line">Senior Product Manager &amp; Lead Designer · Press Ganey Forsta · 2025–present</p>
+
+    <aside class="infobox" aria-label="Project summary">
+      <div class="ib-name">Press Ganey Forsta</div>
+      <dl>
+        <dt>My role</dt><dd>Senior Product Manager &amp; Lead Designer</dd>
+        <dt>Platform</dt><dd>Wootric CX, within Press Ganey Forsta</dd>
+        <dt>Timeline</dt><dd>2025–present</dd>
+        <dt>Team</dt><dd>5</dd>
+        <dt>Partners</dt><dd>Sales, Engineering, CS, Data Analytics, QA</dd>
+        <dt>Customers</dt><dd>Foot Locker, Jack in the Box, DocuSign, Zoom, Glassdoor</dd>
+      </dl>
+    </aside>
+
+    <!-- ============ OVERVIEW ============ -->
+    <h2 id="overview">Overview</h2>
+    <p>After Press Ganey acquired the Wootric platform, my job was to make it work for a much larger company and a more demanding set of enterprise customers. I was the point person for those customers and for internal stakeholders, deciding what to build and leading the design of it.</p>
+    <p>Four projects carried most of that work. Two help customers act on feedback: AI that finds the responses worth acting on, and survey designs that look right on every channel and to every reader. Two help Press Ganey itself: one shared view of every customer account, and accessibility standards across the whole platform.</p>
+
+    <!-- ============ IMPACT ============ -->
+    <h2 id="impact">Impact</h2>
+    <div class="stats">
+      <div class="stat"><b>$5M+</b><span>ARR managed with a team of 5</span></div>
+      <div class="stat"><b>75%</b><span>of CS issues resolved in the first week</span></div>
+      <div class="stat"><b>6</b><span>customer databases merged into one.</span></div>
+    </div>
+
+    <!-- ============ PROJECT 1 ============ -->
+    <!-- <p class="project-label">Project 1 of 4</p> -->
+    <h2 id="ai-loop">Using AI to close the loop  <span class="project-label">(Project 1 of 4)</span></h2>
+
+
+    <p class="beat">Problem</p>
+    <p>Enterprise customers collect millions of survey responses, reviews, and support conversations. Teams couldn't tell which ones were worth following up on. When they did follow up, it happened in other tools, so nobody in the CX platform could see whether a customer's feedback had actually been addressed.</p>
+
+    <p class="beat">Key decision</p>
+    <p>I redesigned how AI insights were surfaced and acted around two goals:</p>
+    <ul class="tag-types">
+      <li><b>Close the loop faster:</b> Get customers doing their job faster.</li>
+      <li><b>Track It:</b> We wanted to track the follow-up and push that data to integrated apps for others to see.</li>
+    </ul>
+
+    <p class="beat">What shipped</p>
+    <p>AI insights pick out the highest-impact responses from a pool of millions, so teams know where reaching out will matter most. The same analysis works on conversations, tagging what the customer said and how the agent responded.</p>
+    <figure class="shot narrow">
+      <img src="images/pgf-ai-analysis.png" alt="A contact-center conversation with AI-detected insights on the left, such as Complaint, Quality, and Sadness, and agent attributes on the right, such as Attitude Apologetic" data-zoom>
+      <figcaption>AI analysis. Customer insights on the left, agent behavior on the right, each linked to the exact words that triggered it.</figcaption>
+    </figure>
+    <p>For public reviews, AI drafts a reply in the brand's voice. The team edits it, then copies it to the review site.</p>
+    <figure class="shot narrow">
+      <img src="images/pgf-ai-response.png" alt="A five-star Google review with keyword analysis and an AI-generated draft response" data-zoom>
+      <figcaption>An AI-drafted response to a Google review, with editable AI rules and a reminder to proofread before posting.</figcaption>
+    </figure>
+    <p>Every response gets a workflow for following up: tag it, add a note, reply, forward, and mark it complete.</p>
+    <figure class="shot">
+      <img src="images/Notes.gif" alt="A survey response with tags, an internal note being edited, and reply, forward, and mark complete actions" data-zoom>
+      <figcaption>Closing the loop on a single response: tags, an internal note, and the actions that sync back to the platform.</figcaption>
+    </figure>
+
+    <p class="beat">Result</p>
+    <p>Customers are building these steps into their everyday workflow. The biggest change is a sharp drop in the manual work that used to come with finding insights and closing the loop, and customers now want to go further, refining the process and measuring the results.</p>
+
+    <!-- ============ PROJECT 2 ============ -->
+    <!-- <p class="project-label">Project 2 of 4</p> -->
+    <h2 id="unified-data">Unified customer data across platforms   <span class="project-label">(Project 2 of 4)</span></h2>
+
+    <p class="beat">Problem</p>
+    <p>Customer data was split across Salesforce, Intercom, our own database, Recurly, JIRA, and scattered spreadsheets. Most of it was only visible to the individual account manager who owned it, so nobody had a company-wide picture of who our customers were or how they were doing.</p>
+
+    <p class="beat">Key decision</p>
+    <p>I identified the gap, pitched the fix to leadership, and designed the schema and architecture for a unified customer database. The hardest modeling choice was linking individual accounts to their parent organizations, which had never been done before. We used <a href="https://www.holistics.io/">Holistics</a>, a self-service BI platform, so teams could query and build dashboards without waiting on an analyst.</p>
+
+    <p class="beat">What shipped</p>
+    <figure class="diagram">
+<svg viewBox="0 0 1200 630" role="img" aria-label="Six source systems, Salesforce, Intercom, Wootric Database, Google Sheets, Recurly, and JIRA, feed a unified customer database that serves Sales, Product, and Customer Support" xmlns="http://www.w3.org/2000/svg">
 
           <!-- column headings -->
           <text x="40" y="70" class="col-heading">Source systems</text>
@@ -272,67 +237,92 @@
           </g>
 
         </svg>
-        <p class="subtitle image-caption">Six disconnected systems consolidated into one shared customer database — queryable via SQL and visible company-wide.</p>
-      </div>
+      <figcaption>Six disconnected systems consolidated into one shared customer database, queryable with SQL and visible company-wide.</figcaption>
+    </figure>
 
-        <div class="content">
-          <h3 class="subheadline"><strong>Project 3 - Custom Designs Across Web, Email, iOS and Android</h3></strong></h3>
-          <p>A design that took awhile was implementing custom survey designs that would work across all channels. For a survey to work on any email platform and still look and feel the same on an iOS and Android app is a harder feat than one might assume. Especially as we wanted to make sure no matter what the customer chose, the survey would still meet accesibilty standards.</p>
-          <img src="images/Color.gif" class="portfolio-example grow" alt="PG Forsta">
-          <p class="image-caption">The admin showing examples of how the same design would appear across channels.<p>
-        </div>
-        <div class="content">
-          <h3 class="subheadline"><strong>Project 4 - Web Survey Accessibility</h3></strong></h3>
-          <p>An effort across the entire platform from surveys, to admin, to dashboards was to meet WCAG AAA accessiblility standards.</p>
-          <p>For example, depending on the color you've set for a background the font will automatically be black or white to maximize its readability and accessibility. And an error will appear letting you know if the contrast doesn't meet AA or AAA readibility in the outlier cases.</p>
-          <img src="images/Light.png" class="portfolio-example grow" alt="PG Forsta">
-          <img src="images/Dark.png" class="portfolio-example grow" alt="PG Forsta">
-          <p class="image-caption">Auto adjusting font on every device.<p>
-        </div>
-<!--       <div class="content">
-        <h3 class="subheadline"><strong>5. Outcomes & Impact</h3></strong></h3>
-        <p>Clients are integrating these processes as we speak into their everyday workflow. Each organization is different but the biggest takeaway has been a dramatic decrease in the manual work that normally came with closing the loop and finding the insights. With this addition, customers have now also had the desire to be even more involved with their CX program. Wanting the refine the processes even further and measure the results.</p>
-        <p>Utilizing AI to help customer support, sales, and product spend more time working on the important KPIs and less time on the busy work, I think has been a great example of how to use AI effectively.</p> -->
-<!--         <img src="images/pgf-listen-2.png" class="portfolio-example grow" alt="PG Forsta">
-        <p class="image-caption">How to turn customer feedback into actionable results.<p> -->
-      </div>
+    <p class="beat">Result</p>
+    <p>For the first time, Press Ganey had a company-wide view of the Wootric platform, and the database became a foundation for cross-functional teams. The new visibility led directly to upsell opportunities with customers likely to pay more, and recovered sales from demo accounts that had fallen through the cracks.</p>
+
+    <!-- ============ PROJECT 3 ============ -->
+    <!-- <p class="project-label">Project 3 of 4</p> -->
+    <h2 id="cross-channel">Custom survey designs across web, email, iOS, and Android  <span class="project-label">(Project 3 of 4)</span></h2>
+
+    <p class="beat">Problem</p>
+    <p>Customers wanted surveys that matched their brand everywhere they appeared. Making one design look and behave the same in every email client and in native iOS and Android apps is much harder than it sounds, and every combination a customer might choose still had to meet accessibility standards.</p>
+
+    <figure class="shot narrow">
+      <img src="images/pgf-listen.png" alt="A branded mobile banking survey with follow-up questions shown across several screens" data-zoom>
+      <figcaption>One branded survey flow on mobile, from rating to follow-up questions to an app store prompt.</figcaption>
+    </figure>
+
+    <p class="beat">Key decision</p>
+    <p>Rather than asking customers to trust that a design would carry over, the admin previews the same survey on each channel, and on desktop and mobile, and all email clients, before it goes live.</p>
+    <p>The biggest restraint to consistency was email platforms and older mobile devices. Microsoft Outlook gave our rounded buttons enough trouble that we had to settle on square. For mobile devices, we had to set a cut-off on iOS and Androids with less than 0.1% of users.</p>
+
+    <p class="beat">What shipped</p>
+    <figure class="shot narrow">
+      <img src="images/Color.gif" alt="The survey design admin switching between in-app web, email, iOS, and Android previews" data-zoom>
+      <figcaption>The design admin. Switch channels and screen sizes to see exactly how a survey will look.</figcaption>
+    </figure>
+
+    <p class="beat">Result</p>
+    <p>Several customers were extremely excited about the update. They had been considering other products for their customizations, and we now gave them enough options to keep them from churning.</p>
+
+    <!-- ============ PROJECT 4 ============ -->
+    <!-- <p class="project-label">Project 4 of 4</p> -->
+    <h2 id="accessibility">Web survey accessibility  <span class="project-label">(Project 4 of 4)</span></h2>
+
+    <p class="beat">Problem</p>
+    <p>Customers choose their own brand colors, and many of those choices make survey text hard to read. With surveys reaching people in more than 80 countries, unreadable text means lost responses and excluded customers.</p>
+
+    <p class="beat">Key decision</p>
+    <p>We set a goal to meet WCAG AAA across the platform, from surveys to the admin to dashboards, and made contrast automatic so customers couldn't accidentally break it.</p>
+
+    <p class="beat">What shipped</p>
+    <p>The survey picks black or white text automatically based on the background color the customer sets. In the rare cases where contrast still falls short, the admin shows a warning saying whether the design meets AA or AAA.</p>
+    <div class="pair">
+      <figure>
+        <img src="images/Light.png" alt="An NPS survey with light blue buttons and dark numbers" data-zoom>
+        <figcaption>Light buttons get dark text.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Dark.png" alt="The same NPS survey with dark navy buttons and white numbers" data-zoom>
+        <figcaption>Dark buttons get white text, automatically.</figcaption>
+      </figure>
     </div>
-  </div>
-  <footer id="bottomBar">
-      <p class="footer-text">© Daniel Pitrowiski 2026 | Senior Product Manager & Lead Designer | <a target="_blank" href="mailto:danpitrowiski@gmail.com?subject=Hello Daniel! &#128075;">danpitrowiski@gmail.com</a></p>
-      <ul class="soc">
-        <!-- <p class="footer-copyright">DJP LLC &#169; 2016</p> -->
 
-        <li class="footer-icons"><a href="https://dribbble.com/DJP" target="_blank" class="icon-7 dribbble" title="Dribbble"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M256 68.4C152.4 68.4 68.4 152.4 68.4 256c0 103.6 84 187.6 187.6 187.6S443.6 359.6 443.6 256C443.6 152.4 359.6 68.4 256 68.4zM410.6 247.3c-40.3-6.6-77.3-7-111-1.1 -3.8-8.8-7.8-17.6-12-26.3 36.1-15.6 65.1-36.9 86.7-63.8C395.4 181 408.6 212.6 410.6 247.3zM350.5 133.4c-18.8 24.3-44.8 43.5-78 57.5 -15.9-29.1-34-57.5-54.5-85 12.2-3.1 24.9-4.9 38-4.9C291.6 101 324.3 113.2 350.5 133.4zM186.1 117.9c20.8 27.2 39.3 55.3 55.3 84.1 -38 11.2-83.4 16.9-135.8 17.3C116.4 175 146.3 138.1 186.1 117.9zM101 256c0-1.3 0.2-2.7 0.2-4 60.2-0.1 112.1-7 155.6-20.7 3.6 7.4 7.1 14.9 10.5 22.4 -52.8 16.5-96.4 50.4-130.3 101.3C114.5 328.2 101 293.6 101 256zM160.9 378.1c30.8-48.3 70.1-79.7 118.8-94.2 14.5 37.8 25.2 76.8 31.9 116.6 -17.3 6.7-36 10.5-55.6 10.5C220.1 411 187.2 398.6 160.9 378.1zM342 384.8c-6.9-36.8-16.9-72.8-30-107.8 29.3-4.1 61.6-3.1 96.9 3.1C402.1 323.6 377.2 361.3 342 384.8z"/></svg><!--[if lt IE 9]><em>Dribbble</em><![endif]--></a></li>
+    <p class="beat">Result</p>
+    <p>The accessibility update led to fewer user experience issues, allowed us to pass customer audits, and to let all our customers know we were now AAA compliant.</p>
 
-        <li class="footer-icons"><a href="mailto:DanPitrowiski@gmail.com" target="_blank" class="icon-8 email" title="Email"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+    <!-- ============ OUTCOME ============ -->
+    <h2 id="outcome">Outcome</h2>
+    <p>Together, these projects moved the platform from collecting feedback to acting on it. Customers spend less time on busy work and more on the problems their feedback points to, Press Ganey can see its whole customer base in one place, and surveys look right and read clearly for everyone who receives them.</p>
 
+    <!-- ============ CONCLUSION ============ -->
+    <h2 id="conclusion">Conclusion</h2>
+    <p>The best use of AI was taking a job that should be automated, and automating it. It took the busy work off customer support, sales, and product teams so they could spend their time where it matters.</p>
 
-        <li class="footer-icons"><a href="https://www.facebook.com/danpitrowiski" target="_blank" class="icon-10 facebook" title="Facebook"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg><!--[if lt IE 9]><em>Facebook</em><![endif]--></a></li>
+    <nav class="next-case" aria-label="More case studies">
+      <a href="resume-wootric.html">← Previous: Wootric CXInsights</a>
+      <a href="index.html#work">All case studies →</a>
+    </nav>
+  </main>
+</div>
 
+<footer class="site">© Daniel Pitrowiski 2026 · <a href="mailto:danpitrowiski@gmail.com">danpitrowiski@gmail.com</a></footer>
 
-        <li class="footer-icons"><a href="https://github.com/DanPitrowiski" target="_blank" class="icon-13 github" title="GitHub"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
-
-
-        <li class="footer-icons"><a href="https://www.linkedin.com/in/danpitrowiski" target="_blank" class="icon-17 linkedin" title="LinkedIn"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
-
-
-        <li class="footer-icons"><a href="https://twitter.com/DanPitrowiski" target="_blank" class="icon-26 twitter" title="Twitter"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"/></svg><!--[if lt IE 9]><em>Twitter</em><![endif]--></a></li>
-      </ul>
-  </footer>
-
-<!-- begin Wootric code -->
-<script type="text/javascript">
-  window.wootric_survey_immediately = true; // Shows survey immediately for testing purposes. TODO: Comment out for production.
-  window.wootricSettings = {
-    email: 'portfolio@djp.com', // TODO: Required to uniquely identify a user. Email is recommended but this can be any unique identifier.
-    account_token: 'NPS-2827f58f', // This is your unique account token.
-  };
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '0px 0px -70% 0px' });
+  document.querySelectorAll('.article h2[id]').forEach(function (h) { io.observe(h); });
+})();
 </script>
-<script type="text/javascript" src="https://cdn.wootric.com/wootric-sdk.js"></script>
-<script type="text/javascript">
-  // This loads the Wootric survey
-  window.wootric('run');
-</script>
+<script src="js/lightbox.js"></script>
 </body>
 </html>

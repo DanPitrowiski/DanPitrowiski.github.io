@@ -1,142 +1,205 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Dan Daniel Pitrowiski design and front-end developer portfolio">
-    <meta name="keywords" content="designer, porfolio, front-end developer">
-    <meta name="author" content="Dan Pitrowiski">
-    <meta property="og:title" content="Daniel Pitrowiski's Portfolio" />
-    <meta property="og:description" content="Come say hello and see what Daniel's been up to." />
-    <meta property="og:image" content="https://danpitrowiski.github.io/images/dan-animoji.jpg" />
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons//pple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <title>Dan Pitrowiski ~ About Me</title>
-
-    <!-- external CSS link -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/path/to/styles/default.css"/>
-
-  </head>
-
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Knight of the Living Dead: a roguelike RPG designed in Sketch and built entirely in the browser by Daniel Pitrowiski.">
+<meta name="author" content="Dan Pitrowiski">
+<meta property="og:title" content="Knight of the Living Dead · Daniel Pitrowiski">
+<meta property="og:description" content="A browser-based roguelike RPG, designed and coded from scratch.">
+<meta property="og:image" content="https://danpitrowiski.github.io/images/KnightoftheLivingDead.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+<title>Knight of the Living Dead · Daniel Pitrowiski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style-new.css">
+<link rel="stylesheet" href="css/case-study.css">
+<style>
+/* Code listings: an editor panel that stays dark in both themes, like the Sublime screenshots on this page. */
+:root {
+  --code-bg: #23262e; --code-fg: #e4e7ec; --code-gutter: #6b7280;
+  --code-kw: #c49af0; --code-str: #e6c87a; --code-num: #f2977a; --code-com: #7d8593; --code-fn: #7cc4e8;
+}
+.code {
+  margin: 18px 0 24px; max-width: 900px; background: var(--code-bg); color: var(--code-fg);
+  border: 1px solid var(--rule); overflow-x: auto;
+}
+.code figcaption {
+  font: 500 .72rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--code-gutter); padding: 12px 16px 0;
+}
+.code pre { margin: 0; padding: 12px 16px 16px; font: .86rem/1.6 var(--f-mono); tab-size: 2; }
+.code .k { color: var(--code-kw); font-style: italic; }
+.code .s { color: var(--code-str); }
+.code .n { color: var(--code-num); }
+.code .c { color: var(--code-com); }
+.code .f { color: var(--code-fn); }
+.code-note { font-size: .82rem; color: var(--ink-soft); margin: -14px 0 24px; max-width: 68ch; }
+.play { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 8px 0 20px; }
+.play a.btn { text-decoration: none; display: inline-block; }
+.play a.btn:hover { text-decoration: none; opacity: .9; }
+.features { padding-left: 1.4em; max-width: 68ch; }
+.infobox figure img { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); }
+.features li { margin-bottom: 6px; }
+</style>
+</head>
 <body>
-  <header>
-    <nav class="clearfix">
-      <div class="logo"><a href="index.html"><img src="images/DJP_logo.png"></a></div>
-      <ul>
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="personal.html">Personal Projects</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<header class="masthead">
+  <a class="wordmark" href="index.html">Pitrowiski<span>Senior Product Designer</span></a>
+  <nav aria-label="Elsewhere">
+    <a href="https://www.linkedin.com/in/danpitrowiski/">LinkedIn</a>
+    <a href="https://medium.com/@danpitrowiski">Medium</a>
+    <a href="https://dribbble.com/DJP">Dribbble</a>
+    <a href="https://github.com/DanPitrowiski">GitHub</a>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#design">Designing the game</a></li>
+      <li><a href="#goal">The goal</a></li>
+      <li><a href="#solution">The solution</a></li>
+      <li><a href="#outcome">The outcome</a></li>
+      <li><a href="#play">Play it</a></li>
+    </ol>
+  </aside>
+
+  <main class="article">
+    <div class="title-row" style="border-bottom: none;">
+      <p class="crumb"><a href="index.html#projects">Side projects</a> / Knight of the Living Dead</p>
+      <h1>Knight of the Living Dead</h1>
+      <p class="dek">A roguelike RPG I designed in Sketch and built entirely in the browser.</p>
+    </div>
+    <p class="meta-line">Designer &amp; developer · Released February 2016 · v1.6 in 2020</p>
+
+    <aside class="infobox" aria-label="Project summary">
+      <div class="ib-name">Knight of the Living Dead</div>
+      <figure>
+        <img src="images/KnightoftheLivingDead.png" alt="The game's battle screen: the Undead Knight faces Farmer Bob Brains, with Attack, Skills, and Items buttons below" data-zoom>
+        <figcaption>The first battle of the game.</figcaption>
+      </figure>
+      <dl>
+        <dt>Genre</dt><dd>Roguelike RPG, turn-based</dd>
+        <dt>My role</dt><dd>Designer and developer</dd>
+        <dt>Released</dt><dd>Feb 2016 (v1.6 in 2020)</dd>
+        <dt>Designed in</dt><dd>Sketch</dd>
+        <dt>Built with</dt><dd>HTML, CSS, JavaScript, jQuery</dd>
+        <dt>Skills</dt><dd>11 playable</dd>
+      </dl>
+    </aside>
+
+    <!-- ============ OVERVIEW ============ -->
+    <h2 id="overview">Overview</h2>
+    <p>Knight of the Living Dead is a roguelike RPG inspired by games like Final Fantasy and Darkest Dungeon. You play the Undead Knight, fighting your way to the king to take back your kingdom.</p>
+    <p>The whole game runs in the browser, built with HTML, CSS, and jQuery. Players who make it to the end see weather effects: rain, thunder, and a darkening sky.</p>
+    <div class="play">
+      <a class="btn" href="https://danpitrowiski.github.io/knight-of-the-living-dead/">Play the game</a>
+    </div>
+
+    <!-- ============ DESIGN ============ -->
+    <h2 id="design">Designing the game</h2>
+    <p>I designed every screen in Sketch first, then built it as a web game. These are the features that make a game feel like a roguelike RPG, and the ones I designed around:</p>
+    <ol class="features">
+      <li>Gaining skills, items, and power</li>
+      <li>Turn-based gameplay</li>
+      <li>New, unique monsters to fight</li>
+      <li>A sense of randomness, so each game feels different</li>
+      <li>Difficulty that increases as you progress</li>
+    </ol>
+    <figure class="shot">
+      <img src="images/knight-screenshot.png" alt="The game's skills code open in Sublime Text next to the battle screen design in Sketch" data-zoom>
+      <figcaption>The battle screen in Sketch, next to the skills code that powers it.</figcaption>
+    </figure>
+
+    <!-- ============ GOAL ============ -->
+    <h2 id="goal">The goal</h2>
+    <p>From the feedback I gathered, the feature people wanted most was cool skills to use. So the goal was a system where your character gains new skills, uses them in battle, and can understand what each one does. Each time you level up, you choose between upgrades, so no two runs build the same knight.</p>
+    <figure class="shot narrow">
+      <img src="images/perks-and-skills.png" alt="Level 1 perk screen offering three choices: upgrade your weapon, up your accuracy, or choose a new skill" data-zoom>
+      <figcaption>The level-up screen. Each choice spells out exactly what changes.</figcaption>
+    </figure>
+
+    <!-- ============ SOLUTION ============ -->
+    <h2 id="solution">The solution</h2>
+    <p>Each skill is a JavaScript object that holds everything it needs: its name, cost, how many turns it lasts, its description, and the functions that apply and remove its effect. Keeping all of that in one place made it easy to create many different kinds of skills, and to rebalance them quickly during playtesting.</p>
+    <figure class="code">
+      <figcaption>skills.js · one skill</figcaption>
+<pre><code><span class="k">var</span> keeneye = {
+  name: <span class="s">"Keen eye"</span>,
+  statAdj: <span class="n">15</span>,
+  skillpointCost: <span class="n">3</span>,
+  turns: <span class="n">10</span>,
+  turnsCount: <span class="n">0</span>,
+  uid: <span class="s">"keeneye"</span>,
+  heroOwns: <span class="k">false</span>,
+  effectDescription: <span class="s">"+15% accuracy for 10 turns"</span>,
+  <span class="f">adjHero</span>: <span class="k">function</span> () {
+    hero.accuracy += keeneye.statAdj;
+  },
+  <span class="f">negHero</span>: <span class="k">function</span> () {
+    hero.accuracy -= keeneye.statAdj;
+  },
+};</code></pre>
+    </figure>
+    <p>The hardest part was tracking active skills and resetting the character when a skill ran out. That's what the <code>adjHero</code> and <code>negHero</code> functions are for: one applies the bonus, the other removes it.</p>
+
+    <!-- ============ OUTCOME ============ -->
+    <h2 id="outcome">The outcome</h2>
+    <p>The hero can use 11 different skills, and the code that manages them is only 35 lines long, thanks to the skill objects. This function runs every turn. It counts down each active skill, and when one ends, it resets the hero's stats and tells the player.</p>
+    <figure class="code">
+      <figcaption>skills.js · skill counter</figcaption>
+<pre><code><span class="c">// Skill Counter and Set</span>
+<span class="k">function</span> <span class="f">skillsSet</span>() {
+  <span class="k">var</span> count = skillList.length;
+  <span class="k">for</span> (<span class="k">var</span> i = <span class="n">0</span>; i &lt; count; i++) {
+    <span class="k">if</span> (eval(skillList[i]).turnsCount &gt;= <span class="n">1</span>) {
+      eval(skillList[i]).turnsCount--;
+      <span class="k">if</span> (eval(skillList[i]).turnsCount === <span class="n">0</span>) {
+        eval(skillList[i]).<span class="f">negHero</span>();
+        <span class="k">var</span> message = (eval(skillList[i]).name + <span class="s">"'s effects just wore off."</span>);
+        <span class="f">alertMessage</span>(message, <span class="k">null</span>, <span class="k">false</span>);
+        $(<span class="s">'#'</span> + eval(skillList[i]).uid).css(<span class="s">'display'</span>, <span class="s">'inherit'</span>);
+      }
+    }
+  }
+}</code></pre>
+    </figure>
+
+    <!-- ============ PLAY ============ -->
+    <h2 id="play">Play it</h2>
+    <p>The game still runs in any modern browser. See how far you get before the king.</p>
+    <div class="play">
+      <a class="btn" href="https://danpitrowiski.github.io/knight-of-the-living-dead/">Play Knight of the Living Dead</a>
+      <a href="https://github.com/DanPitrowiski">More on GitHub</a>
+    </div>
+
+    <nav class="next-case" aria-label="More projects">
+      <a href="index.html#projects">← All side projects</a>
+      <a href="resume-wootric.html">Case study: Wootric CXInsights →</a>
     </nav>
-  </header>
+  </main>
+</div>
 
-<!--   <div class="hero-div wootric-bg">
-  </div> -->
-  <div class="resume portfolio-item">
-    <h2 class="content headline">Knight of the Living Dead</h2>
-    <p class="content small">Creator · 2016</p>
-    <div class="screenshot">
-      <img src="images/knight-screenshot.png" class="portfolio-example grow" alt="Knight of the Living Dead Sketch file and Sublime code">
-    </div>
-      <div class="content">
-        <h3 class="subheadline"><strong>Designing, Coding, Creating a Game</strong></h3>
-        <p>This game was designed in Sketch and made into an entirely web based game.</p>
-        <p>Knight of the Living Dead is a roquelike RPG inspired by games like Final Fantasy and Darkest Dungeon. In the game you are the Undead Knight on your way to defeat the king and take back your kingdom.
-        </p>
-        <p>There were a few features that make a roquelike RPG.
-          <ol>
-            <li>Gaining skills, items, and power</li>
-            <li>Turn based gameplay</li>
-            <li>New unique monsters to fight</li>
-            <li>Sense of randomness, so each game feels unique</li>
-            <li>Increased difficulty as you progress</li>
-          </ol>
-        </p>
-        <p>From the feedback I gathered the most important feature people wanted was cool skills to use. So that's where the below JavaScript Object was created.
-        </p>
-        <pre><code>
-  <span class="selector">var</span> <span class="property">keeneye</span> = {
-    <span class="selector">name:</span> "Keen eye",
-    <span class="selector">statAdj:</span> <span class="number">15</span>,
-    <span class="selector">skillpointCost:</span> <span class="number">3</span>,
-    <span class="selector">turns:</span> <span class="number">10</span>,
-    <span class="selector">turnsCount:</span> <span class="number">0</span>,
-    <span class="selector">uid:</span> "keeneye",
-    <span class="selector">heroOwns:</span> <span class="property">false</span>,
-    <span class="selector">effectDescription:</span> "+15% accuracy for 10 turns",
-    <span class="selector">adjHero: function ()</span>{
-      <span class="property">hero.accuracy += keeneye.statAdj;</span> },
-    <span class="selector">negHero: function ()</span>{
-      <span class="property">hero.accuracy -= keeneye.statAdj;</span> },
-  };
-        </code></pre>
-      <div class="content">
-        <h3 class="subheadline"><strong>The Goal</strong></h3>
-        <p>Create a system where your character gains new skills, uses them in battle, and are easy to understand. The user would randomly get to decide to add them.</p>
-      </div>
-      <div class="screenshot">
-        <img src="images/perks-and-skills.png" class="portfolio-example grow" alt="Example of the perks and skills you can have">
-      </div>
-      <div class="content">
-        <h3 class="subheadline"><strong>The Solution</strong></h3>
-        <p>Create Javascript Objects where all the properties, methods, and values exist for each skill. Defined within the object was everything I needed to create many different types of skills and also it allowed me to balance and change them quickly.</p>
-        <p>The biggest challenge was how to track the skills and reset the character when the skills ran out. Thats where the <span class="selector">adjHero</span> functions came into play.</p>
-      </div>
-      <div class="content">
-        <h3 class="subheadline"><strong>The Outcome</strong></h3>
-        <p>There are 11 different skills the hero can use. The code to manage skills is only 35 lines long thanks to the JavaScript Objects. Below is the code that runs every turn to check when your skill bonus has ended, and turns your stats back to default.</p>
-      </div>
-      <div class="screenshot">
-        <img src="images/skill-check.png" class="portfolio-example grow" alt="The code to check and run through the skills.">
-      </div>
-      </div>
-    </div>
-  </div>
-  <script src="/path/to/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+<footer class="site">© Daniel Pitrowiski 2026 · <a href="mailto:danpitrowiski@gmail.com">danpitrowiski@gmail.com</a></footer>
 
-  <footer id="bottomBar">
-      <p class="footer-text">© Daniel Pitrowiski 2026 | Senior Product Manager & Lead Designer | <a target="_blank" href="mailto:danpitrowiski@gmail.com?subject=Hello Daniel! &#128075;">danpitrowiski@gmail.com</a></p>
-      <ul class="soc">
-        <!-- <p class="footer-copyright">DJP LLC &#169; 2016</p> -->
-
-        <li class="footer-icons"><a href="https://dribbble.com/DJP" target="_blank" class="icon-7 dribbble" title="Dribbble"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M256 68.4C152.4 68.4 68.4 152.4 68.4 256c0 103.6 84 187.6 187.6 187.6S443.6 359.6 443.6 256C443.6 152.4 359.6 68.4 256 68.4zM410.6 247.3c-40.3-6.6-77.3-7-111-1.1 -3.8-8.8-7.8-17.6-12-26.3 36.1-15.6 65.1-36.9 86.7-63.8C395.4 181 408.6 212.6 410.6 247.3zM350.5 133.4c-18.8 24.3-44.8 43.5-78 57.5 -15.9-29.1-34-57.5-54.5-85 12.2-3.1 24.9-4.9 38-4.9C291.6 101 324.3 113.2 350.5 133.4zM186.1 117.9c20.8 27.2 39.3 55.3 55.3 84.1 -38 11.2-83.4 16.9-135.8 17.3C116.4 175 146.3 138.1 186.1 117.9zM101 256c0-1.3 0.2-2.7 0.2-4 60.2-0.1 112.1-7 155.6-20.7 3.6 7.4 7.1 14.9 10.5 22.4 -52.8 16.5-96.4 50.4-130.3 101.3C114.5 328.2 101 293.6 101 256zM160.9 378.1c30.8-48.3 70.1-79.7 118.8-94.2 14.5 37.8 25.2 76.8 31.9 116.6 -17.3 6.7-36 10.5-55.6 10.5C220.1 411 187.2 398.6 160.9 378.1zM342 384.8c-6.9-36.8-16.9-72.8-30-107.8 29.3-4.1 61.6-3.1 96.9 3.1C402.1 323.6 377.2 361.3 342 384.8z"/></svg><!--[if lt IE 9]><em>Dribbble</em><![endif]--></a></li>
-
-        <li class="footer-icons"><a href="mailto:DanPitrowiski@gmail.com" target="_blank" class="icon-8 email" title="Email"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
-
-
-        <li class="footer-icons"><a href="https://www.facebook.com/danpitrowiski" target="_blank" class="icon-10 facebook" title="Facebook"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg><!--[if lt IE 9]><em>Facebook</em><![endif]--></a></li>
-
-
-        <li class="footer-icons"><a href="https://github.com/DanPitrowiski" target="_blank" class="icon-13 github" title="GitHub"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
-
-
-        <li class="footer-icons"><a href="https://www.linkedin.com/in/danpitrowiski" target="_blank" class="icon-17 linkedin" title="LinkedIn"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
-
-
-        <li class="footer-icons"><a href="https://twitter.com/DanPitrowiski" target="_blank" class="icon-26 twitter" title="Twitter"><svg width="24" height="24" viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"/></svg><!--[if lt IE 9]><em>Twitter</em><![endif]--></a></li>
-      </ul>
-  </footer>
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '0px 0px -70% 0px' });
+  document.querySelectorAll('.article h2[id]').forEach(function (h) { io.observe(h); });
+})();
+</script>
+<script src="js/lightbox.js"></script>
 </body>
 </html>
