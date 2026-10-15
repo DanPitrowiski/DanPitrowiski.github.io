@@ -47,7 +47,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding-block: 18px; border-bottom: 1px solid var(--rule);
 }
-.wordmark { font: 700 1.15rem/1 var(--f-display); color: var(--ink); letter-spacing: .01em; }
+.wordmark { font: 700 1.5rem/1 var(--f-display); color: var(--ink); letter-spacing: .01em; }
 .wordmark span { font-family: var(--f-mono); font-weight: 400; font-size: .72rem; color: var(--ink-soft); margin-left: 8px; letter-spacing: .06em; text-transform: uppercase; }
 .masthead nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: .9rem; }
 
@@ -93,6 +93,7 @@ h1 {
 .article h3 .yrs { font: 400 .78rem var(--f-mono); color: var(--ink-soft); margin-left: 8px; letter-spacing: .02em; }
 sup.cite { font: 500 .68rem var(--f-mono); margin-left: 1px; }
 .lead { font-size: 1.06rem; }
+[role="tabpanel"] { padding-top: 24px; }
 
 /* Infobox */
 .infobox {
@@ -227,7 +228,7 @@ body.lb-lock { overflow: hidden; }
 /* Side projects: thumbnail on the left, text on the right */
 .projects-list { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 24px; max-width: 760px; }
 .project { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; align-items: start; }
-.articles-list .project { grid-template-columns: minmax(0, 1fr); }
+.articles-list + .project-links { margin-top: 18px; }
 .project-thumb { display: block; }
 .project-thumb img {
   display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: center;
@@ -245,3 +246,31 @@ body.lb-lock { overflow: hidden; }
 @media (max-width: 640px) {
   .project { grid-template-columns: 96px minmax(0, 1fr); gap: 14px; }
 }
+
+/* ===== Layout trial (Oct 2026): infobox pinned top-right, nothing runs under it; DJP home link in the sticky Contents column.
+   To undo: delete this block, the .toc-home links, and the js/site.js script tags. Originals are in _before-layout-trial/. ===== */
+
+/* Block elements next to the infobox get their own formatting context, so they shrink beside it instead of running under it
+   (heading rules, screenshots, code panels, quotes, lists). Zero specificity, so components that set their own display win. */
+:where(.article :is(h2, h3, figure, ul, ol, blockquote, pre, table, hr, .pull, .todo, .code, .play, .crumb, .meta-line, .dek)):where(:not(.infobox, .infobox *, figure.thumb)) {
+  display: flow-root;
+}
+.infobox { position: relative; z-index: 1; }
+
+/* DJP home link: hidden while the masthead is on screen, slides in at the top of Contents once it scrolls away */
+.toc-home {
+  display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden;
+  transition: grid-template-rows .25s ease, opacity .2s ease, visibility 0s linear .25s;
+}
+.toc-home > a {
+  overflow: hidden; display: block; min-height: 0;
+  font: 700 1.5rem/1 var(--f-display); color: var(--ink); letter-spacing: .01em;
+}
+.toc-home > a:hover { color: var(--link); text-decoration: none; }
+.toc.is-stuck .toc-home {
+  grid-template-rows: 1fr; opacity: 1; visibility: visible;
+  transition: grid-template-rows .25s ease, opacity .2s ease .05s, visibility 0s;
+}
+.toc.is-stuck .toc-home > a { padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--rule); }
+@media (prefers-reduced-motion: reduce) { .toc-home, .toc.is-stuck .toc-home { transition: none; } }
+@media (max-width: 900px) { .toc-home { display: none; } }

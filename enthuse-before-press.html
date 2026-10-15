@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Case study: designing Enthuse, a mobile loyalty app that rewarded college sports fans for engagement. By Daniel Pitrowiski.">
+<meta name="author" content="Dan Pitrowiski">
+<meta property="og:title" content="Enthuse · Daniel Pitrowiski">
+<meta property="og:description" content="Six design stories from a sports-loyalty startup: points, rewards, stadium screens, and what fans taught us.">
+<meta property="og:image" content="https://danpitrowiski.github.io/images/enthuse/app-rewards-iphone-thumb.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+<title>Enthuse · Daniel Pitrowiski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style-new.css">
+<link rel="stylesheet" href="css/case-study.css">
+<style>
+/* Enthuse page: phone screens sit in rows, stadium pieces in a looser grid. */
+.phones { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 20px 0 8px; max-width: 900px; align-items: start; }
+.phones figure { margin: 0; min-width: 0; }
+.phones img, .phones video { display: block; width: 100%; height: auto; border: 1px solid var(--rule); background: var(--panel); }
+.phones figcaption { font-size: .8rem; color: var(--ink-soft); margin-top: 6px; line-height: 1.4; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 8px; max-width: 900px; }
+.gallery figure { margin: 0; min-width: 0; }
+.gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--rule); background: var(--panel); }
+.gallery.tall img { aspect-ratio: 3 / 4; }
+.gallery figcaption { font-size: .8rem; color: var(--ink-soft); margin-top: 6px; line-height: 1.4; }
+#impact { clear: both; }
+.listen { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 14px 0 20px; padding: 12px 14px; border: 1px solid var(--rule); background: var(--panel); max-width: 640px; }
+.listen p { margin: 0 !important; font-size: .88rem; }
+.listen audio { max-width: 100%; }
+.chart { margin: 20px 0 24px; max-width: 900px; border: 1px solid var(--rule); background: var(--paper); padding: 14px 16px 10px; overflow-x: auto; }
+.chart svg { display: block; width: 100%; min-width: 520px; height: auto; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .tick { font: 11px var(--f-mono); fill: var(--ink-soft); }
+.chart .bar { fill: var(--ink-soft); opacity: .55; }
+.chart .bar.hi { fill: var(--link); opacity: 1; }
+.chart .callout { font: 600 13px var(--f-body); fill: var(--ink); }
+.chart .callout-sub { font: 12px var(--f-body); fill: var(--ink-soft); }
+.chart figcaption { font-size: .82rem; color: var(--ink-soft); margin-top: 6px; }
+.findings { list-style: none; padding: 0; margin: 12px 0 20px; display: grid; gap: 0; max-width: 72ch; }
+.findings li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.findings li:last-child { border-bottom: 1px solid var(--rule); }
+.findings .lbl { display: block; font: 500 .68rem/1.4 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 3px; }
+.findings p { margin: 0 !important; font-size: .92rem; }
+@media (max-width: 640px) { .findings li { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <a class="wordmark" href="index.html">Pitrowiski<span>Senior Product Designer</span></a>
+  <nav aria-label="Elsewhere">
+    <a href="https://www.linkedin.com/in/danpitrowiski/">LinkedIn</a>
+    <a href="https://medium.com/@danpitrowiski">Medium</a>
+    <a href="https://dribbble.com/DJP">Dribbble</a>
+    <a href="https://github.com/DanPitrowiski">GitHub</a>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#beyond">Design beyond the screen</a></li>
+      <li><a href="#field">Lessons from the concourse</a></li>
+      <li><a href="#testing">Learning from user testing</a></li>
+      <li><a href="#moderation">Moderating fan photos</a></li>
+      <li><a href="#stadium">Points that sound like a stadium</a></li>
+      <li><a href="#banner">The championship banner</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#press">Press</a></li>
+    </ol>
+  </aside>
+
+  <main class="article">
+    <div class="title-row" style="border-bottom: none;">
+      <p class="crumb"><a href="index.html#work">Case studies</a> / Enthuse</p>
+      <h1>Enthuse: rewarding fans for engagement</h1>
+      <!-- <p class="dek">Six design stories from a startup that turned college sports fandom into points, challenges, and real rewards.</p> -->
+    </div>
+    <p class="meta-line">Lead Product Designer · Enthuse · 2010–2013</p>
+
+    <aside class="infobox" aria-label="Project summary">
+      <div class="ib-name">Enthuse</div>
+      <figure>
+        <img src="images/enthuse/app-rewards-iphone-thumb.jpg" alt="The Enthuse app on an iPhone, showing a 200,000-point reward for a trip to the ESPYs" data-zoom="images/enthuse/app-rewards-iphone.jpg">
+        <figcaption>The Rewards screen.</figcaption>
+      </figure>
+      <dl>
+        <dt>Company</dt><dd>Enthuse</dd>
+        <dt>My role</dt><dd>Lead Product Designer</dd>
+        <dt>Timeline</dt><dd>2010–2013</dd>
+        <dt>Platforms</dt><dd>iOS, Android, &amp; web</dd>
+        <dt>Partners</dt><dd>University of Miami, Purdue, Atlantic Sun Conference, America East Conference</dd>
+        <dt>Funding</dt><dd>$1.3M raised, Dec 2012</dd>
+      </dl>
+    </aside>
+
+    <!-- ============ OVERVIEW ============ -->
+    <h2 id="overview">Overview</h2>
+    <p>Sports teams didn't know who their most loyal fans were. Loyalty programs only covered season ticket holders, and fans had no easy way to earn real rewards for the time they put into following their teams.</p>
+    <p>Enthuse was a mobile app that fixed that. Fans followed their teams, checked in at games or while watching from home, completed photo and walk-in challenges, and redeemed points for rewards: team gear, local discounts, and once-in-a-lifetime experiences like throwing out the first pitch. Schools and conferences got a turnkey loyalty program and a new way to sell sponsorships.</p>
+    <p>I led Product Design and worked as a product manager on a small team: a CEO, a VP of Product, a lead engineer, and developers in France, Indonesia, Australia, and Boston. I designed the iOS, Android, and web experiences, and much of the marketing that put the app in front of fans at the stadium.</p>
+
+    <!-- ============ IMPACT ============ -->
+    <h2 id="impact">Impact</h2>
+
+    <ul class="tag-types">
+      <li><b>Mobile-First Design:</b> It was important to meet the fans where they were in the stadium.</li>
+      <li><b>Localized:</b> A fan needed to be able to open the app up anywhere in the country and find their local team to engage with.</li>
+      <li><b>Engagement Metrics:</b> For our University partners they had almost no way to measure engagement prior to Enthuse. So it was important to measure and show them how quickly Enthuse could scale among their fans.</li>
+      <li><b>Scalable Designs:</b> The Challenges, Rewards, Content Moderation, and Reporting needed to be turn-key for each new partner.</li>
+      <li><b>Partnership Focused:</b> We worked closely with partners to adds users, but also give fans actual awesome rewards that would keep them coming back.</li>
+    </ul>
+
+    <div class="stats">
+      <div class="stat"><b>12,500</b><span>University of Miami fans on the app</span></div>
+      <div class="stat"><b>27,000</b><span>game check-ins</span></div>
+      <div class="stat"><b>40,000</b><span>RSVPs to games</span></div>
+      <div class="stat"><b>2 min</b><span>for the ACC Championship gear reward to sell out</span></div>
+    </div>
+    <p>University of Miami was Enthuse's first partner. In their first quarter, UMiami engagement was 2,325 completed challenges and 507 photo challenges. With how we designed Enthuse, the UMiami example was one we could replicate and scale to other orgs. Allowing Enthuse to partner with Atlantic Sun Conference, America East conference, and Purdue University soon after.</p>
+    <figure class="chart">
+<svg viewBox="0 0 680 236" role="img" aria-labelledby="regTitle regDesc">
+<title id="regTitle">Weekly sign-ups, November 2012 to March 2013</title>
+<desc id="regDesc">Sign-ups stayed between 9 and 307 a week, except the week of January 6, 2013, when the University of Miami launched and 10,303 people signed up.</desc>
+<line x1="56" x2="664" y1="200.0" y2="200.0" class="grid"/>
+<text x="48" y="204.0" text-anchor="end" class="tick">0</text>
+<line x1="56" x2="664" y1="120.0" y2="120.0" class="grid"/>
+<text x="48" y="124.0" text-anchor="end" class="tick">5,000</text>
+<line x1="56" x2="664" y1="40.0" y2="40.0" class="grid"/>
+<text x="48" y="44.0" text-anchor="end" class="tick">10,000</text>
+<rect x="61.5" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Nov 4: 16 sign-ups</title></rect>
+<text x="70.5" y="218" text-anchor="middle" class="tick">Nov 4</text>
+<rect x="90.5" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Nov 11: 9 sign-ups</title></rect>
+<rect x="119.4" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Nov 18: 20 sign-ups</title></rect>
+<rect x="148.4" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Nov 25: 74 sign-ups</title></rect>
+<rect x="177.3" y="196.6" width="18.0" height="3.4" class="bar"><title>Week of Dec 2: 215 sign-ups</title></rect>
+<text x="186.3" y="218" text-anchor="middle" class="tick">Dec 2</text>
+<rect x="206.3" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Dec 9: 67 sign-ups</title></rect>
+<rect x="235.2" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Dec 16: 40 sign-ups</title></rect>
+<rect x="264.2" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Dec 23: 19 sign-ups</title></rect>
+<rect x="293.1" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Dec 30: 58 sign-ups</title></rect>
+<rect x="322.1" y="35.2" width="18.0" height="164.8" class="bar hi"><title>Week of Jan 6: 10,303 sign-ups</title></rect>
+<text x="331.0" y="218" text-anchor="middle" class="tick">Jan 6</text>
+<rect x="351.0" y="195.5" width="18.0" height="4.5" class="bar"><title>Week of Jan 13: 282 sign-ups</title></rect>
+<rect x="380.0" y="196.5" width="18.0" height="3.5" class="bar"><title>Week of Jan 20: 220 sign-ups</title></rect>
+<rect x="408.9" y="195.1" width="18.0" height="4.9" class="bar"><title>Week of Jan 27: 307 sign-ups</title></rect>
+<rect x="437.9" y="196.7" width="18.0" height="3.3" class="bar"><title>Week of Feb 3: 207 sign-ups</title></rect>
+<text x="446.9" y="218" text-anchor="middle" class="tick">Feb 3</text>
+<rect x="466.8" y="197.8" width="18.0" height="2.2" class="bar"><title>Week of Feb 10: 136 sign-ups</title></rect>
+<rect x="495.8" y="198.1" width="18.0" height="1.9" class="bar"><title>Week of Feb 17: 117 sign-ups</title></rect>
+<rect x="524.7" y="197.5" width="18.0" height="2.5" class="bar"><title>Week of Feb 24: 156 sign-ups</title></rect>
+<rect x="553.7" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Mar 3: 84 sign-ups</title></rect>
+<text x="562.7" y="218" text-anchor="middle" class="tick">Mar 3</text>
+<rect x="582.6" y="197.9" width="18.0" height="2.1" class="bar"><title>Week of Mar 10: 131 sign-ups</title></rect>
+<rect x="611.6" y="198.0" width="18.0" height="2.0" class="bar"><title>Week of Mar 17: 122 sign-ups</title></rect>
+<rect x="640.5" y="198.5" width="18.0" height="1.5" class="bar"><title>Week of Mar 24: 67 sign-ups</title></rect>
+<text x="347.0" y="47.2" class="callout">10,303 sign-ups</text>
+<text x="347.0" y="63.2" class="callout-sub">Week of Jan 6, 2013: University of Miami launch</text>
+</svg>
+      <figcaption>Weekly sign-ups. The University of Miami launch drove more sign-ups in one week than the previous two months combined.</figcaption>
+    </figure>
+    <blockquote class="pull">"Winning the tickets was awesome... It was probably one of the best moments of my life."<cite>University of Miami student, in the program's press release</cite></blockquote>
+
+    <!-- ============ STORY 1 ============ -->
+    <p class="project-label">Story 1 of 6</p>
+    <h2 id="beyond">Design beyond the screen</h2>
+    <p class="beat">The moment</p>
+    <p>An app nobody downloads doesn't reward anyone. Most of our fans discovered Enthuse at the game, so the design had to work on a video board, a flier, a banner, and a TV broadcast, not just a phone.</p>
+    <p class="beat">What I designed</p>
+    <p>I designed the marketing that carried the app into stadiums: outfield video-board graphics for the Atlantic Sun Baseball Championship, built to the board's 1024 × 768 spec; First Pitch Challenge fliers for both conferences; in-arena signage; promo cards; a broadcast graphic; partner announcements; and the reward images inside the app.</p>
+    <div class="gallery">
+      <figure><img src="images/enthuse/video-board-1.jpg" alt="Video board graphic: Watch games. Earn points. Get stuff." data-zoom><figcaption>Video board: "Watch games. Earn points. Get stuff."</figcaption></figure>
+      <figure><img src="images/enthuse/video-board-2.jpg" alt="Video board graphic: Download Enthuse. Win sweet rewards." data-zoom><figcaption>Video board, for the A-Sun Baseball Championship.</figcaption></figure>
+      <figure><img src="images/enthuse/espn3-broadcast.jpg" alt="Enthuse graphic on an ESPN3 broadcast inviting fans to download the app" data-zoom><figcaption>On an ESPN3 broadcast.</figcaption></figure>
+    </div>
+    <div class="gallery tall">
+      <figure><img src="images/enthuse/flier-asun-first-pitch.jpg" alt="Atlantic Sun First Pitch Challenge flier" data-zoom><figcaption>The First Pitch Challenge flier.</figcaption></figure>
+      <figure><img src="images/enthuse/stadium-signage-1.jpg" alt="America East Enthuse sign standing on the concourse" data-zoom><figcaption>In-arena signage.</figcaption></figure>
+      <figure><img src="images/enthuse/promo-card-espys.jpg" alt="Promo card: Win a trip to the ESPYs with the free Enthuse app" data-zoom><figcaption>The ESPYs trip promo card.</figcaption></figure>
+      <figure><img src="images/enthuse/app-reward-espys.jpg" alt="ESPY Awards reward screen in the app, 100,000 points" data-zoom><figcaption>The same reward, in the app.</figcaption></figure>
+    </div>
+    <p class="beat">What happened</p>
+    <p>The First Pitch Challenge became the signature reward. The fan with the most check-ins at the America East and Atlantic Sun championships threw out the ceremonial first pitch, and it was promoted everywhere from the video board to the press release.</p>
+    <div class="gallery">
+      <figure><img src="images/enthuse/first-pitch-2.jpg" alt="A fan throwing out the ceremonial first pitch" style="object-position: center 8%;" data-zoom><figcaption>A First Pitch winner on the mound.</figcaption></figure>
+      <figure><img src="images/enthuse/first-pitch-3.jpg" alt="Championship staff and the First Pitch winner holding an Enthuse banner on the field" data-zoom><figcaption>On the field with the Enthuse banner.</figcaption></figure>
+      <figure><img src="images/enthuse/purdue-email.jpg" alt="Email announcement: Purdue partners with Enthuse for fan loyalty" data-zoom><figcaption>Announcing the Purdue partnership.</figcaption></figure>
+    </div>
+
+    <!-- ============ STORY 2 ============ -->
+    <p class="project-label">Story 2 of 6</p>
+    <h2 id="field">Lessons from the concourse</h2>
+    <p class="beat">The moment</p>
+    <p>During a University of Miami vs. Florida State baseball weekend in April 2013, our team and student volunteers worked the stadium to get fans to download the app, then wrote up what worked.</p>
+    <p class="beat">What we learned</p>
+    <ul class="tag-types">
+      <li><b>Kids open the door.</b> Free mini sport balls with a U on them had children begging parents to download the app, and the parents usually liked it once they heard more.</li>
+      <li><b>Be a fan, not a marketer.</b> One volunteer joined the milkshake line and got four people around him to download the app. Fans relaxed when the pitch came from another ballpark-goer.</li>
+      <li><b>Place collateral where people pause.</b> Fliers handed out at the main entrance worked because fans finished reading just as they reached the table.</li>
+      <li><b>Avoid where people rush.</b> Seating-area entrances failed. Everyone was hurrying to their seats, the food line, or the bathroom between innings.</li>
+      <li><b>Luck helps.</b> A Friday rain delay kept everyone on the concourse, and nearly all of that night's downloads happened during the delay.</li>
+    </ul>
+    <div class="gallery">
+      <figure><img src="images/enthuse/stadium-signage-2.jpg" alt="Enthuse sign and a staff member at a stadium concourse table" data-zoom><figcaption>The concourse table.</figcaption></figure>
+      <figure><img src="images/enthuse/popchips-box.jpg" alt="Open box of Popchips bags" data-zoom><figcaption>Sponsor rewards ready to hand out.</figcaption></figure>
+      <figure><img src="images/enthuse/umiami-photo-contest.jpg" alt="Hurricanes photo contest graphic: the top 4 photos earn 1,000 points" data-zoom><figcaption>The contest that ran alongside.</figcaption></figure>
+    </div>
+    <p class="beat">What happened</p>
+    <p>That weekend produced 178 RSVPs, 137 photo uploads, and 111 check-ins, 30 of them from fans physically in the stadium. The biggest lesson for me was that distribution is part of the design: where and how people first meet a product matters as much as the screens they see after.</p>
+
+    <!-- ============ STORY 3 ============ -->
+    <p class="project-label">Story 3 of 6</p>
+    <h2 id="testing">Learning from user testing</h2>
+    <p class="beat">The moment</p>
+    <p>In May 2013 we got back recorded user tests of the iOS app. Watching real people use it surfaced problems we had stopped seeing ourselves.</p>
+    <div class="phones">
+      <figure><img src="images/enthuse/app-feed.jpg" alt="My Teams feed with an upcoming game, a Plan to Watch button, and nearby games" data-zoom><figcaption>The Feed tab.</figcaption></figure>
+      <figure><img src="images/enthuse/app-team-page.jpg" alt="Team page showing an upcoming game and a Follow button" data-zoom><figcaption>A team page.</figcaption></figure>
+      <figure><img src="images/enthuse/explore-feed.jpg" alt="Explore feed with live games, fans checked in, and check-in buttons" data-zoom><figcaption>Live games and check-ins.</figcaption></figure>
+      <figure><img src="images/enthuse/rewards-favorite.jpg" alt="Rewards screen with a favorite reward, Popchips, and Redeem and Edit buttons" data-zoom><figcaption>Rewards, with a favorite.</figcaption></figure>
+    </div>
+    <p class="beat">What we found, and what I'd do today</p>
+    <ul class="findings">
+      <li>
+        <div><span class="lbl">Finding</span><p>The app asked for location and push notification permission back to back, before people had even used it.</p></div>
+        <div><span class="lbl">Today</span><p>Ask in context. Request location when someone taps "Find teams near me," and notifications after they've followed a team.</p></div>
+      </li>
+      <li>
+        <div><span class="lbl">Finding</span><p>Alerts and full-screen modals interrupted people constantly, even for good news like earning points.</p></div>
+        <div><span class="lbl">Today</span><p>Save alerts for real errors. Use a light, dismissible toast for points, like Facebook's "New stories" pill.</p></div>
+      </li>
+      <li>
+        <div><span class="lbl">Finding</span><p>People struggled to find Redeem, and after submitting a code the page stayed open as if something else needed doing.</p></div>
+        <div><span class="lbl">Today</span><p>Make Redeem a first-class destination, and confirm with a clear message like "15% off redeemed. Your certificate is on its way."</p></div>
+      </li>
+      <li>
+        <div><span class="lbl">Finding</span><p>The profile screen was pushed onto the Feed tab's navigation stack, so a tester who tapped Feed later landed back on Profile and got lost.</p></div>
+        <div><span class="lbl">Today</span><p>Give Profile its own tab or open it as a modal, and never mix tab and stack navigation in ways people can't predict.</p></div>
+      </li>
+      <li>
+        <div><span class="lbl">Finding</span><p>The event feed showed hundreds of identical "Person X will be watching" updates.</p></div>
+        <div><span class="lbl">Today</span><p>Group activity and show friends first, with everyone else collapsed into a single line.</p></div>
+      </li>
+    </ul>
+    <p>Most of these are now standard mobile best practice. In 2013 we learned them the hard way, by watching people get stuck.</p>
+
+    <!-- ============ STORY 4 ============ -->
+    <p class="project-label">Story 4 of 6</p>
+    <h2 id="moderation">Moderating fan photos</h2>
+    <p class="beat">The moment</p>
+    <p>Photo challenges were one of the most popular features, and some of the most abused. Some fans uploaded random or inappropriate photos just to collect points. We had no tools to review photos or deal with repeat offenders, so the team was sending warning emails by hand.</p>
+    <figure class="shot narrow">
+      <img src="images/enthuse/moderation-prototype.jpg" alt="An internal page showing recent fan photo uploads in a Pinterest-style grid, with faces blurred and three flagged photos hidden" data-zoom>
+      <figcaption>The first internal prototype: every recent upload in one scrolling wall. Faces blurred; flagged examples obscured for this case study.</figcaption>
+    </figure>
+    <p class="beat">The debate</p>
+    <p>An engineer prototyped a Pinterest-style infinite scroll of every upload, which made bad photos obvious at a glance. Our lead engineer pushed back. For an admin tool, a uniform grid is faster and more precise: with variable-height columns you can't predict where the controls will land. He also warned that reviewing every photo before it posted would be a huge headache.</p>
+    <p>My view was that we were solving two different problems. The real damage came from people stealing points, and only secondarily from inappropriate images. So I proposed rewarding only challenges completed correctly, and holding questionable photos until they were cleared. I also pointed out that the same tool could do something positive: flag great photos to feature in marketing, ads, and the app itself.</p>
+    <p class="beat">What shipped</p>
+    <p>We agreed on a short, prioritized list: flag a photo for deletion, link to the user to see or delete all of their photos or their account, and flag a photo to feature. The first piece was deploying within two days.</p>
+    <p>Featuring great photos was already working for us. Weekly photo contests were some of our best marketing.</p>
+    <div class="gallery">
+      <figure><img src="images/enthuse/umiami-photo-winners.jpg" alt="Week 1 photo contest winners graphic for the University of Miami with four fan photos" data-zoom><figcaption>Miami's weekly winners: 1,000 points and a Canes t-shirt.</figcaption></figure>
+      <figure><img src="images/enthuse/photo-winner-lacrosse.jpg" alt="Atlantic Sun photo contest winner graphic: fan earns 1,500 points" data-zoom><figcaption>An Atlantic Sun contest winner.</figcaption></figure>
+      <figure><img src="images/enthuse/march-madness-leaderboard.jpg" alt="Enthuse March Madness leaderboard showing the top ten fans" data-zoom><figcaption>The March Madness leaderboard.</figcaption></figure>
+    </div>
+
+    <!-- ============ STORY 5 ============ -->
+    <p class="project-label">Story 5 of 6</p>
+    <h2 id="stadium">Making scoring points sound like a stadium</h2>
+    <p class="beat">The moment</p>
+    <p>Earning points was the core loop of the app, but the moment itself felt flat: a number changed and that was it. A points app for sports fans should feel like the crowd just went wild.</p>
+    <p class="beat">What I designed</p>
+    <p>I designed the points animation, a big "+100 POINTS" that bursts onto the screen after a check-in, and paired it with a crowd-roar sound effect I put together.</p>
+    <div class="phones">
+      <figure>
+        <video src="images/enthuse/points-animation-1.mp4" poster="images/enthuse/points-animation-1-poster.jpg" autoplay muted loop playsinline aria-label="Points animation: Check-in! +100 points"></video>
+        <figcaption>The check-in animation.</figcaption>
+      </figure>
+      <figure>
+        <video src="images/enthuse/points-animation-2.mp4" poster="images/enthuse/points-animation-2-poster.jpg" autoplay muted loop playsinline aria-label="Points animation after completing a walk-in challenge"></video>
+        <figcaption>A second version for completing a challenge.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/enthuse/settings-select.jpg" alt="Settings screen with Redeem codes, About, Sounds, and notification toggles" data-zoom>
+        <figcaption>Settings, with the new Sounds option.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/enthuse/settings-sounds.jpg" alt="Sounds settings screen with a Point Awards toggle switched on" data-zoom>
+        <figcaption>Fans could turn the crowd off.</figcaption>
+      </figure>
+    </div>
+    <div class="listen">
+      <audio controls preload="none" src="images/enthuse/crowd-points.m4a"></audio>
+      <p>The crowd sound that played when you earned points.</p>
+    </div>
+    <p class="beat">A small naming debate</p>
+    <p>Sound needed an off switch. I wanted to call the setting "Sound effects" because it sounded more theatrical and fun. Others pointed out that iOS calls this "Sounds". We went with the platform convention so it would feel familiar.</p>
+    <p class="beat">What happened</p>
+    <p>The sound and animation shipped in April 2013. In user testing a month later, a tester suggested taking it further: scale the applause to the reward, with polite clapping for 10 points and a full stadium for 100 or more. That was a great idea, and it's the kind of feedback that only comes once something is real enough to react to.</p>
+
+    <!-- ============ STORY 6 ============ -->
+    <p class="project-label">Story 6 of 6</p>
+    <h2 id="banner">The championship-banner download button</h2>
+    <p class="beat">The moment</p>
+    <p>New features were coming on May 1, and people landing on enthuse.com had no obvious way to get the app. We needed a download call-to-action above the fold, fast.</p>
+    <p class="beat">What I designed</p>
+    <p>I designed the button to look like a championship banner hanging from the rafters, the kind every arena has. At rest it shows "Enthuse App, free on iPhone and Android." On hover, the banner slides down and the iPhone and Android buttons appear. It sat in the top corner of the homepage, where every visitor would see it.</p>
+    <div class="phones">
+      <figure><img src="images/enthuse/get-app-1.jpg" alt="Small blue banner reading Enthuse App, free on iPhone and Android" data-zoom><figcaption>At rest.</figcaption></figure>
+      <figure><img src="images/enthuse/get-app-2.jpg" alt="The banner extended with iPhone and Android buttons" data-zoom><figcaption>On hover, the banner drops.</figcaption></figure>
+      <figure><img src="images/enthuse/get-app-3.jpg" alt="The extended banner with the Android button highlighted" data-zoom><figcaption>Buttons highlight on hover.</figcaption></figure>
+    </div>
+    <div class="pair">
+      <figure><img src="images/enthuse/cta-banner-normal.jpg" alt="Enthuse homepage for teams: A simple way to reward your fans, with the download banner in the corner" data-zoom><figcaption>The homepage for teams, with the banner at rest.</figcaption></figure>
+      <figure><img src="images/enthuse/cta-banner-hover.jpg" alt="The same homepage with the banner extended to show download buttons" data-zoom><figcaption>The same page on hover.</figcaption></figure>
+    </div>
+    <p class="beat">What happened</p>
+    <p>I sent the first design on April 9. I was asked to get it implemented right away, and a front-end developer had it in the repo and ready to go live by April 14, less than a week from first mockup to shipped.</p>
+
+    <!-- ============ CONCLUSION ============ -->
+    <h2 id="conclusion">Conclusion</h2>
+    <p>Enthuse was where I learned to design the whole experience, not just the app: the sound of earning points, the banner that gets someone to download, the tool that keeps the community honest, and the flier in a fan's hand on the concourse.</p>
+    <p>It also taught me to watch people use what I build. The user tests and stadium debriefs changed my thinking more than any internal debate did, and that habit carried straight into the ten years I spent designing feedback and analytics tools at Wootric.</p>
+
+    <!-- ============ PRESS ============ -->
+    <h2 id="press">Press</h2>
+    <ol class="refs">
+      <li><a href="https://techcrunch.com/2012/12/03/enthuse-raises-1-3m-from-greystripe-co-founder-and-others-to-help-sports-teams-reward-their-fans/">Enthuse raises $1.3M from Greystripe co-founder and others to help sports teams reward their fans</a>. <i>TechCrunch</i>, December 2012.</li>
+      <li>The America East Conference partners with Enthuse to engage and reward fans during Baseball Championship with First Pitch Challenge. <i>America East Conference</i>, May 2013.</li>
+      <li>Purdue partners with Enthuse for fan loyalty. <i>Purdue Athletics</i>, May 2013.</li>
+    </ol>
+
+    <nav class="next-case" aria-label="More case studies">
+      <a href="index.html#work">← All case studies</a>
+      <a href="resume-wootric.html">Next: Wootric CXInsights →</a>
+    </nav>
+  </main>
+</div>
+
+<footer class="site">© Daniel Pitrowiski 2026 · <a href="mailto:danpitrowiski@gmail.com">danpitrowiski@gmail.com</a></footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '0px 0px -70% 0px' });
+  document.querySelectorAll('.article h2[id]').forEach(function (h) { io.observe(h); });
+  // Respect reduced-motion: pause looping videos
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[autoplay]').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.setAttribute('controls', ''); });
+  }
+})();
+</script>
+<script src="js/lightbox.js"></script>
+</body>
+</html>
