@@ -55,6 +55,24 @@
   font: 500 .7rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--passive);
 }
 
+/* Editor's notes: dated updates showing what changed after new research.
+   Usage: <p class="editor-note" data-date="Oct 16, 2026">...</p>. Use <del>old</del> <ins>new</ins> for before/after. */
+.editor-note, .todo.editor-note {
+  max-width: 68ch; margin: 14px 0 22px; padding: 10px 14px 11px 16px;
+  border: 0; border-left: 3px solid var(--promoter);
+  background: color-mix(in srgb, var(--promoter) 8%, var(--paper));
+  font-size: .92rem; line-height: 1.55; color: var(--ink);
+}
+.editor-note::before, .todo.editor-note::before {
+  content: "Editor\2019s note"; display: block; margin-bottom: 5px;
+  font: 500 .7rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--promoter);
+}
+.editor-note[data-date]::before { content: "Editor\2019s note \00B7  " attr(data-date); }
+.editor-note > :last-child { margin-bottom: 0; }
+.editor-note del { color: var(--ink-soft); text-decoration-thickness: 1px; }
+.editor-note ins { text-decoration: none; font-weight: 600; padding: 0 2px; border-radius: 2px;
+  background: color-mix(in srgb, var(--promoter) 18%, transparent); }
+
 /* Next/previous case study */
 .next-case { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .92rem; }
 

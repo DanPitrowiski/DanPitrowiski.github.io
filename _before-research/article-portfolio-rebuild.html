@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Draft: remove this noindex line when the article is ready to publish -->
+<meta name="robots" content="noindex">
+<meta name="description" content="How I rebuilt my product design portfolio with AI in four days, from researching the best case studies to a Wikipedia-style site. By Daniel Pitrowiski.">
+<meta name="author" content="Dan Pitrowiski">
+<meta property="og:title" content="Citation Needed: Rebuilding My Portfolio With AI in 4 Days">
+<meta property="og:description" content="What AI did, what I still had to design, and what went wrong.">
+<meta property="og:image" content="https://danpitrowiski.github.io/images/article-rebuild/portfolio-after.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+<title>Rebuilding My Portfolio · Daniel Pitrowiski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style-new.css">
+<link rel="stylesheet" href="css/case-study.css">
+<style>
+/* Outline notes: the raw material for each section. Replace each list with prose as you write. */
+.notes { max-width: 68ch; padding-left: 1.2em; }
+.notes li { margin-bottom: 6px; }
+.titles { max-width: 68ch; padding-left: 1.2em; font-family: var(--f-display); }
+.titles li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <a class="wordmark" href="index.html">DJP<span>Senior Product Designer</span></a>
+  <nav aria-label="Elsewhere">
+    <a href="https://www.linkedin.com/in/danpitrowiski/">LinkedIn</a>
+    <a href="Daniel-Pitrowiski-Resume.pdf">Resume</a>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="toc" aria-label="Contents">
+    <div class="toc-home"><a href="index.html" aria-label="DJP · Home">DJP</a></div>
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#research">Researching the best</a></li>
+      <li><a href="#direction">Choosing a direction</a></li>
+      <li><a href="#system">Building the system</a></li>
+      <li><a href="#evidence">Digging for evidence</a></li>
+      <li><a href="#judgment">Where I stayed in charge</a></li>
+      <li><a href="#wrong">What went wrong</a></li>
+      <li><a href="#takeaways">What I'd tell other designers</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </aside>
+
+  <main class="article">
+    <!-- <aside class="infobox" aria-label="Project summary">
+      <div class="ib-name">Portfolio rebuild</div>
+      <figure>
+        <img src="images/article-rebuild/portfolio-after.jpg" alt="The new Wikipedia-style portfolio homepage, with Contents on the left and an infobox on the right" data-zoom>
+        <figcaption>The new homepage.</figcaption>
+      </figure>
+      <dl>
+        <dt>Timeline</dt><dd>4 days, October 2026</dd>
+        <dt>My role</dt><dd>Designer, Vibe Coder</dd
+        <dt>Built with</dt><dd>Claude, HTML/CSS, JavaScript, GitHub Pages</dd>
+        <dt>Inspired by</dt><dd>Case Study Club</dd>
+        <dt>Pages</dt><dd>Homepage, 3 case studies, 3 articles, 2 side projects</dd>
+      </dl>
+    </aside> -->
+
+    <div class="title-row" style="border-bottom: none;">
+      <p class="crumb"><a href="index.html#articles">Articles</a> / Rebuilding my portfolio</p>
+      <h1>My Portfolio Was 10 Years Old. AI Helped Me Rebuild It.</h1>
+      <p class="dek">What AI did well, where it sucked, and what it means.</p>
+    </div>
+    <p class="meta-line">October 2026</p>
+
+    <!-- ============ OVERVIEW ============ -->
+    <p>My portfolio was looking old. No one needed to say it. It was the fact that after a dozen interviews no one mentioned my portfolio. If it wasn't grabbing your attention it wasn't working.</p>
+
+    <p>See it for yourself:</p>
+
+    <p>Old Link: <a href="https://danpitrowiski.github.io/index-old.html">danpitrowiski.github.io/index-old.html</a></p>
+    <p>New Link: <a href="https://danpitrowiski.github.io/">danpitrowiski.github.io</a></p>
+    <div class="pair">
+      <figure>
+        <img src="images/article-rebuild/portfolio-before.jpg" alt="The old portfolio homepage: a DJP logo, a one-line bio, and a single Press Ganey project with a Learn More button" data-zoom>
+        <figcaption>Before. A resume without focus.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/article-rebuild/portfolio-after.jpg" alt="The new portfolio homepage in a Wikipedia style, with Contents, a lead paragraph, and an infobox" data-zoom>
+        <figcaption>After. A dense resume with purpose.</figcaption>
+      </figure>
+    </div>
+    <p>The best place to start, as always, is research.</p>
+
+    <!-- ============ RESEARCH ============ -->
+    <h2 id="research">Where</h2>
+    <div class="todo">Describe the research the way you'd describe user research on a product. This section shows that the redesign started with a design process, not a prompt.</div>
+    <ul class="notes">
+      <li>I started with <a href="https://www.casestudy.club/case-studies?tag=ux-design">Case Study Club</a>, a curated collection of UX case studies, and read the best-written ones.</li>
+      <li>I organized that list and pulled out the most common themes and sections. <i>(Add the list here: for example overview, role, problem, research, process, outcome, and what you'd do differently.)</i></li>
+      <li>Then I looked at those designers' own websites, to see how the strongest portfolios presented the same material.</li>
+      <li>The finding that shaped everything after it: <i>(what separated the great case studies from the good ones?)</i></li>
+    </ul>
+
+    <!-- ============ DIRECTION ============ -->
+    <h2 id="direction">Choosing a direction</h2>
+    <div class="todo">Why the Wikipedia style won out over the others. Give Alex Lakas credit by name and link his site.</div>
+    <ul class="notes">
+      <li>Out of all those portfolios, I kept coming back to the Wikipedia-style site of <a href="https://alexlakas.com">Alex Lakas</a>.</li>
+      <li>Why it fit me: a long career reads like a biography, and the format is dense, scannable, and familiar to everyone.</li>
+      <li>Citations make claims checkable. Acquisitions, customers, and press link to their sources, which builds trust with a hiring manager.</li>
+      <li>The infobox gives the quick facts at a glance: role, timeline, team, customers.</li>
+      <li>What I changed from the reference: <i>(your own decisions: the dark mode, the case-study layout, the Feedback tab with a live survey)</i></li>
+    </ul>
+
+    <!-- ============ SYSTEM ============ -->
+    <h2 id="system">Building the system</h2>
+    <div class="todo">How the work split between you and AI. Keep it concrete: you described the outcome and judged the result, and Claude wrote the HTML and CSS. Pick one or two moments where you pushed back.</div>
+    <ul class="notes">
+      <li>One shared stylesheet for every page: color and type tokens, light and dark mode, the masthead, Contents, and the infobox.</li>
+      <li>A second stylesheet for case studies: stat rows, pull quotes, screenshot pairs, and a "To write" box that keeps half-finished sections visible.</li>
+      <li>A lightbox, so any screenshot can be opened full size.</li>
+      <li>The case study template came straight out of the research: the common sections became the outline for every case study.</li>
+      <li>Late change: pinning the infobox to the top right so nothing runs underneath it, and a "DJP" home link that follows you down the page.</li>
+    </ul>
+
+    <!-- ============ EVIDENCE ============ -->
+    <h2 id="evidence">Digging for evidence</h2>
+    <div class="todo">This is the most surprising part of the story, so give it room. The point: AI was most useful as a research assistant, not as a writer.</div>
+    <h3>A 2013 inbox</h3>
+    <ul class="notes">
+      <li>My Enthuse work was over a decade old, and most of it was gone from the web.</li>
+      <li>I exported my old work email and had Claude sort through it for designs, launch numbers, and the stories behind them.</li>
+      <li>That turned up six design stories, the launch-week sign-up numbers, fliers, video boards, and photos from the championships.</li>
+    </ul>
+    <h3>Customer voices from before the acquisition</h3>
+    <ul class="notes">
+      <li>Wootric's G2 listing was renamed InMoment after the acquisition, so I used only reviews from before January 2021 as testimonials.</li>
+      <li>G2 blocked automated browsing, so I copied the reviews over myself. Not every step can be automated.</li>
+    </ul>
+    <h3>Press that survived</h3>
+    <ul class="notes">
+      <li>We found 2012–2013 announcements still live on the America East, CSU Monterey Bay, and Miami Hurricanes sites, plus TechCrunch.</li>
+      <li>It also caught a mix-up: a Forbes article about a similar app, and an unrelated UK company also called Enthuse.</li>
+      <li>A date check showed one partnership was announced before the launch I'd called the "first," so I reworded it.</li>
+    </ul>
+
+    <!-- ============ JUDGMENT ============ -->
+    <h2 id="judgment">Where I stayed in charge</h2>
+    <div class="todo">The section hiring managers care about most. Every choice here is a design decision AI couldn't make for you. Keep the list tight and specific.</div>
+    <ul class="notes">
+      <li><b>Positioning.</b> I rewrote Wootric and Press Ganey so they talk about design, not product management.</li>
+      <li><b>Story order.</b> I reordered the six Enthuse stories so the strongest design work leads.</li>
+      <li><b>Editing.</b> I kept the infobox short, even when that meant leaving a partner off the list.</li>
+      <li><b>Crops and images.</b> I cropped photos so the moment shows (a fan's face and the ball on a first pitch), and chose a phone screen for the thumbnail.</li>
+      <li><b>Layout.</b> I tried the pinned infobox as an experiment, compared every page, then decided to keep it.</li>
+    </ul>
+
+    <!-- ============ WRONG ============ -->
+    <h2 id="wrong">What went wrong</h2>
+    <div class="todo">Honest and a little funny. Readers trust a write-up more when it includes the mistakes.</div>
+    <ul class="notes">
+      <li>The lightbox jumped to the bottom of the page. The cause was one missing curly brace in the CSS.</li>
+      <li>I accidentally overwrote the homepage and lost a round of changes. We rebuilt it from a backup. Lesson: commit to git after every round.</li>
+      <li>Some sites block automated tools (G2 reviews, Medium images), so those steps went back to me.</li>
+      <li>AI drafts read smooth and generic until I put my own voice back in.</li>
+    </ul>
+
+    <!-- ============ TAKEAWAYS ============ -->
+    <h2 id="takeaways">What I'd tell other designers</h2>
+    <div class="todo">Three to five lessons, then a closing line that ties back to the hook. End with a link to the portfolio itself.</div>
+    <ul class="notes">
+      <li>Do the research before the prompt. A strong reference gets you further than a blank page.</li>
+      <li>Treat AI like a fast production team: you set the direction and review every result.</li>
+      <li>Use it to dig. The best material was buried in old email, old reviews, and old press.</li>
+      <li>Commit often, and keep a backup before every big change.</li>
+      <li>AI can build the page. It can't decide what your story is.</li>
+    </ul>
+
+    <!-- ============ REFERENCES ============ -->
+    <h2 id="references">References</h2>
+    <ol class="refs">
+      <li id="ref-1"><a href="https://www.casestudy.club/case-studies?tag=ux-design">UX design case studies</a>. <i>Case Study Club</i>.</li>
+      <li id="ref-2"><a href="https://alexlakas.com">Alex Lakas</a>. Portfolio.</li>
+    </ol>
+
+    <nav class="next-case" aria-label="More">
+      <a href="index.html#articles">← All articles</a>
+      <a href="index.html">See the portfolio →</a>
+    </nav>
+  </main>
+</div>
+
+<footer class="site">© Daniel Pitrowiski 2026 · <a href="mailto:danpitrowiski@gmail.com">danpitrowiski@gmail.com</a></footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '0px 0px -70% 0px' });
+  document.querySelectorAll('.article h2[id]').forEach(function (h) { io.observe(h); });
+})();
+</script>
+<script src="js/lightbox.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
