@@ -3,12 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<!-- Draft: remove this noindex line when the article is ready to publish -->
-<meta name="robots" content="noindex">
-<meta name="description" content="How I rebuilt my product design portfolio with AI in four days, from researching the best case studies to a Wikipedia-style site. By Daniel Pitrowiski.">
+<meta name="robots" content="How I rebuilt my 10-year-old product design portfolio with AI: researching 76 case studies and 44 homepages, building a Wikipedia-style site, and what went wrong. By Daniel Pitrowiski.">
+<meta name="description" content="How I rebuilt my 10-year-old product design portfolio with AI: researching 76 case studies and 44 homepages, building a Wikipedia-style site, and what went wrong. By Daniel Pitrowiski.">
 <meta name="author" content="Dan Pitrowiski">
-<meta property="og:title" content="Citation Needed: Rebuilding My Portfolio With AI in 4 Days">
-<meta property="og:description" content="What AI did, what I still had to design, and what went wrong.">
+<meta property="og:title" content="My Portfolio Was 10 Years Old. Time to Rebuild with AI.">
+<meta property="og:description" content="What 76 case studies and 44 homepages taught me, and what it was like rebuilding my portfolio with AI.">
 <meta property="og:image" content="https://danpitrowiski.github.io/images/article-rebuild/portfolio-after.jpg">
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
@@ -48,11 +47,10 @@
     <h2>Contents</h2>
     <ol>
       <li><a href="#overview">Overview</a></li>
-      <li><a href="#research">Researching the best</a></li>
-      <li><a href="#direction">Choosing a direction</a></li>
-      <li><a href="#system">Building the system</a></li>
-      <li><a href="#evidence">Digging for evidence</a></li>
-      <li><a href="#judgment">Where I stayed in charge</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#direction">Where I started</a></li>
+      <li><a href="#evidence">Using AI to speed up the process</a></li>
+      <li><a href="#judgment">Where I put in the most work</a></li>
       <li><a href="#wrong">What went wrong</a></li>
       <li><a href="#takeaways">What I'd tell other designers</a></li>
       <li><a href="#references">References</a></li>
@@ -60,30 +58,16 @@
   </aside>
 
   <main class="article">
-    <!-- <aside class="infobox" aria-label="Project summary">
-      <div class="ib-name">Portfolio rebuild</div>
-      <figure>
-        <img src="images/article-rebuild/portfolio-after.jpg" alt="The new Wikipedia-style portfolio homepage, with Contents on the left and an infobox on the right" data-zoom>
-        <figcaption>The new homepage.</figcaption>
-      </figure>
-      <dl>
-        <dt>Timeline</dt><dd>4 days, October 2026</dd>
-        <dt>My role</dt><dd>Designer, Vibe Coder</dd
-        <dt>Built with</dt><dd>Claude, HTML/CSS, JavaScript, GitHub Pages</dd>
-        <dt>Inspired by</dt><dd>Case Study Club</dd>
-        <dt>Pages</dt><dd>Homepage, 3 case studies, 3 articles, 2 side projects</dd>
-      </dl>
-    </aside> -->
 
-    <div class="title-row" style="border-bottom: none;">
+    <div class="title-row" id="overview" style="border-bottom: none;">
       <p class="crumb"><a href="index.html#articles">Articles</a> / Rebuilding my portfolio</p>
-      <h1>My Portfolio Was 10 Years Old. Time to Rebuild w/ AI.</h1>
-      <p class="dek">What AI did well, where it sucked, and what it means.</p>
+      <h1>My Portfolio Was 10 Years Old. Time to Rebuild It with AI.</h1>
+      <p class="dek">What 76 case studies taught me, and what AI could and couldn&rsquo;t do.</p>
     </div>
     <p class="meta-line">October 2026</p>
 
     <!-- ============ OVERVIEW ============ -->
-    <p>My portfolio was looking old. No one needed to say it. It was the fact that after a dozen interviews it hardly came up. If it wasn't grabbing your attention. It wasn't working.</p>
+    <p>My portfolio was looking old. No one needed to say it. After a half-a-dozen design interviews, I could tell it wasn't working.</p>
 
     <p>So we rebuild!</p>
 
@@ -109,12 +93,12 @@
       <figcaption><a href="https://productdesignportfolios.com">Product Design Portfolios</a>, where research started.</figcaption>
     </figure>
 
-    <p>The research began with <a href="https://productdesignportfolios.com">Product Design Portfolios</a>. A curated collection of designers portfolios with many that are just visually stunning. All excellently put together.</p>
+    <p>The research began with <a href="https://productdesignportfolios.com">Product Design Portfolios</a>. A curated collection of designers&rsquo; portfolios with many that are just visually stunning. All excellently put together.</p>
     <p>From that website, I made a list of every designer with their portfolio link. In total now I had <b>76 case studies by 39 designers</b> to compare.</p>
-    <p>Using Claude, I asked it to analyze each site for (1) Common Homepage Sections (2) Common Case Study Sections (3) Word Count. And gather all that data into a spreadsheet.</p>
-    <div>Spreadsheet linked <a href="https://docs.google.com/spreadsheets/d/1s_fg5tJXfDYJMeYdzuHE0hCMWxIvnXW7FXGv9MJn-sI/edit?usp=sharing">here.</a></div>
+    <p>I asked AI to analyze each site for (1) Common Homepage Sections (2) Common Case Study Sections (3) Word Count. And gather all that data into a spreadsheet.</p>
+    <p><a href="https://docs.google.com/spreadsheets/d/1s_fg5tJXfDYJMeYdzuHE0hCMWxIvnXW7FXGv9MJn-sI/edit?usp=sharing">See the full research spreadsheet.</a></p>
 
-    <h2>What's in a case study?</h2>
+    <h3>What's in a Case Study?</h3>
 
     <p>Four sections show up in nearly every case study, I'm calling these the MUST.</p>
 
@@ -169,7 +153,8 @@
     </figure>
 
 
-    <h2>What's on a homepage</h2>
+    <h3>What's on a Homepage?</h3>
+    <p>The same sections can add up to very different first impressions:</p>
     <div class="pair">
       <figure>
         <img src="images/article-rebuild/research/hp-pendlebury.jpg" alt="Joe Pendlebury's homepage: a large paragraph of results, starting with stopping a burger menu trend that would have cost Next £135m" loading="lazy" data-zoom>
@@ -214,51 +199,39 @@
         </tbody>
       </table>
     </figure>
-    <p>The same sections can add up to very different first impressions:</p>
 
-    <h2>How long are they? (word count)</h2>
+    <h3>How long are they? (word count)</h3>
     <div class="stats">
       <div class="stat"><b>1,106</b><span>words in the average case study (median 1,023)</span></div>
       <div class="stat"><b>371</b><span>words on the average homepage (median 234)</span></div>
-      <div class="stat"><b>782</b><span>words on my homepage</span></div>
+      <div class="stat"><b>782</b><span>words on my first-draft homepage</span></div>
     </div>
     <p>A case study is about a five-minute read. A homepage is usually under a minute. My first draft of my new homepage was more than three times as long.</p>
     <p class="editor-note" data-date="Oct 16, 2026">After this research, I cut my homepage from <del>782</del> to <ins>593</ins> words.</p>
     <p>Currently my Case Studies are a tad long to be frank. <a href="resume-wootric.html">Wootric CXI</a> is 1,670,
 <a href="resume-pg-forsta.html">Press Ganey</a> is about 1,200, and <a href="enthuse.html">Enthuse</a> is about 2,000 words long.</p>
 
-    <h2>Qualitative: What Made Great Case Studies? (in my opinion)</h2>
+    <h3>Qualitative: What Made Great Case Studies? (in my opinion)</h3>
     <ul>
-      <li><b>Lead with the result:</b> The most polished case studies lead with the outcome: 135m saved, doubling engagement, +15% conversion, etc.</li>
-      <li><b>Key Decisions.</b> Over half describe a hard decision or trade-off. The strongest put it in the title.</li>
-      <li><b>Show the Work</b> Where you could see the process in action I thought led to the strongest case studies. Especially where someone was lucky enough to take a photo.</li>
+      <li><b>Lead with the result.</b> The most polished case studies lead with the outcome: &pound;135m saved, doubling engagement, +15% conversion, etc.</li>
+      <li><b>Key decisions.</b> Over half describe a hard decision or trade-off. The strongest put it in the title.</li>
+      <li><b>Show the work.</b> Where you could see the process in action I thought led to the strongest case studies. Especially where someone was lucky enough to take a photo.</li>
     </ul>
 
     <!-- ============ DIRECTION ============ -->
     <h2 id="direction">Where I started</h2>
     <ul class="notes">
-      <li><b>Explorations.</b> I started by asking AI to start iterating on examples of my website in different styles. I gave it access to my local repo, and went to work. The design I decided on was similar to wikipedia. Leaning on a profile that could be easy to scan and infomationally dense.</li>
+      <li><b>Explorations.</b> I started by asking AI to start iterating on examples of my website in different styles. I gave it access to my local repo, and went to work. The design I decided on was similar to Wikipedia. Leaning on a profile that could be easy to scan and informationally dense.</li>
       <li><b>Gather the assets.</b> It was important for me to create documents where I could layout everything I had in order to start building.</li>
       <li><b>Create now, edit later.</b> Editing in the moment is incredibly difficult. Having written 3 yet to be published books, I know. It's easier to finish, and edit down from there.</li>
+      <li><b>Building the System.</b> Separate stylesheet for homepage and case-studies so AI didn't change too much at once. Archiving old HTML/CSS to keep the originals.</li>
     </ul>
-
-    <!-- ============ SYSTEM ============ -->
-<!--     <h2 id="system">Building the system</h2>
-    <div class="todo">How the work split between you and AI. Keep it concrete: you described the outcome and judged the result, and Claude wrote the HTML and CSS. Pick one or two moments where you pushed back.</div>
-    <ul class="notes">
-      <li>One shared stylesheet for every page: color and type tokens, light and dark mode, the masthead, Contents, and the infobox.</li>
-      <li>A second stylesheet for case studies: stat rows, pull quotes, screenshot pairs, and a "To write" box that keeps half-finished sections visible.</li>
-      <li>A lightbox, so any screenshot can be opened full size.</li>
-      <li>The case study template came straight out of the research: overview, role, problem, final solution and impact in every one, plus the decisions and honest misses that set the best apart.</li>
-      <li>Late change: pinning the infobox to the top right so nothing runs underneath it, and a "DJP" home link that follows you down the page.</li>
-    </ul> -->
 
     <!-- ============ EVIDENCE ============ -->
     <h2 id="evidence">Using AI to Speed Up the Process</h2>
-    <div class="todo">.</div>
     <h3>Scanning Emails from 2013</h3>
     <p>My Enthuse work was over a decade old, and my original Case Study has since been deleted by Squarespace (Thanks Squarespace). So I needed to put it all back together.</p>
-    <p>So I put all my data into one folder and asked AI for help. Heres what I gave it:</p>
+    <p>So I put all my data into one folder and asked AI for help. Here&rsquo;s what I gave it:</p>
     <ul class="notes">
       <li>Old work emails.</li>
       <li>Design Google Docs.</li>
@@ -267,40 +240,45 @@
       <li>Old Resumes.</li>
     </ul>
     <h3>Grabbing Customer Quotes</h3>
-    <p>For customer quotes I had AI go scan the web for customer quotes.</p>
+    <p>I had AI scan the web for customer quotes.</p>
     <ul class="notes">
       <li><b>Wootric</b> It found G2 Crowd quotes.</li>
       <li><b>Enthuse</b> Articles by the partnership universities.</li>
       <li><b>Press Ganey/InMoment/Qualtrics</b> Case Studies from my customers.</li>
     </ul>
 
+    <!-- ============ JUDGMENT ============ -->
+    <h2 id="judgment">Where I Put In the Most Work</h2>
+    <ul class="notes">
+      <li><b>Massive Editing.</b> AI was good for laying out a structure for me to working with, but I had to edit everything after.</li>
+      <li><b>Telling a Story.</b> For a case study to read and show well, I think it's all about the story. That's where reading and reading every case study became so important.</li>
+      <li><b>Images.</b> Putting together the best assets is a job on it's own that AI can sometimes help with. Like a lot of my Enthuse Case Study has images cropped by AI to show better.</li>
+      <li><b>Data Gathering.</b> Getting all the data in one place took forever. Even if AI helped slog through some old emails, it was a lot to export and gather.</li>
+    </ul>
+
     <!-- ============ WRONG ============ -->
     <h2 id="wrong">What went wrong</h2>
     <p>Plenty went wrong. And I think AI is best used when you already know the subject matter really well. In this case, I was the subject matter.</p>
     <ul class="notes">
-      <li><b>Case Studies:</b> It would often fill in details or assume things about myself or the role that didn't exist. While the content is great as an outline, it's worth deleting whole paragraphs and just rewriting it yourself.</li>
-      <li><b>Git &amp; Overwriting the AI:</b> More than a few times, I would edit a file and then ask AI to change something. When I saved my changes, it over-wrote everything. Ge sure to git commit after every important update.</li>
-      <li>Some sites block automated tools (G2 reviews, Medium images), so those steps went back to me.</li>
-      <li>AI drafts read smooth and generic until I put my own voice back in.</li>
+      <li><b>Hallucinations:</b> AI would often fill in details or assume things about myself or the role that didn't exist. While the content is great as an outline, it's worth deleting whole paragraphs and just rewriting it yourself.</li>
+      <li><b>Lost work:</b> More than a few times, I would edit a file and then ask AI to change something. When I saved my changes, it over-wrote everything. Be sure to git commit after every important update.</li>
+      <li><b>Code Yourself:</b> This portfolio was originally 100% coded by myself. Now it's a mix. But when it comes to the small tweaks, it's 1000% more efficient to make the changes yourself than ask the AI.</li>
     </ul>
 
     <!-- ============ TAKEAWAYS ============ -->
     <h2 id="takeaways">What I'd tell other designers</h2>
-    <div class="todo">Three to five lessons, then a closing line that ties back to the hook. End with a link to the portfolio itself.</div>
+    <p>My portfolio isn't finished. I don&rsquo;t think any portfolio ever is. But here are my takeaways from working with AI to rebuild my portfolio.</p>
     <ul class="notes">
-      <li>Treat your portfolio like a product. Research it, ship it, measure it, and keep going.</li>
-      <li>Do the research before the prompt. A strong reference gets you further than a blank page.</li>
-      <li>Treat AI like a fast production team: you set the direction and review every result.</li>
-      <li>Use it to dig. The best material was buried in old email, old reviews, and old press.</li>
-      <li>Commit often, and keep a backup before every big change.</li>
-      <li>AI can build the page. It can't decide what your story is.</li>
+      <li><b>Treat your portfolio like a product.</b> Research it, ship it, measure it, and keep going.</li>
+      <li><b>Do the research before the prompt.</b> A strong reference gets you further than a blank page.</li>
+      <li><b>Review Every Result:</b> Ask it to show you the changes before it does anything. After a change, ask to see the before and after. Make sure it's what you want.</li>
+      <li><b>More is Better:</b> Specifically working with AI, it's better to give it more information than less especially with Case Studies.</li>
+      <li><b>Use it to dig:</b> Save your time scouring the internet and let it look for customer quotes.</li>
     </ul>
 
     <!-- ============ REFERENCES ============ -->
     <h2 id="references">References</h2>
     <ol class="refs">
-      <li id="ref-1"><a href="https://www.casestudy.club/case-studies?tag=ux-design">UX design case studies</a>. <i>Case Study Club</i>.</li>
-      <li id="ref-2"><a href="https://alexlakas.com">Alex Lakas</a>. Portfolio.</li>
       <li id="ref-3"><a href="https://productdesignportfolios.com">Product Design Portfolios</a>. Curated list of designer portfolios.</li>
     </ol>
 
