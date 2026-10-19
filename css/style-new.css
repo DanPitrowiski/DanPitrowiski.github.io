@@ -255,6 +255,7 @@ body.lb-lock { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .project-thumb img { transition: none; } }
 @media (max-width: 640px) {
   .project { grid-template-columns: 96px minmax(0, 1fr); gap: 14px; }
+  .mobile-hide {display:none;}
 }
 
 /* ===== Layout trial (Oct 2026): infobox pinned top-right, nothing runs under it; DJP home link in the sticky Contents column.

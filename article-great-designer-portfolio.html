@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="What 44 homepages and 76 case studies from great designer portfolios have in common, advice for other designers, and my top 10 portfolios. By Daniel Pitrowiski.">
+<meta name="author" content="Dan Pitrowiski">
+<meta property="og:title" content="What Makes a Great Designer Portfolio?">
+<meta property="og:description" content="What 44 homepages and 76 case studies have in common, plus my top 10 designer portfolios.">
+<meta property="og:image" content="https://danpitrowiski.github.io/images/article-rebuild/research/product-design-portfolios.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+<title>What Makes a Great Designer Portfolio? · Daniel Pitrowiski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style-new.css">
+<link rel="stylesheet" href="css/case-study.css">
+<style>
+.notes { max-width: 68ch; padding-left: 1.2em; }
+.notes li { margin-bottom: 6px; }
+.wikitable { border-collapse: collapse; font-size: .88rem; background: var(--paper); min-width: 320px; }
+.wikitable caption { font: 700 .9rem/1.4 var(--f-body); text-align: left; padding: 0 0 6px; }
+.wikitable th, .wikitable td { border: 1px solid var(--rule); padding: 5px 10px; text-align: left; }
+.wikitable th { background: var(--panel); font-weight: 600; }
+.wikitable .num { text-align: right; font-variant-numeric: tabular-nums; }
+.data-table { margin: 16px 0 24px; max-width: 100%; overflow-x: auto; }
+/* Screenshots of other portfolios, shown in a simple browser frame */
+.browser { display: block; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--paper); transition: border-color .15s ease; }
+.browser:hover { border-color: var(--link); }
+.browser .bar { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: var(--panel); border-bottom: 1px solid var(--rule); }
+.browser .dots { display: flex; gap: 4px; flex: none; }
+.browser .dots i { display: block; width: 7px; height: 7px; border-radius: 50%; background: var(--rule); }
+.browser .url { font: 400 .72rem/1 var(--f-mono); color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.pair .browser img, .shot .browser img, .browser img { display: block; width: 100%; height: auto; border: 0; border-radius: 0; cursor: zoom-in; }
+.browser.crop img { aspect-ratio: 9 / 10; object-fit: cover; object-position: top; }
+.pair figure figcaption b, .shot figcaption b { color: var(--ink); font-weight: 600; }
+/* Top 10: homepage and case study side by side */
+.top10 { list-style: none; padding: 0; margin: 20px 0 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 32px 24px; max-width: 900px; }
+.pcard { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.article .pcard h3 { margin: 0; font: 400 1.3rem/1.25 var(--f-display); }
+.pcard .rank { font: 500 .8rem/1 var(--f-mono); color: var(--ink-soft); margin-right: 4px; vertical-align: .15em; }
+.pcard .sides { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+.pcard figure { margin: 0; min-width: 0; }
+.pcard .browser img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
+.pcard .lbl { display: block; font: 500 .66rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); padding: 8px 2px 0; margin: 0; }
+.pcard p { margin: 0; font-size: .9rem; line-height: 1.5; color: var(--ink-soft); }
+/* Section tiers: MUST-INCLUDE (green), STRONG-CHOICES (blue), DEPENDS (yellow) */
+:root { --must:#1a7f43; --must-bg:#e3f4ea; --strong:#2450b3; --strong-bg:#e6eefb; --dep:#8a6100; --dep-bg:#fdf4d7; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --must:#6fd59a; --must-bg:#14291d; --strong:#8aaefc; --strong-bg:#172238; --dep:#f0c95a; --dep-bg:#2b2410; } }
+:root[data-theme="dark"] { --must:#6fd59a; --must-bg:#14291d; --strong:#8aaefc; --strong-bg:#172238; --dep:#f0c95a; --dep-bg:#2b2410; }
+.tiers { display: grid; grid-template-columns: max-content 1fr; gap: 12px 14px; align-items: baseline; margin: 14px 0 22px; max-width: 900px; }
+.tiers dt { font: 600 .7rem/1 var(--f-mono); letter-spacing: .06em; padding: 6px 8px; border-radius: 4px; color: var(--c); background: var(--bg); }
+.tiers dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tiers dd span { font-size: .85rem; line-height: 1.4; padding: 3px 9px; border-radius: 999px; background: var(--bg); color: var(--ink); border: 1px solid color-mix(in srgb, var(--c) 35%, transparent); }
+.tiers .must { --c: var(--must); --bg: var(--must-bg); }
+.tiers .strong { --c: var(--strong); --bg: var(--strong-bg); }
+.tiers .dep { --c: var(--dep); --bg: var(--dep-bg); }
+@media (max-width: 560px) { .tiers { grid-template-columns: 1fr; gap: 8px; } .tiers dt { justify-self: start; } .tiers dd { margin-bottom: 8px; } }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <a class="wordmark" href="index.html">DJP<span>Senior Product Designer</span></a>
+  <nav aria-label="Elsewhere">
+    <a href="https://www.linkedin.com/in/danpitrowiski/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="Daniel-Pitrowiski-Resume.pdf">Resume</a>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="toc" aria-label="Contents">
+    <div class="toc-home"><a href="index.html" aria-label="DJP · Home">DJP</a></div>
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#research">The research</a></li>
+      <li><a href="#homepage">What's on a homepage?</a></li>
+      <li><a href="#case-study">What's in a case study?</a></li>
+      <li><a href="#length">Typical length</a></li>
+      <li><a href="#standouts">What stood out</a></li>
+      <li><a href="#advice">Advice for other designers</a></li>
+      <li><a href="#top-10">My top 10 portfolios</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </aside>
+
+  <main class="article">
+
+    <div class="title-row" id="overview" style="border-bottom: none;">
+      <p class="crumb"><a href="index.html#articles">Articles</a> / What makes a great designer portfolio?</p>
+      <h1>What Makes a Great Designer Portfolio?</h1>
+      <p class="dek">Research from 44 portfolios and 76 case studies. Plus my top 10.</p>
+    </div>
+    <p class="meta-line">October 2026</p>
+
+    <!-- ============ OVERVIEW ============ -->
+    <p>As I've started to redesign my own portfolio, I started asking myself what could I do to make it great?</p>
+    <p>I didn't quite know when I started this. But it was time to find out what everyone else was doing and where the great ones stood out. So I went through 44 designers' portfolios and their 76 case studies to find out. Here is what I learned.</p>
+
+    <!-- ============ RESEARCH ============ -->
+    <h2 id="research">The Research Group</h2>
+
+    <figure class="shot">
+      <span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">productdesignportfolios.com</span></span><img src="images/article-rebuild/research/product-design-portfolios.jpg" alt="The Product Design Portfolios homepage: Inspirational Product Design Portfolios, a collection of portfolios from product and UX/UI designers at leading tech companies, beside a collage of portfolio screenshots" width="1400" height="717" data-zoom></span>
+      <!-- <figcaption><b><a href="https://productdesignportfolios.com" target="_blank" rel="noopener">Product Design Portfolios</a></b>, a great source for amazing designer portfolios.</figcaption> -->
+    </figure>
+
+    <p><a href="https://productdesignportfolios.com" target="_blank" rel="noopener">Product Design Portfolios</a> is a curated collection of excellent portfolios, including several from FAANG designers.</p>
+    <p>From my data pull, I found 44 homepages and 76 case studies to compare.</p>
+    <p>With the list, I asked Claude to analyze each site for (1) common homepage sections, (2) common case study sections, and (3) the word count for each. Then I gathered all that data into a spreadsheet (linked <a href="https://docs.google.com/spreadsheets/d/1s_fg5tJXfDYJMeYdzuHE0hCMWxIvnXW7FXGv9MJn-sI/edit?usp=sharing" target="_blank" rel="noopener">here</a>).</p>
+
+    <h2 id="homepage">What's on a Homepage?</h2>
+    <p>The same sections can add up to very different first impressions:</p>
+    <div class="pair">
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">joependlebury.com</span></span><img src="images/article-rebuild/research/hp-pendlebury-top.jpg" alt="Joe Pendlebury's homepage: a large paragraph of results, starting with stopping a burger menu trend that would have cost Next £135m" loading="lazy" data-zoom="images/article-rebuild/research/hp-pendlebury-full.jpg"></span>
+        <figcaption><b><a href="https://www.joependlebury.com" target="_blank" rel="noopener">Joe Pendlebury</a>.</b> The hero is a list of results. 377 words total.</figcaption>
+      </figure>
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">stephparrott.com</span></span><img src="images/article-rebuild/research/hp-parrott-top.jpg" alt="Steph Parrott's homepage: one sentence of introduction, then large cards for Square and Plantd" loading="lazy" data-zoom="images/article-rebuild/research/hp-parrott-full.jpg"></span>
+        <figcaption><b><a href="https://www.stephparrott.com" target="_blank" rel="noopener">Steph Parrott</a>.</b> One sentence, then the work. 90 words total.</figcaption>
+      </figure>
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">fiordaliso.io</span></span><img src="images/article-rebuild/research/hp-vasylenko-top.jpg" alt="Maryna Vasylenko's homepage: a dark hero with tabs for recruiters, designers, product managers and engineers" loading="lazy" data-zoom="images/article-rebuild/research/hp-vasylenko-full.jpg"></span>
+        <figcaption><b><a href="https://fiordaliso.io" target="_blank" rel="noopener">Maryna Vasylenko</a>.</b> Tabs speak to recruiters, designers, PMs and engineers. 1,958 words total.</figcaption>
+      </figure>
+    </div>
+    <p>Homepages are simpler than case studies. Every one has a hero line, and nearly all list their case studies and give you a way to get in touch. Fewer than half link a resume, while 70% have an About Me page, which seems like a missed opportunity for someone to get to know you through your resume too.</p>
+
+    <dl class="tiers">
+      <dt class="must">MUST-INCLUDE</dt><dd class="must"><span>Hero One-liner</span><span>Contact</span><span>About Me (somewhere)</span><span>Case Study Link</span></dd>
+    </dl>
+
+    <figure class="data-table">
+      <table class="wikitable">
+        <caption>Sections found on 44 homepages</caption>
+        <thead><tr><th scope="col">Homepage section</th><th scope="col" class="num">Count</th><th scope="col" class="num">Share</th></tr></thead>
+        <tbody>
+        <tr><td>Hero / one-line positioning</td><td class="num">44</td><td class="num">100%</td></tr>
+        <tr><td>Contact / call to action</td><td class="num">40</td><td class="num">91%</td></tr>
+        <tr><td>Case study list</td><td class="num">38</td><td class="num">86%</td></tr>
+        <tr><td>Separate About page</td><td class="num">31</td><td class="num">70%</td></tr>
+        <tr><td>Resume link</td><td class="num">21</td><td class="num">48%</td></tr>
+        <tr><td>About (on the homepage)</td><td class="num">20</td><td class="num">45%</td></tr>
+        <tr><td>Current role or company</td><td class="num">14</td><td class="num">32%</td></tr>
+        <tr><td>Testimonials</td><td class="num">11</td><td class="num">25%</td></tr>
+        <tr><td>Articles, writing, podcasts</td><td class="num">10</td><td class="num">23%</td></tr>
+        <tr><td>Client logos</td><td class="num">9</td><td class="num">20%</td></tr>
+        <tr><td>Side projects / experiments</td><td class="num">9</td><td class="num">20%</td></tr>
+        <tr><td>Services / mentoring</td><td class="num">9</td><td class="num">20%</td></tr>
+        <tr><td>Skills, strengths, tools</td><td class="num">7</td><td class="num">16%</td></tr>
+        <tr><td>Principles / approach</td><td class="num">6</td><td class="num">14%</td></tr>
+        <tr><td>Labels on projects (type, year, tags)</td><td class="num">5</td><td class="num">11%</td></tr>
+        <tr><td>Design process</td><td class="num">3</td><td class="num">7%</td></tr>
+        <tr><td>Awards, press, speaking</td><td class="num">3</td><td class="num">7%</td></tr>
+        <tr><td>Career history</td><td class="num">2</td><td class="num">5%</td></tr>
+        </tbody>
+      </table>
+    </figure>
+
+    <h2 id="case-study">What's in a Case Study?</h2>
+
+    <div class="pair">
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">joependlebury.com</span></span><img src="images/article-rebuild/research/cs-pendlebury-top.jpg" alt="Joe Pendlebury's case study title: £135m saved, Leadership wanted the navigational trend, I said no, three A/B tests backed me up" loading="lazy" data-zoom="images/article-rebuild/research/cs-pendlebury-full.jpg"></span>
+        <figcaption><b><a href="https://www.joependlebury.com/work/next-ecommerce-navigation-ux-research/" target="_blank" rel="noopener">Joe Pendlebury, Next</a>.</b> The result and the decision are the title.</figcaption>
+      </figure>
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">selinaturfus.co.uk</span></span><img src="images/article-rebuild/research/cs-turfus-top.jpg" alt="Selina Turfus's SurgeryHero case study: the title, with role, team, year and company listed beside it, and a summary below" loading="lazy" data-zoom="images/article-rebuild/research/cs-turfus-full.jpg"></span>
+        <figcaption><b><a href="https://www.selinaturfus.co.uk/portfolio/surgeryhero" target="_blank" rel="noopener">Selina Turfus, SurgeryHero</a>.</b> Quick facts up top.</figcaption>
+      </figure>
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">jessicagoldmandesign.com</span></span><img src="images/article-rebuild/research/cs-goldman-top.jpg" alt="Jessica Goldman's Gusto case study: laptop and phone mockups of the Gusto signup flow" loading="lazy" data-zoom="images/article-rebuild/research/cs-goldman-full.jpg"></span>
+        <figcaption><b><a href="https://www.jessicagoldmandesign.com/gusto" target="_blank" rel="noopener">Jessica Goldman, Gusto</a>.</b> A +15% conversion story.</figcaption>
+      </figure>
+    </div>
+
+    <p>Four sections show up in nearly every case study. I'm calling these the MUST-INCLUDE.</p>
+
+    <dl class="tiers">
+      <dt class="must">MUST-INCLUDE</dt><dd class="must"><span>Overview</span><span>Role</span><span>The Problem</span><span>Final Solution / Outcome</span></dd>
+      <dt class="strong">STRONG-CHOICES</dt><dd class="strong"><span>Impact</span><span>Research</span><span>Ideation / explorations</span><span>Timeline</span><span>Insights / Personas</span><span>Key decisions / trade-offs</span><span>Reflection / Learnings</span><span>Testing / iteration</span><span>Team / Collaborators</span></dd>
+      <dt class="dep">DEPENDS</dt><dd class="dep"><span>Goals</span><span>Link to next case study</span><span>Constraints</span><span>Testimonials / Quotes</span><span>&ldquo;How might we&rdquo; question</span><span>FAQ</span><span>Press / Awards</span></dd>
+    </dl>
+
+    <figure class="data-table">
+      <table class="wikitable">
+        <caption>Sections found in 76 case studies</caption>
+        <thead><tr><th scope="col">Case study section</th><th scope="col" class="num">Count</th><th scope="col" class="num">Share</th></tr></thead>
+        <tbody>
+        <tr><td>Final solution</td><td class="num">66</td><td class="num">87%</td></tr>
+        <tr><td>Role</td><td class="num">63</td><td class="num">83%</td></tr>
+        <tr><td>Overview / TL;DR</td><td class="num">61</td><td class="num">80%</td></tr>
+        <tr><td>Problem</td><td class="num">59</td><td class="num">78%</td></tr>
+        <tr><td>Impact / results</td><td class="num">51</td><td class="num">67%</td></tr>
+        <tr><td>Research</td><td class="num">48</td><td class="num">63%</td></tr>
+        <tr><td>Ideation / explorations</td><td class="num">44</td><td class="num">58%</td></tr>
+        <tr><td>Timeline</td><td class="num">41</td><td class="num">54%</td></tr>
+        <tr><td>Insights / personas</td><td class="num">41</td><td class="num">54%</td></tr>
+        <tr><td>Key decisions / trade-offs</td><td class="num">41</td><td class="num">54%</td></tr>
+        <tr><td>Reflection / learnings</td><td class="num">40</td><td class="num">53%</td></tr>
+        <tr><td>Testing / iteration</td><td class="num">39</td><td class="num">51%</td></tr>
+        <tr><td>Team / collaborators</td><td class="num">32</td><td class="num">42%</td></tr>
+        <tr><td>Goals</td><td class="num">26</td><td class="num">34%</td></tr>
+        <tr><td>Link to next case study</td><td class="num">26</td><td class="num">34%</td></tr>
+        <tr><td>Constraints</td><td class="num">24</td><td class="num">32%</td></tr>
+        <tr><td>Testimonials / quotes</td><td class="num">18</td><td class="num">24%</td></tr>
+        <tr><td>“How might we” question</td><td class="num">16</td><td class="num">21%</td></tr>
+        <tr><td>FAQ</td><td class="num">4</td><td class="num">5%</td></tr>
+        <tr><td>Press / awards</td><td class="num">3</td><td class="num">4%</td></tr>
+        </tbody>
+      </table>
+    </figure>
+
+    <h2 id="length">Typical Length of Homepage and Case Study</h2>
+    <div class="stats">
+      <div class="stat"><b>1,106</b><span>words in the average case study (median 1,023)</span></div>
+      <div class="stat"><b>371</b><span>words on the average homepage (median 234)</span></div>
+    </div>
+    <p>A case study is about a five-minute read. A homepage is usually under a minute.</p>
+
+    <!-- ============ STANDOUTS ============ -->
+    <h2 id="standouts">Qualitative: What portfolios stood out? (in my opinion)</h2>
+
+    <h3>Homepage standouts:</h3>
+    <ul>
+      <li><b>Strong hero one-liners with results.</b> Having a strong statement above the fold with a clear result always caught my eye. I would always read it.</li>
+      <li><b>Tell me about the Case Study before I click.</b> I love homepages where I can instantly tell what product they worked on, and that the work was great. There's nothing worse than being disappointed after clicking into something.</li>
+      <li><b>Well designed.</b> It's hard to not appreciate a well-put-together page. Not always the most visually stunning, but the ones that convey information quickly.</li>
+    </ul>
+
+    <div class="pair">
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">jonprinzdesigns.com</span></span><img src="images/article-rebuild/research/hp-prinz-top.jpg" alt="Jon Prinz's homepage: the hero reads &ldquo;Driven Product Designer.&rdquo; with his years of experience and a conversion lift underneath" loading="lazy" data-zoom="images/article-rebuild/research/hp-prinz-full.jpg"></span>
+        <figcaption><b><a href="https://www.jonprinzdesigns.com" target="_blank" rel="noopener">Jon Prinz</a>.</b> Three words, with his years of experience and a conversion lift right under them.</figcaption>
+      </figure>
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">lawrencezheng.com</span></span><img src="images/article-rebuild/research/hp-zheng-top.jpg" alt="Lawrence Zheng's homepage: a featured card titled Reshaping clinical AI to be human-first at 3M, with a short summary and two stats" loading="lazy" data-zoom="images/article-rebuild/research/hp-zheng-full.jpg"></span>
+        <figcaption><b><a href="https://www.lawrencezheng.com" target="_blank" rel="noopener">Lawrence Zheng</a>.</b> The 3M card tells you the product, the problem and the result before you click.</figcaption>
+      </figure>
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">buzzusborne.com</span></span><img src="images/article-rebuild/research/hp-usborne-top.jpg" alt="Buzz Usborne's homepage: a one-line pitch, then project cards that each have a title and a short description" loading="lazy" data-zoom="images/article-rebuild/research/hp-usborne-full.jpg"></span>
+        <figcaption><b><a href="https://buzzusborne.com" target="_blank" rel="noopener">Buzz Usborne</a>.</b> Nothing flashy, and fast to read. A one-line pitch, then cards that explain each project.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Case Study standouts:</h3>
+    <ul>
+      <li><b>Lead with the result.</b> The most polished case studies lead with the outcome: &pound;135m saved, doubling engagement, +15% conversion, etc.</li>
+      <li><b>Key decisions.</b> Over half describe a hard decision or trade-off. The strongest put it in the title.</li>
+      <li><b>Show the work.</b> Seeing the process in action made for the strongest case studies, especially when someone was lucky enough to take a photo.</li>
+    </ul>
+
+    <div class="pair">
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">emilybackes.design</span></span><img src="images/article-rebuild/research/cs-backes-top.jpg" alt="Emily Backes's Sortly Sage case study: the title reads How I Doubled Chatbot Resolution Rate and Cut Agent Tickets 29%" loading="lazy" data-zoom="images/article-rebuild/research/cs-backes-full.jpg"></span>
+        <figcaption><b><a href="https://emilybackes.design/case-study/sage-designing-an-ai-powered-chatbot" target="_blank" rel="noopener">Emily Backes, Sortly Sage</a>.</b> Both results are in the title.</figcaption>
+      </figure>
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">mchiu.co.uk</span></span><img src="images/article-rebuild/research/cs-chiu-top.jpg" alt="Alex Chiu's Rayo case study: titled Challenging the Brief: From Station Pages to Schedule, with the impact listed near the top" loading="lazy" data-zoom="images/article-rebuild/research/cs-chiu-full.jpg"></span>
+        <figcaption><b><a href="https://mchiu.co.uk/case-studies/rayo-schedule/" target="_blank" rel="noopener">Alex Chiu, Rayo</a>.</b> The decision is the title. Research moved the brief from station pages to a schedule.</figcaption>
+      </figure>
+      <figure>
+        <span class="browser crop"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">joependlebury.com</span></span><img src="images/article-rebuild/research/cs-pendlebury-returns-top.jpg" alt="Joe Pendlebury's Next returns case study: a photo of hand-drawn sketches and notes just below the title" loading="lazy" data-zoom="images/article-rebuild/research/cs-pendlebury-returns-full.jpg"></span>
+        <figcaption><b><a href="https://www.joependlebury.com/work/next-ecommerce-ux-returns-reduction/" target="_blank" rel="noopener">Joe Pendlebury, Next returns</a>.</b> A photo of his paper sketches sits right under the title.</figcaption>
+      </figure>
+    </div>
+
+    <!-- ============ ADVICE ============ -->
+    <h2 id="advice">Advice for Other Designers</h2>
+    <ul class="notes">
+      <li><b>Lead with the result.</b> If you have a number, put it in the title or the first line.</li>
+      <li><b>Make your hero line count.</b> Add a result, who you helped, or your specialty. If the hero just mentions you being a product designer, it won't stand out.</li>
+      <li><b>Tell me what's behind the click.</b> Your case study cards should say what the product is, what you worked on and how it turned out. Don't make someone click just to find out.</li>
+      <li><b>Aim for a five-minute case study.</b> The average case study is about 1,100 words. If yours is pushing 2,000, it's probably time to edit. (This is a problem I have.)</li>
+      <li><b>Name the hard decision.</b> Over half the case studies describe a trade-off. The strongest put it right in the title, like Alex Chiu's &ldquo;Challenging the Brief.&rdquo;</li>
+      <li><b>Show the work.</b> Sketches, whiteboards, rejected designs. Seeing the process made for the strongest case studies. If you took a photo of your sketches, use it.</li>
+      <li><b>Link your resume.</b> Fewer than half the homepages do. Why not?</li>
+      <li><b>It's never finished.</b> I don't think any portfolio ever is. Treat it like a product: research it, ship it, and keep improving it.</li>
+    </ul>
+
+    <!-- ============ TOP 10 ============ -->
+    <h2 id="top-10">My Top 10 Designer Portfolios</h2>
+    <p>After looking at these portfolios for days, here's my top 10. Click any screenshot to see more of the page.</p>
+    <ol class="top10">
+      <li class="pcard">
+        <h3><span class="rank">#1</span> <a href="https://www.joependlebury.com" target="_blank" rel="noopener">Joe Pendlebury</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">joependlebury.com</span></span><img src="images/article-portfolios/top10/joe-pendlebury-hp-top.jpg" alt="Joe Pendlebury's homepage: a large paragraph of results, starting with stopping a burger menu trend that would have cost Next £135m" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/joe-pendlebury-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">joependlebury.com</span></span><img src="images/article-portfolios/top10/joe-pendlebury-cs-top.jpg" alt="Joe Pendlebury's case study title: £135m Saved: Leadership Wanted the Navigational Trend. I Said No. Three A/B Tests Backed Me Up." width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/joe-pendlebury-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>The hero is a list of results. His <a href="https://www.joependlebury.com/work/next-ecommerce-navigation-ux-research/" target="_blank" rel="noopener">Next navigation</a> case study puts the &pound;135m result and the decision (&ldquo;I said no&rdquo;) right in the title.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#2</span> <a href="https://emilybackes.design" target="_blank" rel="noopener">Emily Backes</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">emilybackes.design</span></span><img src="images/article-portfolios/top10/emily-backes-hp-top.jpg" alt="Emily Backes's homepage: a dark hero reading Wrangler of Pixels. Herder of Cats. &amp; Humans., with a cartoon cat" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/emily-backes-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">emilybackes.design</span></span><img src="images/article-portfolios/top10/emily-backes-cs-top.jpg" alt="Emily Backes's Sortly Sage case study: How I Doubled Chatbot Resolution Rate and Cut Agent Tickets 29%" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/emily-backes-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>A playful hero (&ldquo;Wrangler of Pixels. Herder of Cats.&rdquo;) and a SWOT of her own skills. <a href="https://emilybackes.design/case-study/sage-designing-an-ai-powered-chatbot" target="_blank" rel="noopener">Sortly Sage</a> puts both results in the title, then a summary and an FAQ.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#3</span> <a href="https://www.stephparrott.com" target="_blank" rel="noopener">Steph Parrott</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">stephparrott.com</span></span><img src="images/article-portfolios/top10/steph-parrott-hp-top.jpg" alt="Steph Parrott's homepage: one sentence of introduction, then project cards for Square, Plantd, Box and more" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/steph-parrott-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">stephparrott.com</span></span><img src="images/article-portfolios/top10/steph-parrott-cs-top.jpg" alt="Steph Parrott's Square case study: Getting invoices paid faster, with photos and an overview" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/steph-parrott-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>One sentence, then the work. Her <a href="https://www.stephparrott.com/square/" target="_blank" rel="noopener">Square Invoices</a> case study groups several shipped projects into one story.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#4</span> <a href="https://whyramachandran.design" target="_blank" rel="noopener">Ramachandra Swamy</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">whyramachandran.design</span></span><img src="images/article-portfolios/top10/ramachandra-swamy-hp-top.jpg" alt="Ramachandra Swamy's homepage: Creative Product Designer in large playful type, with skill tags below" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/ramachandra-swamy-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">whyramachandran.design</span></span><img src="images/article-portfolios/top10/ramachandra-swamy-cs-top.jpg" alt="Ramachandra Swamy's Talent Linker case study: a large title banner and product screenshots" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/ramachandra-swamy-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>A bold, playful homepage. <a href="https://whyramachandran.design/Case-study-1" target="_blank" rel="noopener">Talent Linker</a> shows the rejected design next to the one he picked.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#5</span> <a href="https://www.nicolearoberts.com" target="_blank" rel="noopener">Nicole Roberts</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">nicolearoberts.com</span></span><img src="images/article-portfolios/top10/nicole-roberts-hp-top.jpg" alt="Nicole Roberts's homepage: Welcome! I'm Nicole. I am a product designer" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/nicole-roberts-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">nicolearoberts.com</span></span><img src="images/article-portfolios/top10/nicole-roberts-cs-top.jpg" alt="Nicole Roberts's Walmart case study: Creating a Reviewer Profile to drive engagement and impact, with role and collaborators beside the overview" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/nicole-roberts-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>Key strengths and testimonials on the homepage. Her <a href="https://www.nicolearoberts.com/case-studies/creating-a-reviewer-profile-to-drive-engagement-and-impact" target="_blank" rel="noopener">Walmart Reviewer Profile</a> case study shows the pivot after presenting to leadership.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#6</span> <a href="https://www.elisefu.com" target="_blank" rel="noopener">Elise Fu</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">elisefu.com</span></span><img src="images/article-portfolios/top10/elise-fu-hp-top.jpg" alt="Elise Fu's homepage: Hi! I'm Elise, then large cards for Kiwi, Komeeda and Corporate Access Platform" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/elise-fu-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">elisefu.com</span></span><img src="images/article-portfolios/top10/elise-fu-cs-top.jpg" alt="Elise Fu's Komeeda case study: her role, team and duration, then six result metrics" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/elise-fu-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>Six result metrics sit right under the intro of <a href="http://www.elisefu.com/work-komeeda/" target="_blank" rel="noopener">Komeeda</a>, with a Team Feedback section near the end.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#7</span> <a href="https://buzzusborne.com" target="_blank" rel="noopener">Buzz Usborne</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">buzzusborne.com</span></span><img src="images/article-portfolios/top10/buzz-usborne-hp-top.jpg" alt="Buzz Usborne's homepage: a one-line pitch, then project cards that each have a title and a short description" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/buzz-usborne-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">buzzusborne.com</span></span><img src="images/article-portfolios/top10/buzz-usborne-cs-top.jpg" alt="Buzz Usborne's Designing with AI case study: a summary box above the story" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/buzz-usborne-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>A one-line pitch, then cards that explain each project. <a href="https://buzzusborne.com/work/designing-with-ai/" target="_blank" rel="noopener">Designing with AI</a> opens with a summary, and each section is an idea.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#8</span> <a href="https://mchiu.co.uk" target="_blank" rel="noopener">Alex Chiu</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">mchiu.co.uk</span></span><img src="images/article-portfolios/top10/alex-chiu-hp-top.jpg" alt="Alex Chiu's homepage: a grid of cards with his photo, intro and case studies" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/alex-chiu-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">mchiu.co.uk</span></span><img src="images/article-portfolios/top10/alex-chiu-cs-top.jpg" alt="Alex Chiu's case study: Bringing Design to a Team That Had Never Had a Designer" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/alex-chiu-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>Case study titles that read like headlines. His <a href="https://mchiu.co.uk/case-studies/rayo-in-alexa/" target="_blank" rel="noopener">Rayo on Alexa</a> case study is candid about what each decision cost.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#9</span> <a href="https://www.selinaturfus.co.uk" target="_blank" rel="noopener">Selina Turfus</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">selinaturfus.co.uk</span></span><img src="images/article-portfolios/top10/selina-turfus-hp-top.jpg" alt="Selina Turfus's homepage: her name and Product Designer over a soft orange gradient" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/selina-turfus-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">selinaturfus.co.uk</span></span><img src="images/article-portfolios/top10/selina-turfus-cs-top.jpg" alt="Selina Turfus's SurgeryHero case study: Doubling user engagement for a surgery preparation app, with role, team, year and company beside it" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/selina-turfus-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>A 47-word homepage. <a href="https://www.selinaturfus.co.uk/portfolio/surgeryhero" target="_blank" rel="noopener">SurgeryHero</a> is honest about missing its target, and her Reed case study lists the features she cut.</p>
+      </li>
+      <li class="pcard">
+        <h3><span class="rank">#10</span> <a href="https://www.lawrencezheng.com" target="_blank" rel="noopener">Lawrence Zheng</a></h3>
+        <div class="sides">
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">lawrencezheng.com</span></span><img src="images/article-portfolios/top10/lawrence-zheng-hp-top.jpg" alt="Lawrence Zheng's homepage: Creates clarity from chaos, a pixel-art office, then a featured 3M card with two stats" width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/lawrence-zheng-hp-full.jpg"></span><figcaption class="lbl">Homepage</figcaption></figure>
+          <figure><span class="browser"><span class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">lawrencezheng.com</span></span><img src="images/article-portfolios/top10/lawrence-zheng-cs-top.jpg" alt="Lawrence Zheng's 3M case study: 3M's AI had the answers. Clinicians had a workflow. I designed where the two meet." width="600" height="800" loading="lazy" data-zoom="images/article-portfolios/top10/lawrence-zheng-cs-full.jpg"></span><figcaption class="lbl">Case study</figcaption></figure>
+        </div>
+        <p>Each project card gives the product, the problem and the result. His <a href="https://www.lawrencezheng.com/3m" target="_blank" rel="noopener">3M</a> case study uses questions and decisions as its headings.</p>
+      </li>
+    </ol>
+
+    <!-- ============ REFERENCES ============ -->
+    <h2 id="references">References</h2>
+    <ol class="refs">
+      <li><a href="https://productdesignportfolios.com" target="_blank" rel="noopener">Product Design Portfolios</a>. Curated list of designer portfolios.</li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1s_fg5tJXfDYJMeYdzuHE0hCMWxIvnXW7FXGv9MJn-sI/edit?usp=sharing" target="_blank" rel="noopener">Design Portfolio Research</a>. The homepage and case study data behind this article.</li>
+    </ol>
+
+    <nav class="next-case" aria-label="More">
+      <a href="index.html#articles">← All articles</a>
+      <a href="index.html">See the portfolio →</a>
+    </nav>
+  </main>
+</div>
+
+<footer class="site">© Daniel Pitrowiski 2026 · <a href="mailto:danpitrowiski@gmail.com">danpitrowiski@gmail.com</a></footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '0px 0px -70% 0px' });
+  document.querySelectorAll('.article h2[id]').forEach(function (h) { io.observe(h); });
+})();
+</script>
+<script src="js/lightbox.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
