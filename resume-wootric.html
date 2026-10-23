@@ -97,7 +97,7 @@
     <ul class="tag-types">
       <li><b>Senior Product Designer:</b> led design reviews and user interviews, mentored three interns, and used product analytics to guide decisions.</li>
       <li><b>User Interviews:</b> Conducted user interviews throughout the process of designing CXI.</li>
-      <li><b>Cross-functional collaboration:</b> Partnered with Marketing, Engineering, C-suite, and investors to build a product meant for Enterprise.</li>
+      <li><b>Mentorship:</b> Mentored a designer intern and front-end developer.</li>
     </ul>
 
     <!-- ============ IMPACT ============ -->
@@ -114,23 +114,23 @@
       <li><b>New Enterprise Customers:</b> Zoom, DocuSign, HubSpot, Visma, Glassdoor, and HSBC.</li>
       <li><b>Cross-functional collaboration:</b> Partnered with Marketing, Engineering, C-suite, and investors to build a product meant for Enterprise.</li>
     </ul>
-    <p>CXInsights helped Wootric move upmarket from startups to enterprise. Soon after launch we landed our first +$100,000 contract. We grew our ARR from around $1m to $3m before<b>InMoment acquired Wootric in January 2021.</b></p>
+    <p>CXInsights helped Wootric move upmarket from startups to enterprise. Soon after launch we landed our first $100,000+ contract. We grew our ARR from around $1m to $3m before <b>InMoment acquired Wootric in January 2021.</b></p>
     <blockquote class="pull">"[Wootric] allows our Support team to segment feedback by agent and other relevant business drivers to uncover insights that help us optimize our support experience, and it can also reveal bottlenecks that are best addressed by improving product features or design."<cite>Glassdoor</cite></blockquote>
 
     <!-- ============ PROBLEMS ============ -->
     <h2 id="problems">Problems</h2>
-    <h3 id="big-data">(1) Too Many Responses to Understand at Scale</h3>
-    <p>Enterprise customers received millions of responses sometimes per month. Companies like DocuSign, Zoom, and Glassdoor had teams exporting spreadsheets of their feedback and building their own dashboards by hand.</p>
-    <h3 id="big-data">(2) Big Bad Data</h3>
-    <p>Customers data sent with surveys was disorganized. For example, one source might pass an empty property called <code>company_name</code> while another source passed <code>organization</code>, <code>account_name</code>, or <code>company</code>. Users would often filter on these and see a blank page.</p>
+    <h3>(1) Too Many Responses to Understand at Scale</h3>
+    <p>Enterprise customers sometimes received millions of responses a month. Companies like DocuSign, Zoom, and Glassdoor had teams exporting spreadsheets of their feedback and building their own dashboards by hand.</p>
+    <h3>(2) Big Bad Data</h3>
+    <p>Customer data sent with surveys was disorganized. For example, one source might pass an empty property called <code>company_name</code> while another source passed <code>organization</code>, <code>account_name</code>, or <code>company</code>. Users would often filter on these and see a blank page.</p>
     <blockquote class="pull">“It’s so much easier when you have all of the feedback come into one place. You can look at the snapshot view. You can filter. You can triage. Honestly, it’s so much better than going through spreadsheets manually. I never want to do that again.”<cite>Customer Insights Manager, Hootsuite</cite></blockquote>
 
     <!-- ============ RESEARCH ============ -->
-    <h2 id="research">Qualitative and quant research</h2>
+    <h2 id="research">Qualitative and quantitative research</h2>
     <h3 id="interviews">UX Case Study</h3>
     <p>I designed our UX Case Study and ran a dozen interviews with enterprise customers to understand how they reported on feedback today. Those conversations shaped the core feature list: dashboards to share with executives, all feedback from every source in one place, actionable insights, and automatic categorization.</p>
     <p class="editor-note" data-date="Oct 23, 2026">Full UX Case Study article coming soon</p>
-    <p><b>Full Story Session Recordings</b> caught what interviews missed. Watching people use the product, we saw them filter, hit zero results, and give up. Nobody mentions it because it's a common problem across the industry.</p>
+    <p><b>FullStory session recordings</b> caught what interviews missed. Watching people use the product, we saw them filter, hit zero results, and give up. Nobody mentions it because it's a common problem across the industry.</p>
     <p>Public reviews backed the interview results. Customers liked the simple dashboard but kept running into its limits the more data they had:</p>
     <blockquote class="pull">"I can't create a dashboard with different views/report (i.e.: by business unit, by country and etc)."<cite>Product Manager, small business · G2 review, May 2020</cite></blockquote>
 
@@ -156,7 +156,7 @@
       <li><b>Out-of-the-box:</b> After feedback is loaded into the account the customer should see immediate value.</li>
       <li><b>Source of Truth:</b> All feedback from every source into one place.</li>
       <li><b>Code Free Analysis:</b> Let teams build custom dashboards and reports without a BI tool or spreadsheet.</li>
-      <li><b>Machine Learning Categorization</b> Categorize feedback automatically so it scales to millions of responses.</li>
+      <li><b>Machine Learning Categorization:</b> Categorize feedback automatically so it scales to millions of responses.</li>
       <li><b>Actionable:</b> Turn that data into insights with a purpose.</li>
     </ul>
 
@@ -206,8 +206,8 @@
     <p>Feedback cards went through the most iterations. We defined a few of the most important features:</p>
     <ul class="tag-types">
       <li><b>Readability:</b> The survey feedback should be easy to read and scan through.</li>
-      <li><b>Clearly Delinations:</b> Because all surveys were mixed together the feedback needed to look different where it mattered. Score. NPS, CSAT, CES, open-ended only. Positive Sentiment, Neutral, or Negative. etc.</li>
-      <li><b>Fast Manual Tagging</b> Tags needed to be easy to add, easy to delete, and easy to understand why a Tag was added in the first place.</li>
+      <li><b>Clear delineations:</b> Because all surveys were mixed together the feedback needed to look different where it mattered. Score. NPS, CSAT, CES, open-ended only. Positive Sentiment, Neutral, or Negative. etc.</li>
+      <li><b>Fast Manual Tagging:</b> Tags needed to be easy to add, easy to delete, and easy to understand why a Tag was added in the first place.</li>
     </ul>
     <figure class="shot">
       <div class="trio">
@@ -228,9 +228,9 @@
 
     <h3 id="prototyping">Rapid prototyping</h3>
     <ul class="tag-types">
-      <li class="no"><b>AI Controls:</b> Our ML models allowed additional configuration. But in testing it was too confusing. For example our standard was to assign feedback a "Negative" sentiment if the model returned a score between 0-0.25. That range could be adjusted. It resulted in users noticing edge cases where they wanted to adjust the entire model if 2 feedback in 100 were wrong. Instead we added the ability to change a Sentiment for one feedback at a time.</li>
+      <li class="no"><b>AI Controls:</b> Our ML models allowed additional configuration. But in testing it was too confusing. For example our standard was to assign feedback a "Negative" sentiment if the model returned a score between 0-0.25. That range could be adjusted. It resulted in users noticing edge cases where they wanted to adjust the entire model if 2 responses in 100 were wrong. Instead we added the ability to change a Sentiment for one feedback at a time.</li>
       <li class="yes"><b>Custom Reports:</b> The first reports we built worked directly with customers to reproduce the most common reports they made for themselves.</li>
-      <li class="no"><b>Onboarding and Empty-State:</b> I worked dirctly with our design intern to create an onboarding flow. She did a fantastic job. But we pivoted after talking with our account managers. They planned on personally onboarding Enterprise customers and already preloading their data. So Enterprise customers would never even see the onboarding we were building for them.</li>
+      <li class="no"><b>Onboarding and Empty-State:</b> I worked directly with our design intern to create an onboarding flow. She did a fantastic job. But we pivoted after talking with our account managers. They planned on personally onboarding Enterprise customers and already preloading their data. So Enterprise customers would never even see the onboarding we were building for them.</li>
     </ul>
 
     <!-- ============ SEQUENCING ============ -->
@@ -238,10 +238,10 @@
     <p>We built in layers, each one getting tested with customers:</p>
     <ol class="sequence">
       <!-- <li><div><b>Standard Dashboard.</b> A simple, free view every customer starts on.</div></li> -->
-      <li><div><b>Enterprise Executive Dashboard.</b> Custom reports and dashboards with feedback from all sources in one place.</div></li>
-      <li><div><b>Feedback Breakdown.</b> See every segment and its response count before filtering, then click straight in. Every report needed to lead here to see the survey responses behind the reporting.</div></li>
-      <li><div><b>AI/ML auto-categorization.</b> Smart, Text Match, and Manual tags with sentiment, so the data tells a story at any volume.</div></li>
-      <li><div><b>Watchlists.</b> To monitor important customer segments that need immediate attention.</div></li>
+      <li><div><b>Feedback Breakdown.</b> We needed the view to see all the feedback first.</div></li>
+      <li><div><b>AI/ML auto-categorization.</b> Smart, Text Match, and Manual tags with sentiment, so the data tells a story.</div></li>
+      <li><div><b>Enterprise Executive Dashboard.</b> Custom reports and dashboards once customers could see their feedback.</div></li>
+      <li><div><b>Watchlists.</b> Actionable watchlists from segments customers made themselves.</div></li>
     </ol>
 
     <figure class="shot">
@@ -258,7 +258,7 @@
       <img src="images/wootric/cxi-feedback-template.png" alt="The Feedback page with the Feedback Breakdown showing segments and counts" data-zoom>
       <figcaption>The Feedback page. The breakdown shows what's in each segment before you filter.</figcaption>
     </figure>
-    <p>Alongside Feedback Breakdown, CXInsights helped carry Wootric from focusing on startups to enterprise. Allowing us to sign our biggest contracts ever and taking ARR from $1M to $5M before acquisition by InMoment in January 2021.</p>
+    <p>Alongside Feedback Breakdown, CXInsights helped carry Wootric from focusing on startups to enterprise. It let us sign our biggest contracts ever and took ARR from $1M to $5M before acquisition by InMoment in January 2021.</p>
 
     <h3 id="customers-said">What customers said</h3>
     <div class="testimonials">
@@ -279,7 +279,7 @@
         <figcaption><b>Deepak D.</b>, CTO &amp; Co-Founder · Small business · Jul 2020</figcaption>
       </figure>
     </div>
-    <p class="source-note">Reviews from <a href="https://www.g2.com/products/inmoment-experience-improvement-xi-platform/reviews">G2</a> crowd (from Wootric customers)</p>
+    <p class="source-note">Reviews from <a href="https://www.g2.com/products/inmoment-experience-improvement-xi-platform/reviews">G2</a> (from Wootric customers)</p>
 
     <!-- ============ CONCLUSION ============ -->
     <h2 id="conclusion">Conclusion</h2>
