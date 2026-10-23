@@ -44,6 +44,14 @@
 
 .tag-types { padding-left: 1.2em; max-width: 68ch; }
 .tag-types li { margin-bottom: 6px; }
+/* Green check / red X in place of the bullet: <li class="yes"> or <li class="no"> */
+.tag-types li.yes, .tag-types li.no { list-style: none; position: relative; }
+.tag-types li.yes::before, .tag-types li.no::before {
+  position: absolute; left: -1.35em; top: 0;
+  font: 600 1rem/1.65 var(--f-body);
+}
+.tag-types li.yes::before { content: "\2713" / "Shipped: "; color: var(--promoter); }
+.tag-types li.no::before { content: "\2717" / "Not shipped: "; color: var(--detractor); }
 
 /* Draft prompts: visible on purpose so nothing ships half-written. Delete each one once its section is written. */
 .todo {
@@ -101,6 +109,17 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
   align-items: center;
+}
+
+/* Three screenshots side by side with one caption; stacks on phones */
+.shot .trio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+@media (max-width: 640px) {
+  .shot .trio { grid-template-columns: minmax(0, 1fr); gap: 16px; }
 }
 
 /* Images inside the summary box never exceed its width */
