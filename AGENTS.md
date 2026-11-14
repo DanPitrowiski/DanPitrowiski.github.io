@@ -149,5 +149,5 @@ When implementing a Figma frame:
 
 ## Git
 
-- Commit or push only when Daniel asks. Use short, plain commit messages in the style of `git log`.
-- Never force-push or rewrite history.
+- Don't commit or push unless the user confirms. Use short, plain commit messages in the style of `git log`.
+- NEVER force-push or rewrite history.
