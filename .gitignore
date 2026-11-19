@@ -1,1 +1,3 @@
 .DS_Store
+# Cloudflare wrangler cache
+.wrangler/

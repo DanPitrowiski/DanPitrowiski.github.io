@@ -1,0 +1,20 @@
+name = "danai"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+# Lets worker.js import knowledge.md as text
+[[rules]]
+type = "Text"
+globs = ["**/*.md"]
+fallthrough = true
+
+[vars]
+MODEL = "claude-haiku-5-5"
+
+# 20 questions per minute per visitor. Delete this block if deploy complains about it.
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "1001"
+  [ratelimits.simple]
+  limit = 20
+  period = 60

@@ -83,7 +83,7 @@ HEADER NAV
 */
 
 header {
-  /* background: url("../images/hero_background.jpg"); */
+  /* background: url("../../../images/hero_background.jpg"); */
   /* background-size: cover; */
   border-bottom: 1px solid #e0e0e0;
 }
@@ -102,7 +102,7 @@ header img {
 }
 
 header nav {
-  background-image: url(images/DJP_logo.png);
+  background-image: url(../../../css/images/DJP_logo.png);
   text-align: right;
   margin: 0 auto;
   padding: 0px;
@@ -164,11 +164,11 @@ img.hero{
 }
 
 .default-bg {
-  background: url("../images/hero_background.png");
+  background: url("../../../images/hero_background.png");
 }
 
 .wootric-bg {
-  background: url(../images/wootric-team.png);
+  background: url(../../../images/wootric-team.png);
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -414,7 +414,7 @@ CSS effects
 }
 
 .aboutme-bg-image {
-  background: url(../images/pledge1.jpeg);
+  background: url(../../../images/pledge1.jpeg);
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -817,7 +817,7 @@ FOR SMALLER SCEENS
 
     .hero-div {
       margin-top: 0em;
-      background: url(../images/hero_background.png);
+      background: url(../../../images/hero_background.png);
       background-position-x: center;
       background-position-y: top;
       height: 6em;
@@ -827,7 +827,7 @@ FOR SMALLER SCEENS
 
     .hero-wootric-div {
       margin-top: 0rem;
-      background: url(../images/wootric-team.png);
+      background: url(../../../images/wootric-team.png);
       background-position-x: center;
       background-position-y: center;
       height: 8rem;
@@ -837,7 +837,7 @@ FOR SMALLER SCEENS
 
     .hero-aboutme-div {
       margin-top: 0rem;
-      background: url(../images/pledge1.jpeg);
+      background: url(../../../images/pledge1.jpeg);
       background-position-x: center;
       background-position-y: center;
       height: 22rem;

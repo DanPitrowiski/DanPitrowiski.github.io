@@ -1,0 +1,87 @@
+DANIEL PITROWISKI
+Senior Product Designer
+San Francisco, CA | danpitrowiski.github.io | danpitrowiski@gmail.com | 
+
+Senior Product Designer with 16+ years experience in B2B SaaS and leading design from startup to
+acquisition. Designed AI-powered CXInsights a full 2-years before ChatGPT.
+
+
+WORK EXPERIENCE
+
+
+PRESS GANEY (acquired InMoment, before Qualtrics acquired them)
+Senior Product Designer | May 2025 - June 2026
+   ●​ Senior member of a 10-person team, managing $5M+ in ARR across 80+ countries serving
+       enterprise customers including Foot Locker, DocuSign, Zoom, and Glassdoor.
+   ●​ Designed AI/ML survey feature that prompts survey users with follow-up questions, which
+       in testing showed it would increase the volume of open-ended responses by 10%.
+   ●​ Added WCAG AA compliance across web, email, and mobile iOS and Android integrations,
+       passing customer audits, leading to 5 new customer accounts upon passing.
+
+
+INMOMENT (acquired Wootric)
+Senior Product Designer | December 2020 - May 2025
+
+   ●​ Expanded CXInsights into EU and AU markets by designing survey localization and language
+       management tools, adding customers like Visma, Bank of Queensland, and Contentful.
+   ●​ Built deep integrations w/ Salesforce, Zendesk, Slack, MS Dynamics and InMoment, adding
+       shared InMoment/Wootric customers like INFINITI, Jack in the Box, and Foot Locker.
+   ●​ Integrated the Wootric Design System using Figma and Storybook into InMoment, allowing
+       Wootric and InMoment products to work together.
+
+
+WOOTRIC
+Lead Product Designer | November 2015 - December 2020
+
+   ●​ Launched Wootric CXInsights, an AI-powered customer experience platform (2020,
+       2-years before ChatGPT). Leading to the first $100,000 contract and major expansion into
+       Enterprise.
+   ●​ Headed design for Wootric's B2B SaaS app from $0 to $3M+ in ARR before its acquisition.
+   ●​ Gave all-hands Data Analysis presentations showing user pain points that kicked-off our
+       design of CXI.
+VACATIA
+Product Manager and UX Designer | August 2013 - June 2014
+   ●​ Created Zendesk automations for the Customer Service team to close tickets 20% faster.
+   ●​ Raised customer satisfaction (CSAT) from the low 3’s to 3.9.
+
+
+ENTHUSE
+Lead UI/UX and Product Manager | December 2010 - July 2013
+Consumer iOS and Android app connecting sports fans to teams and brands.
+   ●​ Owned Product and Design while supporting $1.3M seed fundraising.
+   ●​ Led 0-to-1 development of a B2C iOS/Android app connecting sports fans with teams and
+        brands that launched nationwide in schools like University of Miami, Purdue, and CSU
+        Monterey Bay.
+
+
+
+EDUCATION
+
+
+GENERAL ASSEMBLY
+Bootcamp, Front-End Programming | January 2018 - June 2018
+
+
+NORTHEASTERN UNIVERSITY
+Bachelor's, Engineering | September 2004 - May 2008
+
+
+
+PROJECTS
+
+
+AI AGENT for TRADE EVALUATIONS
+Creator | Sports Simulation League | Project Link
+Built end-to-end evaluation logic and decision criteria with Claude and Gemini for assessing trade
+proposals in a competitive sports simulation league.
+
+
+STACK
+
+
+ Claude       Cursor       Rapid Prototyping   Github     AI Design   Figma       Product Strategy
+
+ Roadmap Development           Cross-functional Team Leadership   Visual Design     Web      Android
+
+ iOS       Presentations
+

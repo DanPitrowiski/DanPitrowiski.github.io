@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Knight of the Living Dead: a roguelike RPG designed in Sketch and built entirely in the browser by Daniel Pitrowiski.">
 <meta name="author" content="Dan Pitrowiski">
 <meta property="og:title" content="Knight of the Living Dead · Daniel Pitrowiski">
 <meta property="og:description" content="A browser-based roguelike RPG, designed and coded from scratch.">
 <meta property="og:image" content="https://danpitrowiski.github.io/images/KnightoftheLivingDead.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/favicons/favicon-16x16.png">
 <title>Knight of the Living Dead · Daniel Pitrowiski</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,14 +52,13 @@
   <a class="wordmark" href="index.html">DJP<span>Senior Product Designer</span></a>
   <nav aria-label="Elsewhere">
     <a href="https://www.linkedin.com/in/danpitrowiski/">LinkedIn</a>
-    <a href="https://medium.com/@danpitrowiski">Medium</a>
-    <a href="https://dribbble.com/DJP">Dribbble</a>
-    <a href="https://github.com/DanPitrowiski">GitHub</a>
+    <a href="../../Daniel%20Pitrowiski%20-%20Senior%20Product%20Designer.pdf">Resume</a>
   </nav>
 </header>
 
 <div class="shell">
   <aside class="toc" aria-label="Contents">
+    <div class="toc-home"><a href="index.html" aria-label="DJP · Home">DJP</a></div>
     <h2>Contents</h2>
     <ol>
       <li><a href="#overview">Overview</a></li>
@@ -71,17 +71,10 @@
   </aside>
 
   <main class="article">
-    <div class="title-row" style="border-bottom: none;">
-      <p class="crumb"><a href="index.html#projects">Side projects</a> / Knight of the Living Dead</p>
-      <h1>Knight of the Living Dead</h1>
-      <p class="dek">A roguelike RPG I designed in Sketch and built entirely in the browser.</p>
-    </div>
-    <p class="meta-line">Designer &amp; developer · Released February 2016 · v1.6 in 2020</p>
-
     <aside class="infobox" aria-label="Project summary">
       <div class="ib-name">Knight of the Living Dead</div>
       <figure>
-        <img src="images/KnightoftheLivingDead.png" alt="The game's battle screen: the Undead Knight faces Farmer Bob Brains, with Attack, Skills, and Items buttons below" data-zoom>
+        <img src="../../images/KnightoftheLivingDead.png" alt="The game's battle screen: the Undead Knight faces Farmer Bob Brains, with Attack, Skills, and Items buttons below" data-zoom>
         <figcaption>The first battle of the game.</figcaption>
       </figure>
       <dl>
@@ -93,6 +86,13 @@
         <dt>Skills</dt><dd>11 playable</dd>
       </dl>
     </aside>
+    <div class="title-row" style="border-bottom: none;">
+      <p class="crumb"><a href="index.html#projects">Side projects</a> / Knight of the Living Dead</p>
+      <h1>Knight of the Living Dead</h1>
+      <p class="dek">A roguelike RPG I designed in Sketch and built entirely in the browser.</p>
+    </div>
+    <p class="meta-line">Designer &amp; developer · Released February 2016 · v1.6 in 2020</p>
+
 
     <!-- ============ OVERVIEW ============ -->
     <h2 id="overview">Overview</h2>
@@ -113,7 +113,7 @@
       <li>Difficulty that increases as you progress</li>
     </ol>
     <figure class="shot">
-      <img src="images/knight-screenshot.png" alt="The game's skills code open in Sublime Text next to the battle screen design in Sketch" data-zoom>
+      <img src="../../images/knight-screenshot.png" alt="The game's skills code open in Sublime Text next to the battle screen design in Sketch" data-zoom>
       <figcaption>The battle screen in Sketch, next to the skills code that powers it.</figcaption>
     </figure>
 
@@ -121,7 +121,7 @@
     <h2 id="goal">The goal</h2>
     <p>From the feedback I gathered, the feature people wanted most was cool skills to use. So the goal was a system where your character gains new skills, uses them in battle, and can understand what each one does. Each time you level up, you choose between upgrades, so no two runs build the same knight.</p>
     <figure class="shot narrow">
-      <img src="images/perks-and-skills.png" alt="Level 1 perk screen offering three choices: upgrade your weapon, up your accuracy, or choose a new skill" data-zoom>
+      <img src="../../images/perks-and-skills.png" alt="Level 1 perk screen offering three choices: upgrade your weapon, up your accuracy, or choose a new skill" data-zoom>
       <figcaption>The level-up screen. Each choice spells out exactly what changes.</figcaption>
     </figure>
 
@@ -200,6 +200,7 @@
   document.querySelectorAll('.article h2[id]').forEach(function (h) { io.observe(h); });
 })();
 </script>
-<script src="js/lightbox.js"></script>
+<script src="../../js/lightbox.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
