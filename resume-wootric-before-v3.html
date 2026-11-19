@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Case study: designing Wootric CXInsights, an enterprise feedback analytics product. By Daniel Pitrowiski.">
+<meta name="author" content="Daniel Pitrowiski">
+<meta property="og:title" content="Wootric CXInsights · Daniel Pitrowiski">
+<meta property="og:description" content="How we helped enterprise CX teams make sense of millions of survey responses.">
+<meta property="og:image" content="https://danpitrowiski.github.io/images/wootric/CXI-Customer-Support-Reporting.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+<title>Wootric CXInsights · Daniel Pitrowiski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style-new.css">
+<link rel="stylesheet" href="css/case-study.css">
+</head>
+<body>
+<header class="masthead">
+  <a class="wordmark" href="index.html">DJP<span>Senior Product Designer</span></a>
+  <nav aria-label="Elsewhere">
+    <a href="https://www.linkedin.com/in/danpitrowiski/">LinkedIn</a>
+    <a href="Daniel-Pitrowiski-Resume.pdf">Resume</a>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="toc" aria-label="Contents">
+    <div class="toc-home"><a href="index.html" aria-label="DJP · Home">DJP</a></div>
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#what">What is it?</a></li>
+      <li><a href="#role">Role</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#problems">Problems</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#hypothesis">Hypothesis &amp; goals</a></li>
+      <li><a href="#designthinking">Design Thinking</a></li>
+      <li><a href="#competitive">Competitive analysis</a></li>
+      <li><a href="#experiments">Experiments</a></li>
+      <li><a href="#sequencing">Sequencing &amp; scaling</a></li>
+      <li><a href="#outcome">Outcome</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#press">Press</a></li>
+    </ol>
+  </aside>
+
+  <main class="article">
+    <aside class="infobox" aria-label="Project summary">
+      <div class="ib-name">CXInsights</div>
+      <figure>
+          <img src="images/wootric/CXI-Customer-Support-Reporting.png" alt="CXInsights executive dashboard configured for a customer support team" data-zoom>
+          <figcaption>An executive dashboard.</figcaption>
+      </figure>
+      <dl>
+        <dt>Company</dt><dd>Wootric (acquired by InMoment, Jan 2021)</dd>
+        <dt>My role</dt><dd>Senior Product Designer</dd>
+        <dt>Timeline</dt><dd>2015–2025</dd>
+        <dt>Team</dt><dd>10 engineers, marketing, 3 design interns</dd>
+        <!-- <dt>Partners</dt><dd>CEO, COO, investors</dd> -->
+        <dt>Customers</dt><dd>DocuSign, Zoom, Glassdoor, Foot Locker, HSBC</dd>
+        <!-- <dt>Scope</dt><dd>Design, product, QA, data visualization</dd> -->
+      </dl>
+    </aside>
+    <div class="title-row" style="border-bottom: none;">
+      <p class="crumb"><a href="index.html#work">Case studies</a> / Wootric</p>
+      <h1>CXInsights: AI feedback analysis that helped grow Wootric from $1M to $5M+ ARR</h1>
+      <!-- <p class="dek">Helping enterprise CX teams make sense of millions of survey responses without exporting a single spreadsheet.</p> -->
+    </div>
+    <p class="meta-line">Senior Product Designer · Wootric, acquired by InMoment · 2015–2025</p>
+
+<!--     <figure class="shot">
+      <img src="images/wootric/CXI-Customer-Support-Reporting.png" alt="CXInsights executive dashboard configured for a customer support team" data-zoom>
+      <figcaption>A CXInsights executive dashboard, set up for a customer support team.</figcaption>
+    </figure> -->
+
+
+    <!-- ============ WHAT IS IT ============ -->
+    <h2 id="what">What is it?</h2>
+    <p>Wootric started as a survey company. Any business could drop a snippet of code into its website, mobile app, text or email and start collecting NPS, CSAT, or CES responses in minutes.</p>
+    <p><b>CXInsights (CXI)</b> is the enterprise layer built on top of it. It pulls feedback from any survey source into one place. It let teams build their own dashboards, and use AI to automatically sort open-ended feedback into themes with sentiment, so a CX team can see what customers are saying at a scale no person could read.</p>
+    <blockquote class="pull">"NPS on Steroids"<cite>Customer Success Manager</cite></blockquote>
+<!--     <figure class="shot">
+      <img src="images/wootric/CXI-Customer-Support-Reporting.png" alt="CXInsights executive dashboard configured for a customer support team" data-zoom>
+      <figcaption>A CXInsights executive dashboard, set up for a customer support team.</figcaption>
+    </figure> -->
+
+    <!-- ============ ROLE ============ -->
+    <figure class="shot">
+      <img src="images/wootric-team.jpg" alt="The Wootric product team together" data-zoom>
+      <figcaption>I'm the blonde guy in the middle.</figcaption>
+    </figure>
+    <h2 id="role">Role</h2>
+    <ul class="tag-types">
+      <li><b>Senior Product Designer:</b> led design reviews and user interviews, mentored three interns, and used product analytics to guide decisions.</li>
+      <li><b>User Interviews:</b> Conducted user interviews throughout the process of designing CXI.</li>
+      <li><b>Mentorship:</b> Mentored a designer intern and front-end developer.</li>
+      <li><b>Team:</b> 4 full-stack developers, 1 backend developer, CEO, CTO, and 1 designer (myself).</li>
+    </ul>
+
+    <!-- ============ IMPACT ============ -->
+    <h2 id="impact">Impact</h2>
+    <h3 id="growth">Growth metrics</h3>
+    <div class="stats">
+      <div class="stat"><b>5X</b><span>ARR growth from new enterprise customers over the next 3 years.</span></div>
+      <div class="stat"><b>3B+</b><span>surveys stored</span></div>
+      <div class="stat"><b>~1%</b><span>account churn</span></div>
+      <div class="stat"><b>80+</b><span>countries</span></div>
+    </div>
+    <ul class="tag-types">
+      <li><b><a href="https://inmoment.com/news/inmoment-acquires-digital-feedback-leader-wootric-to-accelerate-pursuit-of-experience-improvement-for-worlds-leading-brands/">InMoment acquired Wootric in January 2021</a></b> to help InMoment move into the AI space.</li>
+      <li><b>New Enterprise Customers:</b> Zoom, DocuSign, HubSpot, Visma, Glassdoor, and HSBC.</li>
+      <li><b>Cross-functional collaboration:</b> Partnered with Marketing, Engineering, C-suite, and investors to build a product meant for Enterprise.</li>
+    </ul>
+    <p>CXInsights helped Wootric move upmarket from startups to enterprise. Soon after launch we landed our first $100,000+ contract. We grew ARR from about $1M to $3M before <b>InMoment acquired Wootric in January 2021.</b> After the merger, the Wootric platform passed $5M ARR on its own, and it also served the enterprise accounts we shared with InMoment, like Foot Locker, Nissan and Infiniti.</p>
+    <blockquote class="pull">"[Wootric] allows our Support team to segment feedback by agent and other relevant business drivers to uncover insights that help us optimize our support experience, and it can also reveal bottlenecks that are best addressed by improving product features or design."<cite>Glassdoor</cite></blockquote>
+
+    <!-- ============ PROBLEMS ============ -->
+    <h2 id="problems">Problems</h2>
+    <h3>(1) Too Many Responses to Understand at Scale</h3>
+    <p>Enterprise customers sometimes received millions of responses a month. Companies like DocuSign, Zoom, and Glassdoor had teams exporting spreadsheets of their feedback and building their own dashboards by hand.</p>
+    <h3>(2) Big Bad Data</h3>
+    <p>Customer data sent with surveys was disorganized. For example, one source might pass an empty property called <code>company_name</code> while another source passed <code>organization</code>, <code>account_name</code>, or <code>company</code>. Users would often filter on these and see a blank page.</p>
+    <blockquote class="pull">“It’s so much easier when you have all of the feedback come into one place. You can look at the snapshot view. You can filter. You can triage. Honestly, it’s so much better than going through spreadsheets manually. I never want to do that again.”<cite>Customer Insights Manager, Hootsuite</cite></blockquote>
+
+    <!-- ============ RESEARCH ============ -->
+    <h2 id="research">Qualitative and quantitative research</h2>
+    <h3 id="interviews">UX Case Study</h3>
+    <p>I designed our UX Case Study and ran a dozen interviews with enterprise customers to understand how they reported on feedback today. Those conversations shaped the core feature list: dashboards to share with executives, all feedback from every source in one place, actionable insights, and automatic categorization.</p>
+    <h3 id="interviews">Personas</h3>
+    <p>The research pointed to three buyers, each with different goals. The <b>CX Program Owner</b> owns customer touchpoints and links CX to business outcomes. The <b>PX Program Owner</b> on product and innovation teams gathers end-user feedback to improve adoption and retention. The <b>CS Program Owner</b> in Customer Success monitors account health and works to prevent churn.</p>
+    <figure class="shot">
+      <img src="images/wootric/wootric-personas.png" alt="Three Wootric personas: the CX Program Owner, the PX Program Owner and the CS Program Owner, each with their goals" loading="lazy" data-zoom>
+      <figcaption>The three personas CXInsights was designed for.</figcaption>
+    </figure>
+    <h3 id="interviews">Session Replays</h3>
+    <p><b>FullStory</b> caught what interviews missed. Watching people use the product, we saw them filter, hit zero results, and give up. Nobody mentions it because it's a common problem across the industry.</p>
+    <h3 id="interviews">Customer Feedback</h3>
+    <p>Public reviews backed the interview results. Customers liked the simple dashboard but kept running into its limits the more data they had:</p>
+    <blockquote class="pull">"I can't create a dashboard with different views/report (i.e.: by business unit, by country and etc)."<cite>Product Manager, small business · G2 review, May 2020</cite></blockquote>
+
+    <h3 id="accessibility">Accessibility &amp; systems</h3>
+
+    <ul class="tag-types">
+      <li><b>WCAG 2.2 AA compliance:</b> Ran our own tests against WCAG compliance.</li>
+      <li><b>Automated Audits:</b> Using Axe DevTools, Lighthouse, and Microsoft’s Accessibility Insights.</li>
+      <li><b>Voiceover and Color-blindness tests:</b> Using the devices themselves we manually tested.</li>
+    </ul>
+
+    <h3 id="benchmarks">Benchmarks &amp; data</h3>
+    <p>Product analytics set the baseline. For the Standard Dashboard, weekly actives kept rising, few customers reported confusion, and CX managers were screenshotting it straight into their executive reports. I wanted to redesign it, but the data said customers liked it as it was. So we kept it as the baseline design as we designed for enterprises.</p>
+    <figure class="shot">
+      <img src="images/wootric/NPS_Feedback.png" alt="The Wootric Standard Dashboard showing NPS and feedback" data-zoom>
+      <figcaption>The Standard Dashboard every customer landed on first. Analytics told us to leave it alone.</figcaption>
+    </figure>
+
+    <!-- ============ HYPOTHESIS ============ -->
+    <h2 id="hypothesis">Hypothesis &amp; goals</h2>
+    <p><b>Goals:</b></p>
+    <ul class="tag-types">
+      <li><b>Out-of-the-box:</b> After feedback is loaded into the account the customer should see immediate value.</li>
+      <li><b>Source of Truth:</b> All feedback from every source into one place.</li>
+      <li><b>Code Free Analysis:</b> Let teams build custom dashboards and reports without a BI tool or spreadsheet.</li>
+      <li><b>Machine Learning Categorization:</b> Categorize feedback automatically so it scales to millions of responses.</li>
+      <li><b>Actionable:</b> Turn that data into insights with a purpose.</li>
+    </ul>
+
+    <!-- ============ PRINCIPLES ============ -->
+    <h2 id="designthinking">Design Thinking</h2>
+    <ul class="principles">
+      <li><b>Simple.</b> There are a lot of places a customer can go for data analysis. We needed to give them value from day 1. An out-of-the-box experience.</li>
+      <li><b>Actionable.</b> Don't just show. Tell the customer what they can act on to create value.</li>
+      <li><b>Transparent AI Decision-Making.</b> Every machine-applied tag should say how it was applied and why, right where it appears.</li>
+      <li><b>Meet people where they report.</b> CX managers live in executive decks, so dashboards had to be clean enough to screenshot.</li>
+      <li><b>Big Dirty Data.</b> Customers were going to send us unstructured data from all sources. Inconsistent schemas, missing metadata, mislabeled, etc. The user experience needed to work around this. </li>
+    </ul>
+
+    <figure class="shot">
+      <div class="duo">
+        <img src="images/design-process.png" alt="The double diamond design process." data-zoom>
+        <img src="images/smart-tag.png" alt="Feedback with Smart Tags and sentiment applied" data-zoom>
+      </div>
+      <figcaption>Prototyping through the double diamond process.</figcaption>
+    </figure>
+
+    <!-- ============ ANALYSIS ============ -->
+    <h2 id="competitive">Competitive analysis</h2>
+    <ul class="tag-types">
+      <li><b>Tableau:</b> Very technical analysis BI tool that is great. But customers would need an in-house person to do the analysis for them.</li>
+      <li><b>Spreadsheets:</b> Manual. Time consuming. But a spreadsheet was the most common answer for how customers handle their feedback now.</li>
+      <li><b>Smaller AI companies:</b> At the time there were smaller AI companies willing to build custom models for each customer. These were expensive and didn't have the industry knowledge.</li>
+    </ul>
+
+    <h2 id="experiments">Experiments</h2>
+    <h3 id="tags">Categorizing Feedback with Tags</h3>
+    <p>To categorize feedback at scale we needed tags. Some ideas made it to launch, others didn't.</p>
+    <ul class="tag-types">
+      <li class="yes"><b>Smart Tags:</b> These tags would match automatically using machine learning trained on large sets of feedback. For each industry, we developed a set of tags after working closely with customers. See article <a href="https://help.wootric.com/en/articles/4364718-text-analytics-smart-tags-by-category">here.</a></li>
+      <li class="no"><b>Deleting Smart Tags and Training the Model:</b> match automatically using machine learning trained on large sets of feedback.</li>
+      <li class="yes"><b>Text Match Tags:</b> This let users add specific phrases, such as "credit card" for a BILLING tag.</li>
+      <li class="no"><b>Text Match Tags with Filters:</b> This was the idea of users setting custom filters, and only tagging the feedback that matched. After scoping this with engineering, it would need to launch later.</li>
+      <li class="yes"><b>Manual Tags:</b> Manually applied tags.</li>
+      <li class="no"><b>Sentiment Only Tags:</b> This would have been tags only looking for positive, neutral, or negative responses. I argued sentiment should live outside of tagging. In the future, a user could create these on their own.</li>
+    </ul>
+    <figure class="shot">
+      <img src="images/wootric/tag-hover-examples.png" alt="Hover cards explaining Smart, Text Match, and Manual tags" data-zoom>
+      <figcaption>Hover cards for each tag type explain how the tag was applied and what sentiment it carries.</figcaption>
+    </figure>
+
+    <h3 id="cards">Survey Feedback Cards</h3>
+    <p>Feedback cards went through the most iterations. We defined a few of the most important features:</p>
+    <ul class="tag-types">
+      <li><b>Readability:</b> The survey feedback should be easy to read and scan through.</li>
+      <li><b>Clear delineations:</b> Because all surveys were mixed together the feedback needed to look different where it mattered. Score. NPS, CSAT, CES, open-ended only. Positive Sentiment, Neutral, or Negative. etc.</li>
+      <li><b>Fast Manual Tagging:</b> Tags needed to be easy to add, easy to delete, and easy to understand why a Tag was added in the first place.</li>
+    </ul>
+    <figure class="shot">
+      <div class="trio">
+        <img src="images/wootric/cxi-card-3.png" alt="CXInsights feedback view with a tag breakdown chart and feedback cards showing score, comment, and tags" loading="lazy" data-zoom>
+        <img src="images/wootric/cxi-card-1.png" alt="Feedback cards color-coded by sentiment, with tag bars split into positive, neutral, and negative" loading="lazy" data-zoom>
+        <img src="images/wootric/cxi-card-2.png" alt="A Voice of Employee project with one response open, showing its sentiment, tags, and feedback properties" loading="lazy" data-zoom>
+      </div>
+      <figcaption>Excuse some of the ugly designs as these were all done very quickly while sitting together with my team.</figcaption>
+    </figure>
+    <h3 id="cards">Unique Reporting</h3>
+    <p>Some reporting ideas were just too ambitious.</p>
+    <figure class="shot">
+        <img src="images/wootric/cxi-retention.png" alt="A report to track retention of new users." loading="lazy" data-zoom>
+      <figcaption>A report to track retention of new users after onboarding.</figcaption>
+    </figure>
+
+
+
+    <h3 id="prototyping">Rapid prototyping</h3>
+    <ul class="tag-types">
+      <li class="no"><b>AI Controls:</b> Our ML models allowed additional configuration. But in testing it was too confusing. For example our standard was to assign feedback a "Negative" sentiment if the model returned a score between 0-0.25. That range could be adjusted. It resulted in users noticing edge cases where they wanted to adjust the entire model if 2 responses in 100 were wrong. Instead we added the ability to change a Sentiment for one feedback at a time.</li>
+      <li class="yes"><b>Custom Reports:</b> The first reports we built worked directly with customers to reproduce the most common reports they made for themselves.</li>
+      <li class="no"><b>Onboarding and Empty-State:</b> I worked directly with our design intern to create an onboarding flow. She did a fantastic job. But we pivoted after talking with our account managers. They planned on personally onboarding Enterprise customers and already preloading their data. So Enterprise customers would never even see the onboarding we were building for them.</li>
+    </ul>
+
+    <!-- ============ SEQUENCING ============ -->
+    <h2 id="sequencing">Sequencing &amp; scaling out</h2>
+    <p>We built in layers, each one getting tested with customers:</p>
+    <ol class="sequence">
+      <!-- <li><div><b>Standard Dashboard.</b> A simple, free view every customer starts on.</div></li> -->
+      <li><div><b>Feedback Breakdown.</b> We needed the view to see all the feedback first.</div></li>
+      <li><div><b>AI/ML auto-categorization.</b> Smart, Text Match, and Manual tags with sentiment, so the data tells a story.</div></li>
+      <li><div><b>Enterprise Executive Dashboard.</b> Custom reports and dashboards once customers could see their feedback.</div></li>
+      <li><div><b>Watchlists.</b> Actionable watchlists from segments customers made themselves.</div></li>
+    </ol>
+
+    <figure class="shot">
+      <div class="duo">
+        <img src="images/cxi-watchlist.gif" alt="Watchlists in CXInsights flagging customer segments that need attention" data-zoom>
+      </div>
+      <figcaption>Watchlists notify users when a customer segment they're watching needs attention.</figcaption>
+    </figure>
+
+    <!-- ============ OUTCOME ============ -->
+    <h2 id="outcome">Outcome</h2>
+    <p>For Enterprise customers, CXInsights became their most used app. Of Enterprise users, 80% of their time was now spent on Feedback Breakdown. The Feedback Breakdown let customers see their data before acting: which segments existed, how much data each held, and a one-click path to dig in or create a report.</p>
+    <figure class="shot">
+      <img src="images/wootric/cxi-feedback-template.png" alt="The Feedback page with the Feedback Breakdown showing segments and counts" data-zoom>
+      <figcaption>The Feedback page. The breakdown shows what's in each segment before you filter.</figcaption>
+    </figure>
+    <p>Alongside Feedback Breakdown, CXInsights helped carry Wootric from focusing on startups to enterprise. It let us sign our biggest contracts ever and helped take ARR from $1M to $3M before InMoment acquired Wootric in January 2021, and past $5M after.</p>
+
+    <h3 id="customers-said">What customers said</h3>
+    <div class="testimonials">
+      <figure class="testimonial">
+        <blockquote>"I personally love using the dashboard to monitor trends&hellip; It's really useful that they let you filter by promoters and detractors with the option of seeing only grades with comments."</blockquote>
+        <figcaption><b>Thiago N.</b>, Senior Product Marketing Manager · Mid-market · Jan 2021</figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote>"It's really easy to consult information and make reports. It's a really clear and easy-to-use platform."</blockquote>
+        <figcaption><b>Ana Cristina S.</b>, Senior Digital Transformation Officer · Enterprise · Jul 2020</figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote>"The UI is simple and clean but it's a robust platform overall. The dashboard has all the information you need."</blockquote>
+        <figcaption>Marketing &amp; Advertising · Small business · Feb 2020</figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote>"We immediately reach out to customers who has given us a low score and it has helped us to retain our customers."</blockquote>
+        <figcaption><b>Deepak D.</b>, CTO &amp; Co-Founder · Small business · Jul 2020</figcaption>
+      </figure>
+    </div>
+    <p class="source-note">Reviews from <a href="https://www.g2.com/products/inmoment-experience-improvement-xi-platform/reviews">G2</a> (from Wootric customers)</p>
+
+    <!-- ============ CONCLUSION ============ -->
+    <h2 id="conclusion">Conclusion</h2>
+    <p>The most valuable fix wasn't a new chart. It was admitting that customer data was big, messy, and hard to work with. We needed to design for it. That lesson still applies across the industry: most CX dashboards still deal with empty screens, bad data, and lost trust.</p>
+    <p>With how AI has taken over, I'm glad I was there on the ground floor in 2020.</p>
+
+    <!-- ============ PRESS ============ -->
+    <h2 id="press">Press</h2>
+    <ol class="refs">
+      <li><a href="https://inmoment.com/news/inmoment-acquires-digital-feedback-leader-wootric-to-accelerate-pursuit-of-experience-improvement-for-worlds-leading-brands/">InMoment acquires digital feedback leader Wootric</a>. <i>InMoment</i>.</li>
+      <li><a href="https://www.destinationcrm.com/Articles/CRM-News/CRM-Across-the-Wire/InMoment-Acquires-Digital-Feedback-Solutions-Provider-Wootric-144611.aspx">InMoment acquires digital feedback solutions provider Wootric</a>. <i>DestinationCRM</i>.</li>
+      <li><a href="https://www.research-live.com/article/news/inmoment-acquires-cx-company/id/5078492">InMoment acquires CX company</a>. <i>Research Live</i>.</li>
+    </ol>
+
+    <nav class="next-case" aria-label="More case studies">
+      <a href="index.html#work">← All case studies</a>
+      <a href="resume-pg-forsta.html">Next: Press Ganey →</a>
+    </nav>
+  </main>
+</div>
+
+<footer class="site">© Daniel Pitrowiski 2026 · <a href="mailto:danpitrowiski@gmail.com">danpitrowiski@gmail.com</a></footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '0px 0px -70% 0px' });
+  document.querySelectorAll('.article h2[id]').forEach(function (h) { io.observe(h); });
+})();
+</script>
+<script src="js/lightbox.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
