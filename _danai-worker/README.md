@@ -10,6 +10,7 @@ GitHub Pages doesn't publish folders that start with `_`, so nothing in here goe
 - `faq.md`: your own answers to common questions. DanAI gives these close to word for word, and they win over the rest of the site. Instructions are at the top of the file.
 - `knowledge.md`: the text of the seven live pages plus the resume, with the phone number removed. Generated; don't edit by hand.
 - `build-knowledge.py`: rebuilds `knowledge.md`. Run it after changing a page or the resume, then deploy again.
+- `schema.sql`: the question log table.
 - `wrangler.toml`: Worker settings. The model is set in `MODEL`, and the rate limit is 20 questions a minute per visitor.
 
 ## Set it up (about 15 minutes, once)
@@ -30,6 +31,37 @@ GitHub Pages doesn't publish folders that start with `_`, so nothing in here goe
 5. Preview locally (`python3 -m http.server 8000` in the repo root), ask a question, then commit and push.
 
 If `wrangler deploy` complains about `[[ratelimits]]`, delete that block from `wrangler.toml` and deploy again.
+
+## See what people ask
+
+Every question is saved to a free Cloudflare D1 database: the time (UTC), the page it was asked from, the question, DanAI's answer, which FAQ answered it (if any) and whether it worked. Nothing that identifies the visitor is saved.
+
+Set it up once, from this folder:
+
+```sh
+npx wrangler d1 create danai-questions
+```
+
+Copy the `database_id` it prints into `wrangler.toml` (replace `PASTE-DATABASE-ID-HERE`), then:
+
+```sh
+npx wrangler d1 execute danai-questions --remote --file=schema.sql
+npx wrangler deploy
+```
+
+To see the latest 20 questions:
+
+```sh
+npx wrangler d1 execute danai-questions --remote --command "SELECT asked_at, page, faq, question FROM questions ORDER BY id DESC LIMIT 20"
+```
+
+To see the questions people ask most:
+
+```sh
+npx wrangler d1 execute danai-questions --remote --command "SELECT question, COUNT(*) AS times FROM questions GROUP BY lower(question) ORDER BY times DESC LIMIT 20"
+```
+
+You can also browse the table in the Cloudflare dashboard: Storage & Databases → D1 → danai-questions → Tables → questions.
 
 ## After you change faq.md, a page or the resume
 

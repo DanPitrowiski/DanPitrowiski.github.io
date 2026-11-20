@@ -18,3 +18,10 @@ namespace_id = "1001"
   [ratelimits.simple]
   limit = 20
   period = 60
+
+# The question log (see schema.sql and README.md).
+# Paste the database_id that `npx wrangler d1 create danai-questions` prints.
+[[d1_databases]]
+binding = "DB"
+database_name = "danai-questions"
+database_id = "aa708193-3a5e-4f9d-815a-d302d1a56927"

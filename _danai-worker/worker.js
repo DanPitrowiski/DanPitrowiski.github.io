@@ -51,19 +51,22 @@ const json = (body, status, origin) => new Response(JSON.stringify(body), {
   status, headers: { 'Content-Type': 'application/json', ...cors(origin) },
 });
 
+// Saves each question to the D1 database (see schema.sql and README.md). Nothing that
+// identifies the visitor is stored. If the database isn't set up, this does nothing.
+function logQuestion(env, ctx, row) {
+  if (!env.DB) return;
+  const stmt = env.DB.prepare(
+    'INSERT INTO questions (page, question, answer, faq, sources, status) VALUES (?, ?, ?, ?, ?, ?)'
+  ).bind(row.page || '', row.question || '', row.answer || '', row.faq || null, (row.sources || []).join(', '), row.status);
+  ctx.waitUntil(stmt.run().catch((e) => console.log('D1 log failed', e.message)));
+}
+
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const origin = request.headers.get('Origin') || '';
     if (!ALLOWED_ORIGINS.includes(origin)) return new Response('Forbidden', { status: 403 });
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(origin) });
     if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405, origin);
-
-    // Optional per-visitor rate limit (see wrangler.toml)
-    if (env.LIMITER) {
-      const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
-      const { success } = await env.LIMITER.limit({ key: ip });
-      if (!success) return json({ error: 'rate_limited' }, 429, origin);
-    }
 
     let body;
     try { body = await request.json(); } catch { return json({ error: 'Bad JSON' }, 400, origin); }
@@ -73,6 +76,21 @@ export default {
       .map((m) => ({ role: m.role, content: m.content.slice(0, m.role === 'user' ? MAX_CHARS : 2000) }));
     while (messages.length && messages[0].role !== 'user') messages.shift();
     if (!messages.length || messages[messages.length - 1].role !== 'user') return json({ error: 'No question' }, 400, origin);
+
+    const log = {
+      page: typeof body.page === 'string' ? body.page.slice(0, 200) : '',
+      question: messages[messages.length - 1].content,
+    };
+
+    // Optional per-visitor rate limit (see wrangler.toml)
+    if (env.LIMITER) {
+      const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+      const { success } = await env.LIMITER.limit({ key: ip });
+      if (!success) {
+        logQuestion(env, ctx, { ...log, status: 'rate_limited' });
+        return json({ error: 'rate_limited' }, 429, origin);
+      }
+    }
 
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -97,12 +115,14 @@ export default {
     });
     if (!res.ok) {
       console.log('Anthropic error', res.status, await res.text());
+      logQuestion(env, ctx, { ...log, status: 'error' });
       return json({ error: 'upstream' }, 502, origin);
     }
     const data = await res.json();
     let text = (data.content || []).filter((b) => b.type === 'text').map((b) => b.text).join('').trim();
     if (!text) {
       console.log('Empty answer', data.stop_reason, JSON.stringify((data.content || []).map((b) => b.type)));
+      logQuestion(env, ctx, { ...log, status: 'error' });
       return json({ error: 'empty' }, 502, origin);
     }
 
@@ -113,8 +133,12 @@ export default {
       sources = m[1].split(',').map((s) => s.trim()).filter((s) => SOURCE_IDS.includes(s)).slice(0, 2);
     }
     const faq = text.match(/^FAQ:\s*(\d+)/i);
-    if (faq && FAQ[faq[1]]) return json({ answer: FAQ[faq[1]], sources }, 200, origin);
+    if (faq && FAQ[faq[1]]) {
+      logQuestion(env, ctx, { ...log, answer: FAQ[faq[1]], faq: Number(faq[1]), sources, status: 'ok' });
+      return json({ answer: FAQ[faq[1]], sources }, 200, origin);
+    }
     text = text.replace(/\s*—\s*/g, ', ');
+    logQuestion(env, ctx, { ...log, answer: text, sources, status: 'ok' });
     return json({ answer: text, sources }, 200, origin);
   },
 };

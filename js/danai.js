@@ -232,7 +232,7 @@
     fetch(ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: payload })
+      body: JSON.stringify({ messages: payload, page: location.pathname })
     }).then(function (r) {
       return r.json().then(function (d) { return { status: r.status, d: d }; });
     }).then(function (res) {
