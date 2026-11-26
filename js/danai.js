@@ -22,7 +22,7 @@
     'Tell me about a design that didnt work out.'
   ];
   // "Try another" order after the first question
-  var FOLLOW_UPS = [PROMPTS[0], PROMPTS[1], PROMPTS[2], PROMPTS[3]];
+  var FOLLOW_UPS = [PROMPTS[0], PROMPTS[1], PROMPTS[2], PROMPTS[3], PROMPTS[4], PROMPTS[5], PROMPTS[6]];
   var SOURCES = {
     'index': ['Dan’s portfolio', 'index.html'],
     'cxi-ai-feedback': ['CXInsights case study', 'cxi-ai-feedback.html'],
