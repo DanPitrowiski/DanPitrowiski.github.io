@@ -13,7 +13,13 @@
     'Can you walk me through your design process?',
     'How do you approach product strategy?',
     'How do you design AI people can trust?',
-    'Can I email you?'
+    'Whats your best example of AI product design?',
+    'What kind of role are you looking for?',
+    'What business impact has your design work had?',
+    'What business impact has your design work had?',
+    'What makes you different from other senior product designers?',
+    'How do you use AI in your own design work?',
+    'Tell me about a design that didnt work out.'
   ];
   // "Try another" order after the first question
   var FOLLOW_UPS = [PROMPTS[0], PROMPTS[1], PROMPTS[2], PROMPTS[3]];
