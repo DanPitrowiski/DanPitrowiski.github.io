@@ -32,6 +32,57 @@ A: There are (3) keys I learned from building an AI product for Wootric CXI.
 2. User Controls - Give the user as many guardrails and controls as they need to make sure the AI is only working the way they want it to.
 3. Case Study - Build a real-life use case with one customer at least, that can be an example for others. It's easier to trust you if one customer already vouches for you.
 
+FAQ 5
+Q: What's your best example of AI product design?
+A: CXInsights at Wootric. It was one of the first AI products in customer feedback. Our core product helped companies survey their customers across every channel (Web , Email, iOS, Android, SMS, etc.) The problem came when Enterprise customers needed a solution that scaled across millions of responses and a variety survey questions.
+I was the solo designer on it for about ten years, from the first concept through launch and every version after.
+Long story short, Wootric grew from roughly $1M to $3M ARR in about a year before InMoment acquired us. The long story is in my case studies.
+
+FAQ 6
+Q: What kind of role are you looking for?
+A: A senior or lead product design role where I own a real product area end to end. For most of my 16 years I've been the solo lead designer at a startup, so I'm used to being the one who sets up the system, ships the work, and then goes back and improves it.
+Going forward I also want to lead and mentor a team. AI is changing teams fast, and I’d like to help people grow just as fast.
+I'm based in California with my wife and 2 year old daughter, so I'm looking for something remote or in the SF Bay Area.
+
+FAQ 7
+Q: What business impact has your design work had?
+A: A few I can point to:
+- Wootric grew from about $1M to $3M ARR while I was the lead designer, and the platform scaled quickly past $5M after the InMoment acquisition. After my products revenue was combined with InMoment and became harder to reliably quantify.
+- CXInsights, the AI feedback product I designed, became the reason a lot of those customers picked us. DocuSign, Zoom, Foot Locker and Nissan were all on it.
+- The Wootric surveys I designed have been seen over 2,147,483,647 times. I know that because our backend briefly broke a few years ago when we reached the limit of a 32-bit integer number.
+
+FAQ 8
+Q: What business impact has your design work had?
+A: A few I can point to:
+- Wootric grew from about $1M to $3M ARR while I was the lead designer, and the platform scaled quickly past $5M after the InMoment acquisition. After that my product's revenue was combined with InMoment's and became harder to quantify reliably.
+- CXInsights, the AI feedback product I designed, became the reason a lot of customers picked us. DocuSign, Zoom, Foot Locker and Nissan were all on it.
+- The Wootric surveys I designed have been seen at least 2,147,483,647 times. I know the exact number because our backend briefly broke a few years ago when the count hit the limit of a 32-bit integer.
+
+FAQ 9
+Q: What makes you different from other senior product designers?
+A: Three things, honestly.
+I've been the only designer for most of my career, so I've done the whole job: research, design systems, prototypes, specs, and the help docs and release notes after launch. No detail is too small, and there's no part of it I haven't done myself for years.
+I've designed AI features since 2019, well before that was something every designer was doing. I know where AI products lose people, which is almost always trust and control rather than accuracy.
+And I've been through three acquisitions with the same product, so I've designed for a scrappy startup and for an enterprise org with compliance and accessibility requirements, on the same codebase.
+
+FAQ 10
+Q: How do you use AI in your own design work?
+A: Constantly.
+I prototype with Claude, Cursor, and Figma Make, which means I can put a working version in front of someone in a day instead of describing it.
+I build real tools with it. There's an AI agent on this site that evaluates trades for my fantasy baseball league, and the chatbot you're talking to right now is one I built and trained on my own answers.
+And I rebuilt this entire portfolio with AI as my pair, working from a design system I built in Figma. That's a decent stress test of what it's actually good at and where it still needs a designer.
+
+FAQ 11
+Q: Tell me about a design that didn't work out.
+A: Watchlists in CXI. The idea was that you could track a group of customers who mattered to you. One out-of-the-box group was customers whose scores were trending down, and you could build your own.
+My original design had Watchlists running through the whole product. You could use one as a filter on any tab, and being on a watchlist was a flag attached to the customer and their feedback, so it followed them everywhere.
+Engineering cleared the feature up front. When it came time to build it, it turned out to be much harder than we'd imagined.
+Customers told us they wanted it, so we determined it was still worth building. But we had to massively pare it down to exist on it's own page and not integrated.
+After release, Watchlists saw very little use. It became one of those subpages nobody bothered to click into.
+Two things I took from it.
+1. Get engineering into the design early, and walk them through the feature yourself. Help them see it the way you see it.
+2. Don't silo. Users don't want to click away from the main page they work in unless they have to.
+
 ---
 SOURCE: index
 TITLE: Homepage
@@ -42,7 +93,7 @@ Senior Product Designer @ Press Ganey
 
 - Building trust in AI auto-tagging / AI Enterprise Dashboards
 
-- AI feedback analysis that took Wootric from $1M to $5M ARR / Design and Launch
+- CXInsights: AI feedback analysis that helped Wootric 3× its ARR / Design and Launch
 
 - Four Projects @ Press Ganey / AI, custom surveys, & web accessibility
 
@@ -115,7 +166,7 @@ Play the game →
 SOURCE: cxi-ai-feedback
 TITLE: Case study: AI feedback analysis at Wootric (CXInsights)
 
-## CXInsights: AI feedback analysis that helped grow Wootric from $1M to $5M+ ARR
+## CXInsights: AI feedback analysis that helped Wootric 3× its ARR
 
 Company
 
@@ -123,7 +174,7 @@ Wootric (acquired by InMoment, Jan 2021)
 
 My role
 
-Senior Product Designer
+Lead Product Designer
 
 Timeline
 
@@ -131,19 +182,19 @@ Timeline
 
 Team
 
-10 engineers, marketing, 3 design interns
+10 engineers, CEO, CTO, & 3 interns
 
 Customers
 
-DocuSign, Zoom, Glassdoor, Foot Locker, HSBC
+DocuSign, Zoom, Glassdoor, HSBC
 
 Scope
 
 Design, product, QA, data visualization
 
-5×
+3×
 
-ARR growth from new enterprise customers over three years
+ARR growth from new enterprise customers over 2 years
 
 3B+
 
@@ -177,13 +228,11 @@ Role
 
 ## My role
 
-- Senior Product Designer. Led design reviews and user interviews, and used product analytics to guide decisions.
+- Lead Product Designer. Led design reviews and user interviews, and used product analytics to guide decisions.
 
 - User interviews. Ran interviews with enterprise customers throughout the design of CXI.
 
-- Mentorship. Mentored a design intern and a front-end developer.
-
-- Team. 4 full-stack developers, 1 back-end developer, the CEO, the CTO, and me as the only designer.
+- Mentorship. A design intern and two front-end interns.
 
 [Image: The Wootric product team, about fifteen people, posing together in the office]
 
@@ -229,7 +278,7 @@ Customer Insights Manager · Hootsuite
 
 ### Interviews
 
-I designed our UX case study and ran a dozen interviews with enterprise customers to understand how they reported on feedback today. Those conversations shaped the core feature list: dashboards to share with executives, all feedback from every source in one place, actionable insights, and automatic categorization.
+I designed our UX research plan and ran a dozen interviews with enterprise customers to understand how they reported on feedback today. Those conversations shaped the core feature list: dashboards to share with executives, all feedback from every source in one place, clear next steps, and automatic categorization.
 
 ### Personas
 
@@ -245,7 +294,7 @@ FullStory caught what interviews missed. People would filter, hit zero results, 
 
 ### Accessibility
 
-- WCAG 2.2 AA. Ran our own tests against WCAG 2.2 AA compliance.
+- WCAG 2.1. Ran our own tests against WCAG 2.1 compliance.
 
 - Automated audits. Axe DevTools, Lighthouse, and Microsoft’s Accessibility Insights.
 
@@ -279,7 +328,7 @@ Custom dashboards without a BI tool or spreadsheet.
 
 Sort feedback automatically, at millions of responses.
 
-### Actionable
+### Show the value.
 
 Turn the data into insights with a purpose.
 
@@ -343,11 +392,11 @@ Feedback cards went through the most iterations. They had to be easy to scan, lo
 
 [Image: Feedback card exploration: a feedback breakdown chart beside NPS, CSAT and CES feedback cards with tags]
 
-Feedback card explorations, done quickly while sitting with the team.
+Feedback card explorations done with the team.
 
 ### Rapid prototyping
 
-- Cut: AI controls. Letting users tune the sentiment threshold was too confusing. Two wrong responses in a hundred made people want to change the whole model, so we let them fix one response at a time instead.
+- Cut: AI controls. Letting users tune the sentiment threshold was too confusing. The model was 96.5% accurate, but customers who spotted even 2 errors in 100 asked to retrain the whole model. So we let customers fix one error at a time.
 
 - Shipped: Custom reports. We built the first reports with customers, reproducing the reports they most often made for themselves.
 
@@ -377,7 +426,7 @@ Outcome
 
 of enterprise users’ time was spent in Feedback Breakdown. CXInsights became their most used app.
 
-Feedback Breakdown let customers see their data before acting: which segments existed, how much data each held, and a one-click path to dig in or build a report. CXInsights carried Wootric from startups to enterprise, signed our biggest contracts, and helped take ARR from $1M to $3M before the InMoment acquisition, and past $5M after.
+Feedback Breakdown let customers see their data before acting: which segments existed, how much data each held, and a one-click path to dig in or build a report. CXInsights carried Wootric from startups to enterprise and signed our biggest contracts.
 
 [Image: The Feedback page: a breakdown of tags, projects and channels on the left, feedback cards on the right]
 
@@ -409,9 +458,9 @@ Takeaway
 
 ## Conclusion
 
-The most valuable fix wasn’t a new chart. It was admitting that customer data was big, messy, and hard to work with, and designing for it. That lesson still applies: most CX dashboards still deal with empty screens, bad data, and lost trust.
+My first lesson, learned firsthand, was that customer data is unstructured and messy. You can design for ideal circumstances, but the better you prepare for edge cases, the more solid the experience. My second lesson still applies today: most CX dashboards still show empty screens because of bad data. The more empty results users see, the faster you lose their trust, even if the underlying problem was their data all along.
 
-With how AI has taken over, I’m glad I was there on the ground floor in 2020.
+Lastly, with how AI has taken over, I’m glad I was there on the ground floor in 2020.
 
 ## Press
 
@@ -441,13 +490,13 @@ Lead Product Designer
 
 Focus
 
-AI tagging, sentiment, trust
+AI tagging and sentiment
 
 Context
 
 ## What is CXI?
 
-CXInsights (CXI) was Wootric’s app for analyzing open-ended survey feedback at scale.
+CXInsights (CXI) was Wootric’s app for analyzing large volumes of open-ended survey feedback.
 
 Each comment was tagged by topic, like UX/UI or ONBOARDING. Every tag got its own sentiment score, and so did the comment as a whole. We grouped sentiment into Negative, Neutral, and Positive.
 
@@ -459,9 +508,9 @@ The problem
 
 Anonymous G2 customer review
 
-Customers didn’t have confidence in AI to do auto-tagging and apply sentiment correctly.
+Customers weren’t confident the AI tagged feedback and scored sentiment correctly.
 
-For our Enterprise customers who had millions of responses, they wanted all their responses in one place with the AI run on top of it. So we needed a solution that scales.
+Our Enterprise customers had millions of responses. They wanted all of them in one place with the AI run on top. So the solution had to work at that volume.
 
 [Image: A feedback card with a Smart Tag and its positive and negative tag sentiments]
 
@@ -479,49 +528,49 @@ Automatically tag feedback and apply sentiment scores in a way that gives custom
 
 - 02
 
-### Scale across customers
+### Work across industries
 
-Design the system so it scales across customers and industries.
+Design the system so it works for every customer and industry.
 
 - 03
 
-### Make it actionable
+### Cut manual work
 
-Add reporting that gives customers actionable insights and limit manual work.
+Add reporting customers can act on, and limit manual work.
 
 Research
 
-## Listening to enterprise customers
+## Listening to Enterprise customers
 
 After a dozen interviews with Enterprise customers, we narrowed down the list of issues.
+
+“The autotagging, while nice, has no exclusions (so you can’t separate ‘bad’ from ‘not bad’), which requires some manual checking for accuracy.”
+
+LogMeIn
+
+“Text analytics that supports Danish, Swedish, Norwegian and Finnish.”
+
+Visma
 
 “As with any AI tool, to get the detailed information we require, there is a lot of ‘training the tool’ to detect our needs, but working with their data scientist to get there.”
 
 Wootric customer
 
-“The autotagging, while nice, has no exclusions (so you can’t separate ‘bad’ from ‘not bad’), which requires some manual checking for accuracy.”
-
-Wootric customer
-
-“Text analytics that supports Danish, Swedish, Norwegian and Finnish.”
-
-Wootric customer
-
 Exploration
 
-## First test: generic LLM models
+## First test: generic models
 
 We started by testing generic models with our customers. They missed a lot of context. “Michelle crushed it” came back negative. A comment about uploading documents on mobile got tagged DOCS instead of PERFORMANCE. It wouldn’t work well enough for our customers.
 
-[Image: Table of short feedback examples comparing generic algorithm tags with Wootric’s tags and sentiment]
+[Image: Table of short feedback examples comparing generic model tags with Wootric’s tags and sentiment]
 
-Generic algorithm examples vs the models we would build.
+Generic model results vs. what our custom models would do.
 
 Approach
 
 ## Custom models, built with customers
 
-Customers wanted the AI to be at least as good as their own teams already were at tagging feedback. Our three personas were spread across a wide range of industries, so we partnered with customers to create training data for each one.
+Customers wanted the AI to be at least as good as their own teams already were at tagging feedback. Our three personas were spread across a wide range of industries, so we partnered with customers to create training data for each vertical.
 
 [Image: Logos of Wootric customers, including Buffer, Raygun, Docker, Grubhub and Hootsuite]
 
@@ -871,35 +920,33 @@ Feedback
 
 “If I update a tag or sentiment, that should update the model.”
 
-Customer ask
+Frequent Customer Question
 
 ### Why we said no
 
-- Retraining was expensive.
+- Retraining was expensive when only 2% of feedback drew complaints.
 
-- The training data was the source of truth, not individual edits.
-
-- Complaints were about 2 surveys out of 100.
+- The training data was the source of truth, while individual edits were not as reliable.
 
 [Image: A feedback comment with its tags, zoomed in on a single tag being changed]
 
 “Can I play with the model?”
 
-Customer ask
+Frequent Customer Question
 
 ### Why we said no
 
 - Sentiment was Negative, Neutral, or Positive, but we set the score ranges that decided each one.
 
-- Each tag also had a probability cut-off for whether it applied. That could be changed.
+- Each tag also had a probability cut-off for whether it applied. On the backend we could adjust that breakpoint.
 
-- In testing, exposing these settings added more complication and questions than it helped.
+- In testing, exposing these settings caused more confusion than it solved.
 
 [Image: Bar chart of F1 score percent delta by tag]
 
-[Image: Chart of human vs LLM mean sentiment scores with 95% confidence intervals]
+[Image: Chart of human vs LLM mean sentiment scores with 96.5% confidence intervals]
 
-Model evaluation: F1 score delta by tag, and human vs. LLM sentiment scores.
+Model evaluation: F1 score delta by tag, and human vs. LLM model sentiment scores.
 
 Solutions
 
@@ -909,11 +956,11 @@ Solutions
 
 - Scoped tags. Tags can apply only to feedback that matches specific filters.
 
-- Text Match tags. Cover what Smart Tags missed, using phrases the customer chooses.
+- Text Match tags. Cover what Smart Tags missed with phrases the customer chooses.
 
 - Tag descriptions. Shown on hover, so customers define their own tagging system and see it where they need it.
 
-Managing tags: scope, type, and description.
+Managing a tag’s settings.
 
 [Image: Hover cards for Smart, Text Match and Manual tags, each showing tag sentiment and how the tag was applied]
 
@@ -939,10 +986,10 @@ Trust needed evidence, so we ran a test with a CXI customer.
 Five people on the customer’s team each tagged the same 500 new pieces of feedback. We compared their tags to our model’s on those 500.
 
 - Results
-(1) The team was inconsistent, catching some tags and missing others. (2) The model tagged everything the team caught, plus a couple they missed. (3) All five team members combined were only as accurate as the model.
+(1) The team was inconsistent. Each person caught some tags and missed others. (2) The model tagged everything the team caught, plus a couple they missed. (3) All five team members combined were only as accurate as the model.
 
 - Conclusion
-The model’s error rate was so small it was statistically insignificant for customers with millions of responses, and it saved them a huge amount of time. Wootric used this case study often.
+The model was 96.5% accurate. A 3.5% error rate was small enough not to matter for customers with millions of responses, and the model saved them a huge amount of time. Wootric used this case study often.
 
 5
 
@@ -960,7 +1007,7 @@ Results
 
 ## Outcomes
 
-- Fewer complaints. After we covered the most urgent customer issues, users complained about the AI much less.
+- Fewer complaints. After we covered the most urgent customer issues, customers complained about the AI much less.
 
 - Easier sales. Customer stories and our AI case study helped the team get buy-in from new companies.
 
@@ -2008,75 +2055,920 @@ More on GitHub ↗
 SOURCE: resume
 TITLE: Resume (PDF)
 
-DANIEL PITROWISKI
-Senior Product Designer
-San Francisco, CA | danpitrowiski.github.io | danpitrowiski@gmail.com | 
-
-Senior Product Designer with 16+ years experience in B2B SaaS and leading design from startup to
-acquisition. Designed AI-powered CXInsights a full 2-years before ChatGPT.
-
-WORK EXPERIENCE
-
-PRESS GANEY (acquired InMoment, before Qualtrics acquired them)
-Senior Product Designer | May 2025 - June 2026
- - Senior member of a 10-person team, managing $5M+ in ARR across 80+ countries serving
- enterprise customers including Foot Locker, DocuSign, Zoom, and Glassdoor.
- - Designed AI/ML survey feature that prompts survey users with follow-up questions, which
- in testing showed it would increase the volume of open-ended responses by 10%.
- - Added WCAG AA compliance across web, email, and mobile iOS and Android integrations,
- passing customer audits, leading to 5 new customer accounts upon passing.
-
-INMOMENT (acquired Wootric)
-Senior Product Designer | December 2020 - May 2025
-
- - Expanded CXInsights into EU and AU markets by designing survey localization and language
- management tools, adding customers like Visma, Bank of Queensland, and Contentful.
- - Built deep integrations w/ Salesforce, Zendesk, Slack, MS Dynamics and InMoment, adding
- shared InMoment/Wootric customers like INFINITI, Jack in the Box, and Foot Locker.
- - Integrated the Wootric Design System using Figma and Storybook into InMoment, allowing
- Wootric and InMoment products to work together.
-
+DANIEL
+ 
+PITROWISKI
+ 
+Senior
+ 
+Product
+ 
+Designer
+ 
+San
+ 
+Francisco,
+ 
+CA
+ 
+|
+ 
+danpitrowiski.github.io
+ 
+|
+ 
+danpitrowiski@gmail.com
+ 
+|
+ 
++1
+ 
+(650)
+ 
+400-6436
+ 
+Senior
+ 
+Product
+ 
+Designer
+ 
+with
+ 
+16+
+ 
+years
+ 
+experience
+ 
+in
+ 
+B2B
+ 
+SaaS
+ 
+and
+ 
+leading
+ 
+design
+ 
+from
+ 
+startup
+ 
+to
+ 
+acquisition.
+ 
+Designed
+ 
+AI-powered
+ 
+CXInsights
+ 
+a
+ 
+full
+ 
+2-years
+ 
+before
+ 
+ChatGPT.
+ 
+WORK
+ 
+EXPERIENCE
+ 
+PRESS
+ 
+GANEY
+ 
+(acquired
+ 
+InMoment,
+ 
+before
+ 
+Qualtrics
+ 
+acquired
+ 
+them)
+ 
+Senior
+ 
+Product
+ 
+Designer
+ 
+|
+ 
+May
+ 
+2025
+ 
+-
+ 
+June
+ 
+2026
+ 
+-
+ 
+Senior
+ 
+member
+ 
+of
+ 
+a
+ 
+10-person
+ 
+team,
+ 
+managing
+ 
+$5M+
+ 
+in
+ 
+ARR
+ 
+across
+ 
+80+
+ 
+countries
+ 
+serving
+ 
+enterprise
+ 
+customers
+ 
+including
+ 
+Foot
+ 
+Locker,
+ 
+DocuSign,
+ 
+Zoom,
+ 
+and
+ 
+Glassdoor.
+ 
+-
+ 
+Designed
+ 
+AI/ML
+ 
+survey
+ 
+feature
+ 
+that
+ 
+prompts
+ 
+survey
+ 
+users
+ 
+with
+ 
+follow-up
+ 
+questions,
+ 
+which
+ 
+in
+ 
+testing
+ 
+showed
+ 
+it
+ 
+would
+ 
+increase
+ 
+the
+ 
+volume
+ 
+of
+ 
+open-ended
+ 
+responses
+ 
+by
+ 
+10%.
+ 
+-
+ 
+Added
+ 
+WCAG
+ 
+AA
+ 
+compliance
+ 
+across
+ 
+web,
+ 
+email,
+ 
+and
+ 
+mobile
+ 
+iOS
+ 
+and
+ 
+Android
+ 
+integrations,
+ 
+passing
+ 
+customer
+ 
+audits,
+ 
+leading
+ 
+to
+ 
+5
+ 
+new
+ 
+customer
+ 
+accounts
+ 
+upon
+ 
+passing.
+ 
+INMOMENT
+ 
+(acquired
+ 
+Wootric)
+ 
+Senior
+ 
+Product
+ 
+Designer
+ 
+|
+ 
+December
+ 
+2020
+ 
+-
+ 
+May
+ 
+2025
+ 
+-
+ 
+Expanded
+ 
+CXInsights
+ 
+into
+ 
+EU
+ 
+and
+ 
+AU
+ 
+markets
+ 
+by
+ 
+designing
+ 
+survey
+ 
+localization
+ 
+and
+ 
+language
+ 
+management
+ 
+tools,
+ 
+adding
+ 
+customers
+ 
+like
+ 
+Visma,
+ 
+Bank
+ 
+of
+ 
+Queensland,
+ 
+and
+ 
+Contentful.
+ 
+-
+ 
+Built
+ 
+deep
+ 
+integrations
+ 
+w/
+ 
+Salesforce,
+ 
+Zendesk,
+ 
+Slack,
+ 
+MS
+ 
+Dynamics
+ 
+and
+ 
+InMoment,
+ 
+adding
+ 
+shared
+ 
+InMoment/Wootric
+ 
+customers
+ 
+like
+ 
+INFINITI,
+ 
+Jack
+ 
+in
+ 
+the
+ 
+Box,
+ 
+and
+ 
+Foot
+ 
+Locker.
+ 
+-
+ 
+Integrated
+ 
+the
+ 
+Wootric
+ 
+Design
+ 
+System
+ 
+using
+ 
+Figma
+ 
+and
+ 
+Storybook
+ 
+into
+ 
+InMoment,
+ 
+allowing
+ 
+Wootric
+ 
+and
+ 
+InMoment
+ 
+products
+ 
+to
+ 
+work
+ 
+together.
+ 
 WOOTRIC
-Lead Product Designer | November 2015 - December 2020
-
- - Launched Wootric CXInsights, an AI-powered customer experience platform (2020,
- 2-years before ChatGPT). Leading to the first $100,000 contract and major expansion into
- Enterprise.
- - Headed design for Wootric's B2B SaaS app from $0 to $3M+ in ARR before its acquisition.
- - Gave all-hands Data Analysis presentations showing user pain points that kicked-off our
- design of CXI.
-VACATIA
-Product Manager and UX Designer | August 2013 - June 2014
- - Created Zendesk automations for the Customer Service team to close tickets 20% faster.
- - Raised customer satisfaction (CSAT) from the low 3’s to 3.9.
-
+ 
+Lead
+ 
+Product
+ 
+Designer
+ 
+|
+ 
+November
+ 
+2015
+ 
+-
+ 
+December
+ 
+2020
+ 
+-
+ 
+Launched
+ 
+Wootric
+ 
+CXInsights,
+ 
+an
+ 
+AI-powered
+ 
+customer
+ 
+experience
+ 
+platform
+ 
+(2020,
+ 
+2-years
+ 
+before
+ 
+ChatGPT).
+ 
+Leading
+ 
+to
+ 
+the
+ 
+first
+ 
+$100,000
+ 
+contract
+ 
+and
+ 
+major
+ 
+expansion
+ 
+into
+ 
+Enterprise.
+ 
+-
+ 
+Headed
+ 
+design
+ 
+for
+ 
+Wootric's
+ 
+B2B
+ 
+SaaS
+ 
+app
+ 
+from
+ 
+$0
+ 
+to
+ 
+$3M+
+ 
+in
+ 
+ARR
+ 
+before
+ 
+its
+ 
+acquisition.
+ 
+-
+ 
+Gave
+ 
+all-hands
+ 
+Data
+ 
+Analysis
+ 
+presentations
+ 
+showing
+ 
+user
+ 
+pain
+ 
+points
+ 
+that
+ 
+kicked-off
+ 
+our
+ 
+design
+ 
+of
+ 
+CXI.
+ 
+VACATIA
+ 
+Product
+ 
+Manager
+ 
+and
+ 
+UX
+ 
+Designer
+ 
+|
+ 
+August
+ 
+2013
+ 
+-
+ 
+June
+ 
+2014
+ 
+-
+ 
+Created
+ 
+Zendesk
+ 
+automations
+ 
+for
+ 
+the
+ 
+Customer
+ 
+Service
+ 
+team
+ 
+to
+ 
+close
+ 
+tickets
+ 
+20%
+ 
+faster.
+ 
+-
+ 
+Raised
+ 
+customer
+ 
+satisfaction
+ 
+(CSAT)
+ 
+from
+ 
+the
+ 
+low
+ 
+3’s
+ 
+to
+ 
+3.9.
+ 
 ENTHUSE
-Lead UI/UX and Product Manager | December 2010 - July 2013
-Consumer iOS and Android app connecting sports fans to teams and brands.
- - Owned Product and Design while supporting $1.3M seed fundraising.
- - Led 0-to-1 development of a B2C iOS/Android app connecting sports fans with teams and
- brands that launched nationwide in schools like University of Miami, Purdue, and CSU
- Monterey Bay.
-
+ 
+Lead
+ 
+UI/UX
+ 
+and
+ 
+Product
+ 
+Manager
+ 
+|
+ 
+December
+ 
+2010
+ 
+-
+ 
+July
+ 
+2013
+ 
+Consumer
+ 
+iOS
+ 
+and
+ 
+Android
+ 
+app
+ 
+connecting
+ 
+sports
+ 
+fans
+ 
+to
+ 
+teams
+ 
+and
+ 
+brands.
+ 
+-
+ 
+Owned
+ 
+Product
+ 
+and
+ 
+Design
+ 
+while
+ 
+supporting
+ 
+$1.3M
+ 
+seed
+ 
+fundraising.
+ 
+-
+ 
+Led
+ 
+0-to-1
+ 
+development
+ 
+of
+ 
+a
+ 
+B2C
+ 
+iOS/Android
+ 
+app
+ 
+connecting
+ 
+sports
+ 
+fans
+ 
+with
+ 
+teams
+ 
+and
+ 
+brands
+ 
+that
+ 
+launched
+ 
+nationwide
+ 
+in
+ 
+schools
+ 
+like
+ 
+University
+ 
+of
+ 
+Miami,
+ 
+Purdue,
+ 
+and
+ 
+CSU
+ 
+Monterey
+ 
+Bay.
+ 
 EDUCATION
-
-GENERAL ASSEMBLY
-Bootcamp, Front-End Programming | January 2018 - June 2018
-
-NORTHEASTERN UNIVERSITY
-Bachelor's, Engineering | September 2004 - May 2008
-
+ 
+GENERAL
+ 
+ASSEMBLY
+ 
+Bootcamp,
+ 
+Front-End
+ 
+Programming
+ 
+|
+ 
+January
+ 
+2018
+ 
+-
+ 
+June
+ 
+2018
+ 
+NORTHEASTERN
+ 
+UNIVERSITY
+ 
+Bachelor's,
+ 
+Engineering
+ 
+|
+ 
+September
+ 
+2004
+ 
+-
+ 
+May
+ 
+2008
+ 
 PROJECTS
-
-AI AGENT for TRADE EVALUATIONS
-Creator | Sports Simulation League | Project Link
-Built end-to-end evaluation logic and decision criteria with Claude and Gemini for assessing trade
-proposals in a competitive sports simulation league.
-
+ 
+AI
+ 
+AGENT
+ 
+for
+ 
+TRADE
+ 
+EVALUATIONS
+ 
+Creator
+ 
+|
+ 
+Sports
+ 
+Simulation
+ 
+League
+ 
+|
+ 
+Project
+ 
+Link
+ 
+Built
+ 
+end-to-end
+ 
+evaluation
+ 
+logic
+ 
+and
+ 
+decision
+ 
+criteria
+ 
+with
+ 
+Claude
+ 
+and
+ 
+Gemini
+ 
+for
+ 
+assessing
+ 
+trade
+ 
+proposals
+ 
+in
+ 
+a
+ 
+competitive
+ 
+sports
+ 
+simulation
+ 
+league.
+ 
 STACK
-
- Claude Cursor Rapid Prototyping Github AI Design Figma Product Strategy
-
- Roadmap Development Cross-functional Team Leadership Visual Design Web Android
-
- iOS Presentations
+ 
+   Claude   
+ 
+   Cursor   
+ 
+   Rapid
+ 
+Prototyping   
+ 
+   Github   
+ 
+   AI Design   
+ 
+   Figma    
+ 
+   Product Strategy   
+ 
+   Roadmap Development   
+ 
+   Cross-functional Team Leadership   
+ 
+   Visual
+ 
+Design   
+ 
+   Web   
+ 
+   Android   
+ 
+   iOS   
+ 
+   Presentations
