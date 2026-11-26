@@ -20,7 +20,7 @@ These seven pages use the current design. Only change these unless asked.
 | Page | File | Type |
 |---|---|---|
 | Homepage | `index.html` | Home |
-| AI feedback analysis (Wootric CXInsights) | `resume-wootric.html` | Case study |
+| AI feedback analysis (Wootric CXInsights) | `cxi-ai-feedback.html` | Case study |
 | Building trust in AI auto-tagging | `ai-auto-tagging.html` | Case study |
 | Four projects @ Press Ganey | `resume-pg-forsta.html` | Case study |
 | Enthuse | `enthuse.html` | Case study |

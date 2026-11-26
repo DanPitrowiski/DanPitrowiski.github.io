@@ -112,7 +112,7 @@ Read about it
 Play the game →
 
 ---
-SOURCE: resume-wootric
+SOURCE: cxi-ai-feedback
 TITLE: Case study: AI feedback analysis at Wootric (CXInsights)
 
 ## CXInsights: AI feedback analysis that helped grow Wootric from $1M to $5M+ ARR

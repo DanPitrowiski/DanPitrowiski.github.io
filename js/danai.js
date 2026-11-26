@@ -25,7 +25,7 @@
   var FOLLOW_UPS = [PROMPTS[0], PROMPTS[1], PROMPTS[2], PROMPTS[3]];
   var SOURCES = {
     'index': ['Dan’s portfolio', 'index.html'],
-    'resume-wootric': ['CXInsights case study', 'resume-wootric.html'],
+    'cxi-ai-feedback': ['CXInsights case study', 'cxi-ai-feedback.html'],
     'ai-auto-tagging': ['AI auto-tagging case study', 'ai-auto-tagging.html'],
     'resume-pg-forsta': ['Press Ganey case study', 'resume-pg-forsta.html'],
     'enthuse': ['Enthuse case study', 'enthuse.html'],

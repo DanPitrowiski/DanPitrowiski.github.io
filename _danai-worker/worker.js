@@ -7,7 +7,7 @@ const ALLOWED_ORIGINS = [
   'http://localhost:8000',
   'http://127.0.0.1:8000',
 ];
-const SOURCE_IDS = ['index', 'resume-wootric', 'ai-auto-tagging', 'resume-pg-forsta', 'enthuse',
+const SOURCE_IDS = ['index', 'cxi-ai-feedback', 'ai-auto-tagging', 'resume-pg-forsta', 'enthuse',
   'article-great-designer-portfolio', 'knight', 'resume', 'email'];
 const MAX_TURNS = 10;          // messages of history sent to the model
 const MAX_CHARS = 600;         // per visitor message

@@ -3,7 +3,7 @@
 CREATE TABLE IF NOT EXISTS questions (
   id         INTEGER PRIMARY KEY AUTOINCREMENT,
   asked_at   TEXT NOT NULL DEFAULT (datetime('now')),  -- UTC
-  page       TEXT,     -- the page the visitor asked from, like /resume-wootric.html
+  page       TEXT,     -- the page the visitor asked from, like /cxi-ai-feedback.html
   question   TEXT NOT NULL,
   answer     TEXT,
   faq        INTEGER,  -- the FAQ number in faq.md that answered it, if any

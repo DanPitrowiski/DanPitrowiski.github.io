@@ -56,13 +56,13 @@
     <div><dt>Company</dt><dd>Wootric (acquired by InMoment)</dd></div>
     <div><dt>Product</dt><dd>CXInsights (CXI)</dd></div>
     <div><dt>My role</dt><dd>Lead Product Designer</dd></div>
-    <div><dt>Focus</dt><dd>AI tagging, sentiment, trust</dd></div>
+    <div><dt>Focus</dt><dd>AI tagging and sentiment</dd></div>
   </dl>
 
   <section class="block" id="what-is-cxi" aria-labelledby="h-what">
     <p class="kicker">Context</p>
     <h2 id="h-what">What is CXI?</h2>
-    <p>CXInsights (CXI) was Wootric’s app for analyzing open-ended survey feedback at scale.</p>
+    <p>CXInsights (CXI) was Wootric’s app for analyzing large volumes of open-ended survey feedback.</p>
     <p>Each comment was tagged by topic, like UX/UI or ONBOARDING. Every tag got its own sentiment score, and so did the comment as a whole. We grouped sentiment into Negative, Neutral, and Positive.</p>
     <figure>
       <video autoplay muted loop playsinline preload="none" poster="images/v3/ai-cxi-feedback-view.jpg" aria-label="Screen recording of the CXInsights feedback view: filtering by tag, with a feedback breakdown chart and tagged feedback cards.">
@@ -76,8 +76,8 @@
     <p class="kicker">The problem</p>
     <h2 id="h-problem">Customers didn’t trust the AI</h2>
     <blockquote class="pull"><p>“I think the AI could be better.”</p><cite><strong>Anonymous G2 customer review</strong></cite></blockquote>
-    <p>Customers didn’t have confidence in AI to do auto-tagging and apply sentiment correctly.</p>
-    <p>For our Enterprise customers who had millions of responses, they wanted all their responses in one place with the AI run on top of it. So we needed a solution that scales.</p>
+    <p>Customers weren’t confident the AI tagged feedback and scored sentiment correctly.</p>
+    <p>Our Enterprise customers had millions of responses. They wanted all of them in one place with the AI run on top. So the solution had to work at that volume.</p>
     <figure class="fig-narrow">
       <img src="images/v3/ai-smart-tag.png" alt="A feedback card with a Smart Tag and its positive and negative tag sentiments" loading="lazy" data-zoom width="1002" height="299">
       <figcaption>A Smart Tag with its sentiment, applied automatically.</figcaption>
@@ -90,31 +90,31 @@
     <h2 id="h-obj">Objectives</h2>
     <ol class="rows">
       <li class="objective"><span class="n">01</span><div><h3>Earn confidence</h3><p>Automatically tag feedback and apply sentiment scores in a way that gives customers confidence it’s been done correctly.</p></div></li>
-      <li class="objective"><span class="n">02</span><div><h3>Scale across customers</h3><p>Design the system so it scales across customers and industries.</p></div></li>
-      <li class="objective"><span class="n">03</span><div><h3>Make it actionable</h3><p>Add reporting that gives customers actionable insights and limit manual work.</p></div></li>
+      <li class="objective"><span class="n">02</span><div><h3>Work across industries</h3><p>Design the system so it works for every customer and industry.</p></div></li>
+      <li class="objective"><span class="n">03</span><div><h3>Cut manual work</h3><p>Add reporting customers can act on, and limit manual work.</p></div></li>
     </ol>
   </section>
 
   <hr class="divider">
   <section class="block" id="research" aria-labelledby="h-research">
     <p class="kicker">Research</p>
-    <h2 id="h-research">Listening to enterprise customers</h2>
+    <h2 id="h-research">Listening to Enterprise customers</h2>
     <p>After a dozen interviews with Enterprise customers, we narrowed down the list of issues.</p>
     <div class="quote-stack">
-    <blockquote class="pull pull--sm"><p>“As with any AI tool, to get the detailed information we require, there is a lot of ‘training the tool’ to detect our needs, but working with their data scientist to get there.”</p><cite><strong>Wootric customer</strong></cite></blockquote>
-    <blockquote class="pull pull--sm"><p>“The autotagging, while nice, has no exclusions (so you can’t separate ‘bad’ from ‘not bad’), which requires some manual checking for accuracy.”</p><cite><strong>Wootric customer</strong></cite></blockquote>
-    <blockquote class="pull pull--sm"><p>“Text analytics that supports Danish, Swedish, Norwegian and Finnish.”</p><cite><strong>Wootric customer</strong></cite></blockquote>
+      <blockquote class="pull pull--sm"><p>“The autotagging, while nice, has no exclusions (so you can’t separate ‘bad’ from ‘not bad’), which requires some manual checking for accuracy.”</p><cite><strong>LogMeIn</strong></cite></blockquote>
+      <blockquote class="pull pull--sm"><p>“Text analytics that supports Danish, Swedish, Norwegian and Finnish.”</p><cite><strong>Visma</strong></cite></blockquote>
+      <blockquote class="pull pull--sm"><p>“As with any AI tool, to get the detailed information we require, there is a lot of ‘training the tool’ to detect our needs, but working with their data scientist to get there.”</p><cite><strong>Wootric customer</strong></cite></blockquote>
     </div>
   </section>
 
   <hr class="divider">
   <section class="block" id="generic-models" aria-labelledby="h-generic">
     <p class="kicker">Exploration</p>
-    <h2 id="h-generic">First test: generic LLM models</h2>
+    <h2 id="h-generic">First test: generic models</h2>
     <p>We started by testing generic models with our customers. They missed a lot of context. “Michelle crushed it” came back negative. A comment about uploading documents on mobile got tagged DOCS instead of PERFORMANCE. It wouldn’t work well enough for our customers.</p>
     <figure>
-      <img src="images/v3/ai-generic-vs-wootric.png" alt="Table of short feedback examples comparing generic algorithm tags with Wootric’s tags and sentiment" loading="lazy" data-zoom width="1125" height="593">
-      <figcaption>Generic algorithm examples vs the models we would build.</figcaption>
+      <img src="images/v3/ai-generic-vs-wootric.png" alt="Table of short feedback examples comparing generic model tags with Wootric’s tags and sentiment" loading="lazy" data-zoom width="1125" height="593">
+      <figcaption>Generic model results vs. what our custom models would do.</figcaption>
     </figure>
   </section>
 
@@ -122,7 +122,7 @@
   <section class="block" id="custom-models" aria-labelledby="h-custom">
     <p class="kicker">Approach</p>
     <h2 id="h-custom">Custom models, built with customers</h2>
-    <p>Customers wanted the AI to be at least as good as their own teams already were at tagging feedback. Our three personas were spread across a wide range of industries, so we partnered with customers to create training data for each one.</p>
+    <p>Customers wanted the AI to be at least as good as their own teams already were at tagging feedback. Our three personas were spread across a wide range of industries, so we partnered with customers to create training data for each vertical.</p>
     <figure class="fig-pair">
       <div class="pair">
         <img src="images/v3/ai-customer-logos.png" alt="Logos of Wootric customers, including Buffer, Raygun, Docker, Grubhub and Hootsuite" loading="lazy" data-zoom width="795" height="595">
@@ -260,29 +260,28 @@
   <section class="block" id="customer-asks" aria-labelledby="h-asks">
     <p class="kicker">Feedback</p>
     <h2 id="h-asks">What customers asked for</h2>
-    <blockquote class="pull"><p>“If I update a tag or sentiment, that should update the model.”</p><cite><strong>Customer ask</strong></cite></blockquote>
+    <blockquote class="pull"><p>“If I update a tag or sentiment, that should update the model.”</p><cite><strong>Frequent Customer Question</strong></cite></blockquote>
     <h3>Why we said no</h3>
     <ul class="items items--bullets">
-      <li>Retraining was expensive.</li>
-      <li>The training data was the source of truth, not individual edits.</li>
-      <li>Complaints were about 2 surveys out of 100.</li>
+      <li>Retraining was expensive when only 2% of feedback drew complaints.</li>
+      <li>The training data was the source of truth, while individual edits were not as reliable.</li>
     </ul>
     <figure class="fig-plain">
       <img src="images/v3/ai-fix-single-tag.png" alt="A feedback comment with its tags, zoomed in on a single tag being changed" loading="lazy" data-zoom width="1604" height="529">
     </figure>
-    <blockquote class="pull"><p>“Can I play with the model?”</p><cite><strong>Customer ask</strong></cite></blockquote>
+    <blockquote class="pull"><p>“Can I play with the model?”</p><cite><strong>Frequent Customer Question</strong></cite></blockquote>
     <h3>Why we said no</h3>
     <ul class="items items--bullets">
       <li>Sentiment was Negative, Neutral, or Positive, but we set the score ranges that decided each one.</li>
-      <li>Each tag also had a probability cut-off for whether it applied. That could be changed.</li>
-      <li>In testing, exposing these settings added more complication and questions than it helped.</li>
+      <li>Each tag also had a probability cut-off for whether it applied. On the backend we could adjust that breakpoint.</li>
+      <li>In testing, exposing these settings caused more confusion than it solved.</li>
     </ul>
     <figure class="fig-pair">
       <div class="pair">
         <img src="images/v3/ai-f1-delta.png" alt="Bar chart of F1 score percent delta by tag" loading="lazy" data-zoom width="1323" height="782">
-        <img src="images/v3/ai-human-vs-llm.png" alt="Chart of human vs LLM mean sentiment scores with 95% confidence intervals" loading="lazy" data-zoom width="500" height="371">
+        <img src="images/v3/ai-human-vs-llm.png" alt="Chart of human vs LLM mean sentiment scores with 96.5% confidence intervals" loading="lazy" data-zoom width="500" height="371">
       </div>
-      <figcaption>Model evaluation: F1 score delta by tag, and human vs. LLM sentiment scores.</figcaption>
+      <figcaption>Model evaluation: F1 score delta by tag, and human vs. LLM model sentiment scores.</figcaption>
     </figure>
   </section>
 
@@ -293,14 +292,14 @@
     <h3>More auto-tagging control</h3>
     <ul class="items items--bullets">
       <li><strong>Scoped tags.</strong> Tags can apply only to feedback that matches specific filters.</li>
-      <li><strong>Text Match tags.</strong> Cover what Smart Tags missed, using phrases the customer chooses.</li>
+      <li><strong>Text Match tags.</strong> Cover what Smart Tags missed with phrases the customer chooses.</li>
       <li><strong>Tag descriptions.</strong> Shown on hover, so customers define their own tagging system and see it where they need it.</li>
     </ul>
     <figure>
       <video autoplay muted loop playsinline preload="none" poster="images/v3/ai-manage-tags.jpg" aria-label="Screen recording of managing tags: setting a tag’s match phrases, scope filters and description.">
         <source src="images/v3/ai-manage-tags.mp4" type="video/mp4">
       </video>
-      <figcaption>Managing tags: scope, type, and description.</figcaption>
+      <figcaption>Managing a tag’s settings.</figcaption>
     </figure>
     <figure>
       <img src="images/wootric/tag-hover-examples.png" alt="Hover cards for Smart, Text Match and Manual tags, each showing tag sentiment and how the tag was applied" loading="lazy" data-zoom width="1415" height="946">
@@ -324,8 +323,8 @@
     <p>Trust needed evidence, so we ran a test with a CXI customer.</p>
     <ul class="rows">
       <li class="test-row"><span class="kicker">The test</span><p>Five people on the customer’s team each tagged the same 500 new pieces of feedback. We compared their tags to our model’s on those 500.</p></li>
-      <li class="test-row"><span class="kicker">Results</span><p>(1) The team was inconsistent, catching some tags and missing others. (2) The model tagged everything the team caught, plus a couple they missed. (3) All five team members combined were only as accurate as the model.</p></li>
-      <li class="test-row"><span class="kicker">Conclusion</span><p>The model’s error rate was so small it was statistically insignificant for customers with millions of responses, and it saved them a huge amount of time. Wootric used this case study often.</p></li>
+      <li class="test-row"><span class="kicker">Results</span><p>(1) The team was inconsistent. Each person caught some tags and missed others. (2) The model tagged everything the team caught, plus a couple they missed. (3) All five team members combined were only as accurate as the model.</p></li>
+      <li class="test-row"><span class="kicker">Conclusion</span><p>The model was 96.5% accurate. A 3.5% error rate was small enough not to matter for customers with millions of responses, and the model saved them a huge amount of time. Wootric used this case study often.</p></li>
     </ul>
     <div class="stats stats--3">
       <div><p class="stat-num">5</p><p class="stat-cap">team members tagging</p></div>
@@ -339,7 +338,7 @@
     <p class="kicker">Results</p>
     <h2 id="h-outcomes">Outcomes</h2>
     <ul class="items">
-      <li><strong>Fewer complaints.</strong> After we covered the most urgent customer issues, users complained about the AI much less.</li>
+      <li><strong>Fewer complaints.</strong> After we covered the most urgent customer issues, customers complained about the AI much less.</li>
       <li><strong>Easier sales.</strong> Customer stories and our AI case study helped the team get buy-in from new companies.</li>
     </ul>
     <div class="quote-stack">
@@ -351,7 +350,7 @@
 
   <nav class="page-nav" aria-label="More case studies">
     <a href="index.html#case-studies">← All case studies</a>
-    <a class="next-link" href="resume-wootric.html">Next: CXInsights →</a>
+    <a class="next-link" href="cxi-ai-feedback.html">Next: AI feedback analysis →</a>
   </nav>
 </main>
 

@@ -15,7 +15,7 @@ RESUME = 'Daniel Pitrowiski - Senior Product Designer.pdf'
 # key: the id DanAI cites in its SOURCES line (js/danai.js maps it to a link)
 PAGES = [
     ('index', 'index.html', 'Homepage'),
-    ('resume-wootric', 'resume-wootric.html', 'Case study: AI feedback analysis at Wootric (CXInsights)'),
+    ('cxi-ai-feedback', 'cxi-ai-feedback.html', 'Case study: AI feedback analysis at Wootric (CXInsights)'),
     ('ai-auto-tagging', 'ai-auto-tagging.html', 'Case study: Building trust in AI auto-tagging'),
     ('resume-pg-forsta', 'resume-pg-forsta.html', 'Case study: Four projects at Press Ganey'),
     ('enthuse', 'enthuse.html', 'Case study: Enthuse'),
